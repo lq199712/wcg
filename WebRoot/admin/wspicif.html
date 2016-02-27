@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>微</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/yyucadapter.js"></script>
+<style type="text/css">
+body{
+	background-color: white;
+}
+.mainpicshow{
+	width: 100%;
+	height: 170px;
+	overflow: hidden;
+}
+.mainpicarea{
+	width: 100%;
+	height: 170px;
+}
+.mainpicarea img{
+	width: 100%;
+	height: 170px;
+}
+.ppdiv{
+margin: 10px;
+width: 320px;
+text-align: left;
+}
+#picsethere0{
+	width: 100%;
+	text-align: center;
+}
+#picsethere{
+width: auto;
+}
+#picsethere img{
+	max-width: 600px;
+	max-height: 350px;
+}
+.jcrop-holder{
+margin: 0 auto;
+}
+</style>
+<!-- <div class="mainpicshow">
+    	<div class="mainpicarea">
+    	<img src="/res/fmdtp.jpg"/>
+    	</div>
+    	</div>
+    	 -->    
+</head>
+<body>
+<div style="width: 300px;margin-top: 20px;margin-left: 250px;">
+<input type="hidden" relobj="yyuccutpic" rel="yyuc" /><iframe name="YYUC_4840348403fbaaf9ce06b71ab2d64e20_if" style="position:absolute; left:-10000px;"></iframe>
+<table  style="border:none;padding:0;margin:0;width:auto;display: inline-block;"><tr style="border:none;padding:0;margin:0;"><td style="border:none;padding:0;margin:0;width:auto;">
+<div style="display:none" id="YYUC_4840348403fbaaf9ce06b71ab2d64e20_div" action="/@system/upload.html" method="post" enctype="multipart/form-data" target="YYUC_4840348403fbaaf9ce06b71ab2d64e20_if">
+<span style="display:-moz-inline-box;display:inline-block;width:100px;height:32px;line-height: 32px;position: relative;">
+<input name="YYUC_UPLOAD_file" style="position: absolute;height: 100%;width:100px;right: 0;z-index:2" type="file"/>
+<input src="" type="button" style="display:block; position: absolute;height: 100%;width:100%;z-index:1;line-height: 25px;font-size:15px;color:#000000;text-align: center;" value="上传图片"/>
+</span>
+<input type="hidden" name="YYUC_UPLOAD_SIZE" value="600"/>
+<input type="hidden" name="YYUC_UPLOAD_ID" value="YYUC_4840348403fbaaf9ce06b71ab2d64e20"/></div>
+</td><td style="border:none;padding:0;margin:0;width:auto;">
+<span id="YYUC_4840348403fbaaf9ce06b71ab2d64e20_span" style="display:-moz-inline-box;display:inline-block;width:100px;height:32px;">
+</span>
+</td><td style="border:none;padding:0;margin:0;width:auto;"><span id="YYUC_4840348403fbaaf9ce06b71ab2d64e20_loadpic" style="display: none;"><img src="res/18.gif"/></span></td></tr></table>
+<input type="hidden" name="fT08d9e827ffbba2efe4413cb064bbf847pic" id="YYUC_4840348403fbaaf9ce06b71ab2d64e20_text" value=""/>
+<script>
+$(function(){	var YYUC_4840348403fbaaf9ce06b71ab2d64e20_form = window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_form = $('<form style="position: absolute;left:-10000px;" id="YYUC_4840348403fbaaf9ce06b71ab2d64e20" action="/@system/upload.html" method="post" enctype="multipart/form-data" target="YYUC_4840348403fbaaf9ce06b71ab2d64e20_if"></form>');
+	$('body').append(YYUC_4840348403fbaaf9ce06b71ab2d64e20_form);
+	YYUC_4840348403fbaaf9ce06b71ab2d64e20_form.html($('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_div').html());
+	$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_div').remove();
+	window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_resize = function(){
+	if($('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_span').is(':hidden')){
+		YYUC_4840348403fbaaf9ce06b71ab2d64e20_form.hide();
+	}else{
+		YYUC_4840348403fbaaf9ce06b71ab2d64e20_form.show();
+		var YYUC_4840348403fbaaf9ce06b71ab2d64e20_offset = $('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_span').offset();
+		YYUC_4840348403fbaaf9ce06b71ab2d64e20_form.css('left',YYUC_4840348403fbaaf9ce06b71ab2d64e20_offset.left).css('top',YYUC_4840348403fbaaf9ce06b71ab2d64e20_offset.top);
+	}
+  		
+	};
+	setInterval(window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_resize,55);
+	var YYUC_4840348403fbaaf9ce06b71ab2d64e20pic = $('#YYUC_4840348403fbaaf9ce06b71ab2d64e20').find('input[name="YYUC_UPLOAD_file"]');
+	YYUC_4840348403fbaaf9ce06b71ab2d64e20pic.css('opacity',0);
+	YYUC_4840348403fbaaf9ce06b71ab2d64e20pic.change(function(){
+		var thefiles = $(this).val().replaceAll('\\','/').split('/');
+		var filename = thefiles[thefiles.length-1];
+		//后缀校验
+		var needsuffixs = ',png,jpeg,jpg,gif,bmp,'.toLowerCase();
+		var suffixs = filename.split('.');
+		if(needsuffixs.indexOf((','+suffixs[suffixs.length-1]+',').toLowerCase())==-1){
+			if(alert){
+				alert('文件格式不被允许',$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20'),1,'YYUC_4840348403fbaaf9ce06b71ab2d64e20');
+			}
+		}else{			if(savefilename){
+				if(!savefilename(filename,$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20'),'YYUC_4840348403fbaaf9ce06b71ab2d64e20')){
+					return;
+				}
+			}			$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_name').html(filename);
+			window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_jd = 0;
+			YYUC_4840348403fbaaf9ce06b71ab2d64e20_process()
+			$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20').submit();
+			$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_loadpic').show();
+
+			$('iframe[name="YYUC_4840348403fbaaf9ce06b71ab2d64e20_if"]').unbind('load').load(function(){
+				if(!window.YYUC_4840348403fbaaf9ce06b71ab2d64e20){
+					$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_loadpic').hide();
+					$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_bfb').html('');	
+					if(alert){
+						alert('网络连接超时或文件大小超出',$('#ttid'),3,'YYUC_4840348403fbaaf9ce06b71ab2d64e20');
+						clearTimeout(window.YYUC_4840348403fbaaf9ce06b71ab2d64e20jdproc);						
+					}
+				}
+			});
+		}
+	});
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos = {};
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos.cw = 0;
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos.ch = 0;
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos.ctbl = null;
+});
+function YYUC_4840348403fbaaf9ce06b71ab2d64e20_process(){
+	if(window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_jd < 99){
+		var nexttime = parseInt(Math.sqrt(window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_jd)*100)*2;
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_jd = window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_jd+1;
+		$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_bfb').html(window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_jd+'%');
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20jdproc = setTimeout(function(){
+			YYUC_4840348403fbaaf9ce06b71ab2d64e20_process();
+		},nexttime);
+	}else{
+		$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_bfb').html('');
+		$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_loadpic').hide();
+		if(alert){
+			alert('网络连接超时或文件大小超出',$('#ttid'),3,'YYUC_4840348403fbaaf9ce06b71ab2d64e20');
+		}
+	}
+}
+function YYUC_4840348403fbaaf9ce06b71ab2d64e20_success(url,key){
+	$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_del').show();
+	window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_jd = 100;
+	$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_bfb').html('100%');
+	$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_loadpic').hide();
+	clearTimeout(window.YYUC_4840348403fbaaf9ce06b71ab2d64e20jdproc);
+	var oldkey = $('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_text').val();
+	if(oldkey.indexOf('@-@')!=-1){
+		var oldkey2 = oldkey.split('@-@');
+		$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_text').val(key+'@-@'+oldkey2[1]);
+	}else if(oldkey.indexOf('/')==0){
+		$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_text').val(key+'@-@'+oldkey);
+	}else{
+		$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_text').val(key);
+	}	window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_upimg = $('<img id="YYUC_4840348403fbaaf9ce06b71ab2d64e20_realpic" src="'+url+'"/>');
+	$('#picsethere').html('').append(window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_upimg);	window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_uppimg = $('<img id="YYUC_4840348403fbaaf9ce06b71ab2d64e20_realpic" style="position: absolute;left:-10000px;top:-10000px" src="'+url+'"/>');
+	$('body').append(window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_uppimg);
+	var centerbtn = $('<center><button style="" class="">确认剪裁</button></center>');
+	$('#picsethere').append(centerbtn);
+	window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos.key = key;
+	var YYUC_4840348403fbaaf9ce06b71ab2d64e20_savepos = function(c){
+		var xbfb = window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_uppimg.width()/window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_upimg.width();
+		var ybfb = window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_uppimg.height()/window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_upimg.height();
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos.x = c.x*xbfb;
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos.y = c.y*ybfb;
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos.x2 = c.x2*xbfb;
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos.y2 = c.y2*ybfb;
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos.w = c.w*xbfb;
+		window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos.h = c.h*ybfb;
+		if(c.w < 20 || c.h < 20){
+			return false;
+		}
+		return true;
+	}
+	$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_text').attr('needjc','yes');
+	window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_upimg.ready(function(){
+	$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_bfb').html('');
+	$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_name').html('');
+		$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_realpic').Jcrop({
+			aspectRatio: window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos.ctbl
+		},function(){window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_jcrop_api = this;});
+	});
+	
+	centerbtn.find('button').click(function(){
+		if(!YYUC_4840348403fbaaf9ce06b71ab2d64e20_savepos(window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_jcrop_api.tellScaled())){
+			return;
+		}		$(this).attr('disabled',true);
+		
+		ajax('/@system/upload.html',window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_form.serialize()+'&'+$.param(window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_picpos),function(m){
+			if(m!='no'){
+				$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_text').attr('needjc','no');
+				window.YYUC_4840348403fbaaf9ce06b71ab2d64e20_uppimg.remove();
+				var thejchpic = $('<img src="/'+m+'?'+Math.random()+'"/>');
+				$('#picsethere').html(thejchpic);
+				var oldkey = $('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_text').val();
+				if(oldkey.indexOf('@-@')!=-1){
+					var oldkey2 = oldkey.split('@-@');
+					$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_text').val(m+'@-@'+oldkey2[1]);
+				}else if(oldkey.indexOf('/')==0){
+					$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_text').val(m+'@-@'+oldkey);
+				}else{
+					$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_text').val(m);
+				}			}else{
+				alert('System error');
+			}
+		});
+		return false;
+	});}
+function YYUC_4840348403fbaaf9ce06b71ab2d64e20_failure(size,type){
+	if(alert){
+		if(type==2){
+			alert('文件大小为：'+size+'K，超出了600K的限制,上传失败！',$('#ttid'),2,'YYUC_4840348403fbaaf9ce06b71ab2d64e20');
+		}else{
+			alert('文件上传发生未知错误',$('#ttid'),4,'YYUC_4840348403fbaaf9ce06b71ab2d64e20');
+		}
+		clearTimeout(window.YYUC_4840348403fbaaf9ce06b71ab2d64e20jdproc);
+		$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_bfb').html('');
+		$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_name').html('');
+		$('#YYUC_4840348403fbaaf9ce06b71ab2d64e20_loadpic').hide();
+	}
+}
+</script></div>
+<div id="picsethere0">
+<div id="picsethere">
+
+</div>
+</div>
+
+<div style="text-align: center;width: 100%;">
+<button style="padding: 5px 12px 5px 12px;font-weight: bold;" onclick="selthis()">确定选择</button>
+</div>
+<script type="text/javascript">
+$(function(){
+
+});
+
+function selthis(){
+	if($('#picsethere').find('img').size()<1){
+		alert('请上传图片');
+		return;
+	}
+	var pic = $('#picsethere').find('img').eq(0);
+	ajax('wspicif-changepath.html',{ path:pic.attr('src')},function(m){
+		if(parent.curpic){
+			$(parent.curpic).attr('src',m);
+		}		
+		if(parent.piccbk){
+			parent.piccbk(m,window.fn);
+		}
+		parent.yyucpopclose();
+	});	
+}
+
+function savefilename(fn){
+	window.fn = fn;
+	return true;
+}
+</script>
+
+<br/><br/><br/></body></html>

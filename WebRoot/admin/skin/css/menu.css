@@ -1,0 +1,82 @@
+div {
+	padding:0px;
+	margin:0px;
+}
+
+body {
+	
+	padding:0px;
+	margin:auto;
+	text-align:center;
+	background-color:#FFF;
+}
+
+dl.bitem {
+	width:235px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 4px;
+}
+
+dl.bitem dt {
+	background:url(../images/frame/menubg.jpg);
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	cursor:pointer;
+	font-size: 14px;
+}
+
+dl.bitem dd {
+	background-color:#fff;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+}
+
+.fllct
+{
+	float:left;
+	
+	width:90px;
+}
+
+.flrct
+{
+	padding-top:0px;
+	float:left;
+}
+
+div.items
+{
+	line-height:22px;
+	background:url(../images/frame/arr4.gif) no-repeat 10px 9px;
+}
+
+span.items
+{
+	background-image: url(../images/frame/arr4.gif);
+	background-repeat: no-repeat;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 22px;
+}
+
+ul {
+  padding-top:0px;
+}
+
+li {
+  height:24px;
+}
+
+.sitemu li {
+	line-height:24px;
+	background:url(../images/frame/arr4.jpg) no-repeat;
+	width: 235px;
+	text-align: center;
+	
+}

@@ -1,0 +1,568 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>宜兴市城管局</title>
+<script type="text/javascript" src="js/lib/swipe.min.js"></script>
+<script type="text/javascript" src="js/lib/iscroll-5.js"></script>
+<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript">
+//获取url参数
+function GetRequest() {
+   var url = location.search; //获取url中"?"符后的字串
+   var theRequest = new Object();
+   if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      strs = str.split("&");
+      for(var i = 0; i < strs.length; i ++) {
+         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+      }
+   }
+   return theRequest;
+}
+
+var Request = new Object();
+Request = GetRequest();
+var fromuser=Request['fromuser'];
+if(fromuser){
+window.localStorage.setItem("fromuser", fromuser);
+
+}
+
+if(!fromuser || fromuser=='undefined'){
+ fromuser=window.localStorage.getItem("fromuser");
+}
+
+
+</script>
+
+
+<script type="text/javascript">
+var addone;
+addone=0;	
+$(function(){
+var num1=6;
+var num2=0;
+num2=5;var num=(num1+num2)+addone;
+var	w=$(window).width()*0.94;
+	//console.log(w);
+var	w_li=w/4;
+	$('#scroller').width(w_li*num);
+	$('#footer_nav > li').width(w_li);
+
+})
+</script>
+
+<style type="text/css">
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+}
+html,body{
+	width:100%;
+	height:100%;
+	background:#000;
+}
+.slideshow_wrap{
+	position:relative;
+	width:100%;
+	height:100%;
+
+}
+.swipe {
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap {
+ width:100%;
+  height:100%;
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  position: relative;
+  float:left;
+  width:100%;
+  height:100%;
+
+}
+.swipe-wrap > div >img{
+	width:100%;
+	height:100%;
+
+}
+
+#nav{
+	position:absolute;
+	bottom:80px;
+	z-index:2;
+	width:100%;
+	height:20px;
+	text-align:center;
+	line-height:20px;
+}
+#nav >div{
+	display:inline-block;
+	margin-top:8px;
+	width:12px;
+	height:12px;
+	margin-left:6px;
+	border-radius:6px;
+	background:#7c7871;
+}
+#nav > div.active{
+	background:#191817;
+}
+
+
+.opacity_wrap{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:68px;
+	border-top: 2px solid #C0C0C0;
+	background:#000;
+	opacity:0.5;
+	z-index:2;
+}
+.arrow_right{
+	position:absolute;
+	bottom:0;
+	right:0;
+	width:16px;
+	height:68px;
+	z-index:2222;
+	background:url('images/index18_right.png') 50% 50% no-repeat;
+}
+.arrow_left{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:16px;
+	height:68px;
+	z-index:2222;
+	background:url('images/index18_left.png') 50% 50% no-repeat;
+}
+#wrapper {
+	position: absolute;
+	z-index: 10;
+	bottom:0;
+	height: 68px;
+	width: 94%;
+	left:3%;
+	overflow: hidden;
+
+}
+
+#scroller {
+	position: relative;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	height:100%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+	
+
+}
+
+#scroller > ul {
+	height:100%;
+	list-style: none;
+	
+}
+
+#scroller ul >li {
+	height:100%;
+	float: left;
+}
+.nav_wrap{
+	margin:0 auto;
+	width:90%;
+	height:100%;
+	
+}	
+.nav_wrap >div{
+	width:100%;
+	text-align:center;
+	
+}
+.nav_wrap >div:nth-child(1){
+	height:44px;
+	
+}
+.nav_wrap >div:nth-child(2){
+	height:24px;
+	line-height:20px;
+	font-size:15px;
+	color:#fff;
+
+	
+}
+.nav_img_wrap{
+	width:100%;
+	margin-top:2%;
+	height:96%;
+	
+	
+}
+.nav_img_wrap img{
+	position:relative;
+	top:3px;
+	height:100%;
+}
+.swipe-wrap .img_intro{
+	position:absolute;
+	bottom:2px;
+	left:5px;
+	font-size:14px;
+	color:#000;
+}
+
+</style>
+<script type="text/javascript">
+var img_flag=0;
+function loadother(){
+	if(!img_flag){
+		var html='<div onclick=goLink("")><img src="images/lunbo2.jpg" ><span class="img_intro"></span></div><div onclick=goLink("")><img src="images/lunbo3.jpg" ><span class="img_intro"></span></div><div onclick=goLink("")><img src="images/lunbo4.jpg" ><span class="img_intro"></span></div>';
+	
+	
+	document.getElementById('swipe-wrap').innerHTML+=html;
+	img_flag=1;
+	setTimeout(function(){
+	init_swipe();
+	},1000);
+	
+	}
+
+}
+
+
+
+function goLink(url){
+	if(url){
+		//  url=url.toLowerCase();
+		if(url.indexOf("http")!=-1 && url.indexOf("weixinpl")!=-1){
+			//跳转到活动
+			url+='29'+'&fromuser='+fromuser+'&wxref=mp.weixin.qq.com';
+		}else if(url.indexOf("http")!=-1){
+			url=url;
+		}else if(url.indexOf("php")!= -1){
+					url+='&C_id='+'29'+'&wxref=mp.weixin.qq.com&fromuser='+fromuser;
+		}else{
+		url+='.html?wxref=mp.weixin.qq.com&fromuser='+fromuser;
+		}
+		
+		//alert('===='+url);
+		location.href=url;
+		}
+}
+</script>
+</head>
+<body onload="init();" ontouchmove="javascript:event.preventDefault()">
+<!--开场动画开始-->
+<!--开场动画结束-->
+<!--判断验证开始-->
+<!--判断验证结束-->
+<!--slidershow-->
+<div class="slideshow_wrap">
+	<div id='slider' class='swipe'>
+	  <div class='swipe-wrap' id="swipe-wrap">
+	  <div onclick="goLink('')"><img src="images/lunbo1.jpg" onload="loadother()" ><span class="img_intro"></span></div>	  </div>
+	</div>
+
+
+	<div id="nav">
+	  <div class="active"></div><div ></div><div ></div><div ></div>		
+	</div>
+
+</div><!--end of slidershow_wrap-->
+
+<div class="opacity_wrap"></div>
+<div class="arrow_right"></div>
+<div class="arrow_left"></div>
+<div id="wrapper">
+	<div id="scroller">
+		<ul id="footer_nav">
+			
+			
+				<!--自定义栏目-->
+			<li onclick="goPage('info.html')">
+				<div class="nav_wrap">
+					<div>
+						<div class="nav_img_wrap">
+																																									<img src="images/nav6.png" />												
+						
+						</div>
+					</div>
+					<div>
+															单位简介				
+					</div>
+				</div>
+			</li>
+			<li onclick="goPage('complaintAction!goToComplaint')">
+				<div class="nav_wrap">
+					<div>
+						<div class="nav_img_wrap">
+																																									<img src="images/nav7.png" />												
+						
+						</div>
+					</div>
+					<div>
+															市民投诉				
+					</div>
+				</div>
+			</li>
+			<li onclick="goPage('cates.html')">
+				<div class="nav_wrap">
+					<div>
+						<div class="nav_img_wrap">
+																																									<img src="images/nav8.png" />												
+						
+						</div>
+					</div>
+					<div>
+															城管动态				
+					</div>
+				</div>
+			</li>
+			<li onclick="goPage('cates.html')">
+				<div class="nav_wrap">
+					<div>
+						<div class="nav_img_wrap">
+																																									<img src="images/nav8.png" />												
+						
+						</div>
+					</div>
+					<div>
+															信息公开				
+					</div>
+				</div>
+			</li>
+			<li onclick="goPage('cates.html')">
+				<div class="nav_wrap">
+					<div>
+						<div class="nav_img_wrap">
+																																									<img src="images/nav8.png" />												
+						
+						</div>
+					</div>
+					<div>
+															专题报道				
+					</div>
+				</div>
+			</li>
+
+			
+			<li onclick="goPage('xiangce.html')" style="width: 88.125px;">
+						<div class="nav_wrap">
+							<div>
+								<div class="nav_img_wrap">
+									<img src="images/nav11.png">												
+								</div>
+							</div>
+							<div>
+								铁军风采			
+							</div>
+						</div>
+					</li>
+
+			<li onclick="goPage('messageAction!listMessageFront')" style="width: 88.125px;">
+						<div class="nav_wrap">
+							<div>
+								<div class="nav_img_wrap">
+									<img src="images/nav10.png">												
+								</div>
+							</div>
+							<div>
+								微留言			
+							</div>
+						</div>
+					</li>
+
+			<li onclick="goPage('wdystart.html')" style="width: 88.125px;">
+						<div class="nav_wrap">
+							<div>
+								<div class="nav_img_wrap">
+									<img src="images/nav4.png">												
+								</div>
+							</div>
+							<div>
+								微调研			
+							</div>
+						</div>
+					</li>
+
+			<li onclick="goPage('wtpfront.html')" style="width: 88.125px;">
+						<div class="nav_wrap">
+							<div>
+								<div class="nav_img_wrap">
+									<img src="images/nav4.png">												
+								</div>
+							</div>
+							<div>
+								微投票
+							</div>
+						</div>
+					</li>
+
+			<li onclick="goPage('tel:051087121885')">
+				<div class="nav_wrap">
+					<div>
+						<div class="nav_img_wrap">
+																											<img src="images/nav5.png" />																										
+						
+						</div>
+					</div>
+					<div>
+																												联系我们						
+											
+					</div>
+				</div>
+			</li><li onclick="goPage('http://api.map.baidu.com/marker?location=31.345492,119.813731&title=宜兴市城市管理局&content=宜兴市城市管理局是市政府的工作部门，正局（科）级建制，同时挂宜兴市城市管理行政执法局牌子&output=html')">
+				<div class="nav_wrap">
+					<div>
+						<div class="nav_img_wrap">
+																																									<img src="images/nav12.png" />												
+						
+						</div>
+					</div>
+					<div>
+															一键导航				
+					</div>
+				</div>
+			</li>
+			
+<!--好文专栏-->
+		
+		</ul>
+	</div>
+</div>
+
+<style type="text/css">
+.foot{
+	clear:both;
+	width:100%;
+	text-align:center;
+	font-size:12px;
+	margin-bottom:50px;
+}
+</style>
+
+
+<div class="foot" style="color:#FFFFFF;padding-top: 15px;">
+
+技术支持:39MI
+
+</div>
+<!--自定义菜单-->
+
+
+
+
+
+
+<script type="text/javascript" src="js/wsy_ctr.js" ></script></body>	
+
+<!--  start验证用户是否已经可用-->
+<!--  end验证用户是否已经可用-->
+
+
+<script type="text/javascript">
+function init(){
+//统计微网站访问量
+/*
+ajax({
+    type:"get",
+    url:site_visits_url+"29",
+    dataType:"json",
+    success:function(data){
+        if(data != 2){
+			alert('访问数据统计失败');
+		}
+    }
+});
+*/
+loaded();
+//crack();
+}
+function crack(){
+	wwidth = window.innerWidth;
+	if(wwidth>580){
+	   document.location="comFile/error.htm";
+	}
+
+}
+
+
+
+
+
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', { eventPassthrough: true, scrollX: true, scrollY: false });
+}
+
+function init_swipe(){
+window.mySwipe = new Swipe(document.getElementById('slider'), {
+  startSlide: 0,
+  speed: 500,
+  auto: 3000,
+  continuous: true,
+  disableScroll: false,
+  stopPropagation: false,
+  callback: function(index, elem) {
+		try{
+		 document.querySelector('#nav > div.active').className = '';
+		document.querySelector('#nav > div:nth-child(' + (index+1) + ')').className = 'active';
+
+		}catch(err){
+			console.log('error=='+err);
+		}
+	
+  },
+  transitionEnd: function(index, elem) {}
+});
+
+
+}
+
+
+function goPage(url){
+	if(url){
+		if(url.indexOf('?')!=-1){
+				url+='&fromuser='+fromuser+'&wxref=mp.weixin.qq.com';
+		
+		}else if(url.indexOf('tel')==0){
+		url=url;
+		}else if(url.indexOf('javascript') != -1){
+		url=url;
+		
+		}else{
+			url+='?fromuser='+fromuser+'&wxref=mp.weixin.qq.com';
+		
+		}
+		location.href=url;
+	}else{
+		alert('链接不存在');
+	}
+
+}
+</script>
+
+<script>var component_share_img='';var http_host_share='http://115.159.44.46';var component_share_des='';var component_share_title='';var share_link='http://115.159.44.46/weixin/plat/app/html/29/873946/index.html';var weixin_name='浩翔科技';window.shareData={"imgUrl":http_host_share+"/weixin/plat/app/Html/comImg/weixin_share/share.jpg","link":share_link,"title":component_share_title||weixin_name,"content":component_share_des||document.title,};function getShareImageUrl(){var share_imgurl="";if(""==share_imgurl){var shareImgObj=document.getElementsByTagName("img")[0];if('undefined'!=typeof(shareImgObj)){share_imgurl=shareImgObj.src}}return component_share_img||share_imgurl||window.shareData.imgUrl}document.addEventListener('WeixinJSBridgeReady',function onBridgeReady(){WeixinJSBridge.on('menu:share:appmessage',function(argv){WeixinJSBridge.invoke('sendAppMessage',{"img_url":getShareImageUrl(),"img_width":"640","img_height":"640","link":window.shareData.link,"desc":window.shareData.content,"title":window.shareData.title},function(res){})});WeixinJSBridge.on('menu:share:timeline',function(argv){WeixinJSBridge.invoke('shareTimeline',{"img_url":getShareImageUrl(),"img_width":"640","img_height":"640","link":window.shareData.link,"desc":window.shareData.content,"title":window.shareData.title},function(res){})});WeixinJSBridge.on('menu:share:weibo',function(argv){WeixinJSBridge.invoke('shareWeibo',{"content":window.shareData.content,"url":window.shareData.link},function(res){})})},false);</script>
+</html>

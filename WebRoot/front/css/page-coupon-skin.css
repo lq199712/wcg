@@ -1,0 +1,165 @@
+﻿@charset "utf-8";
+/* theme */
+.coupon-tab {
+    background: #FFF;
+}
+    .coupon-tab li {
+        border-color:#dcdcdc;
+        color:#c9c9c9;
+    }
+        .coupon-tab li.selected {
+            color:#850b00;
+            background:#f0ebe7;
+            border-top:1px solid #f0ebe7;
+        }
+        .coupon-tab li.a p {
+            background-image:url(../images/tabBar/coupon-a.png);
+        }
+        .coupon-tab li.a.selected p {
+            background-image:url(../images/tabBar/coupon-a-s.png);
+        }
+        .coupon-tab li.b p {
+            background-image:url(../images/tabBar/coupon-b.png);
+        }
+        .coupon-tab li.b.selected p {
+            background-image:url(../images/tabBar/coupon-b-s.png);
+        }
+        .coupon-tab li.c p {
+            background-image:url(../images/tabBar/coupon-c.png);
+        }
+        .coupon-tab li.c.selected p {
+            background-image:url(../images/tabBar/coupon-c-s.png);
+        }
+        .coupon-tab li.d p {
+            background-image:url(../images/tabBar/coupon-d.png);
+        }
+        .coupon-tab li.d.selected p {
+            background-image:url(../images/tabBar/coupon-d-s.png);
+        }
+
+/* theme coupon */
+.page-coupon {
+    background:#f0ebe7;
+}
+    .page-coupon .am-header .user {
+        background-image:url(../images/icon-user.png);
+    }
+    .page-coupon .am-header .user.am-clickable-active {
+        background-image:url(../images/icon-user-s.png);
+        background-color:rgba(0,0,0,0.1);
+    }
+    .page-coupon .am-header .favor {
+        background: url(../images/icon-favorProduct.png) no-repeat 3px center;
+        background-size: 35px 35px;
+    }
+    .page-coupon .am-header .favor.am-clickable-active {
+        background-image: url(../images/icon-favorProduct-active.png);
+        background-color:rgba(0,0,0,0.1);
+    }
+    .page-coupon .am-header .favor span {
+        border:1px solid #FFF;
+        background: -webkit-gradient(radial, 8 8, 0, 8 8, 16, from(#ff9434), to(#cd6714));
+    }
+
+.coupon-list li {
+    background:-webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f5f5f5));
+    box-shadow:rgba(0,0,0,0.2) 1px 1px 3px;
+}
+.coupon-list li.am-clickable-active {
+    background:-webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ffffff));
+}
+.coupon-list .desc {
+    color:#ce3000;
+}
+.coupon-list .time {
+    color:#727272;
+}
+.coupon-list .arrow {
+    background-image:url(../images/arrow-right.png);
+}
+.coupon-list .residue .num {
+    
+}
+
+/* theme couponDetail */
+.page-couponDetail .am-header .action {
+    background:url(../images/icon-action.png) no-repeat center center;
+    background-size:22px 8px;
+}
+.page-couponDetail .am-header .action.am-clickable-active {
+    background-image:url(../images/icon-action-hover.png);
+    background-color:rgba(0,0,0,0.1);
+}
+.couponDetail-action {
+    border-color:#dcdcdc;
+}
+.page-couponDetail .actionButton{
+    color:#ce3000;
+    border-color:#e3e3e3;
+    background:-webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#ececec));
+}
+.page-couponDetail .actionButton.am-clickable-active{
+    border-color:#e3e3e3;
+    background:-webkit-gradient(linear, left top, left bottom, from(#ececec), to(#f9f9f9));
+}
+.page-couponDetail .actionButton span {
+    background-image:url(../images/icon-hand.png);
+}
+.couponDetail-getCoupon .close,.couponDetail-useCoupon .close {
+    background:url(../images/icon-close.png) no-repeat center center;
+    background-size:18px 18px;
+}
+    .couponDetail-getCoupon .close.am-clickable-active,.couponDetail-useCoupon .close.am-clickable-active {
+        opacity:0.6;
+    }
+.couponDetail-useCoupon .actionButton {
+    color:#000;
+}
+.couponDetail-useCoupon .actionButton span {
+    background-image:url(../images/icon-code.png);
+}
+
+
+.couponDetail-getCoupon input[type=tel],.couponDetail-getCoupon input[type=text] {
+    border:1px solid #cbcbcb;
+}
+.couponDetail-getCoupon .form-select {
+    border:1px solid #d6d6d6;
+}
+    .couponDetail-getCoupon .form-select span {
+        background:#a8a8a8 url(../images/arrow-select-down.png) no-repeat center center;
+        background-size:28px 28px; 
+    }
+    .couponDetail-getCoupon .form-select.am-clickable-active span {
+        background-color:#797979;
+    }
+.couponDetail-actionlist {
+    background: rgba(255,255,255,0.95);
+}
+.couponDetail-actionlist li.am-clickable-active {
+    background: #ffc600;
+}
+    .couponDetail-actionlist li.favor span {
+        background: url(../images/icon-favor.png) no-repeat center center;
+        background-size: 20px 20px;
+    }
+
+    .couponDetail-actionlist li.share span{
+        background: url(../images/icon-share.png) no-repeat center center;
+        background-size: 20px 20px;
+    }
+    .couponDetail-actionlist li.save span {
+        background: url(../images/icon-save.png) no-repeat center center;
+        background-size: 20px 20px;
+    }
+    .couponDetail-actionlist li.collect span {
+        background: url(../images/icon-collect.png) no-repeat center center;
+        background-size: 20px 20px;
+    }
+    .couponDetail-actionlist li.uncollect span {
+        background: url(../images/icon-uncollect.png) no-repeat center center;
+        background-size: 20px 20px;
+    }
+
+
+

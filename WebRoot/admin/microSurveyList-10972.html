@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/admin/bootstrap.min.css">
+<link rel="stylesheet" href="css/admin/admin.css">
+<title>我的活动</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/yyucadapter.js"></script>
+
+</head>
+<body>
+	<div class="main-title">
+		<h3>微调研活动开始啦【所有设置为演示版，请修改】微调研活动</h3>
+	</div>
+
+<div class="pagination">
+  <ul>
+    <li class="pagination_current current"><span>1</span></li>  </ul>  
+</div>
+<div>
+<form action="microSurveyList-10972.html">
+手机号：
+<input type="text"   value="" name="fT08d9e827ffbba2efe4413cb064bbf847tel" id="ftel" style="margin-top: 10px;width:100px;"/>
+开始时间：
+<input type="text"   value=""  id="fkssj" style="margin-top: 10px;width:140px;" name="fT08d9e827ffbba2efe4413cb064bbf847kssj" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm:ss'})" relobj="yyuccalendar" rel="yyuc"/>结束时间：
+<input type="text"   value=""  id="fjssj" style="margin-top: 10px;width:140px;" name="fT08d9e827ffbba2efe4413cb064bbf847jssj" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm:ss'})" relobj="yyuccalendar" rel="yyuc"/><button type="submit" class="btn">检索</button>
+</form>
+
+</div>
+<div>总计：<B>1条/1页</B></div>
+	<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>用户名称</th>
+					<th>用户电话</th>
+					<th>参与时间</th>
+					<th>意见反馈</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+						 
+			      <tr>
+						<td>小龙</td>
+						<td>15861521066</td>
+						<td>2015-02-11 11:15:46</td>
+						<td>						   123						   						   </td>
+						<td>
+						<span>
+						<a href="microSurveyDetail-472-10972.html" >查看详情</a>						
+						</span>
+						</td>
+				  </tr>
+						</tbody>
+		</table>
+	<div class="tb-toolbar">
+	</div>
+
+<div class="pagination">
+  <ul>
+<li class="pagination_current current"><span>1</span></li>  </ul>
+  
+</div>
+
+<script type="text/javascript">
+
+function toused(id,o){
+	if(confirm('确定标记团购已使用吗？')){
+		ajax('microGroupBuyList-used.html',{ id:id},function(m){
+			if(m=='ok'){
+				$(o).parent().html('已使用');
+			}
+		});
+	}
+	
+}
+</script>
+<br/><br/><br/></body></html>

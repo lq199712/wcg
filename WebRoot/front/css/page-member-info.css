@@ -1,0 +1,603 @@
+﻿
+@charset "utf-8";
+/* CSS Document */
+.am-app, .page-member-info {
+	background: #f2f2f2;
+}
+
+.steps {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	font-size: 14px;
+	border-bottom: 2px solid #DDD;
+	line-height: 38px;
+	height: 38px;
+}
+
+.steps li {
+	-webkit-box-flex: 1;
+	height: 38px;
+	text-align: center;
+	color: #666;
+}
+
+.steps li.selected {
+	height: 38px;
+	border-bottom: 2px solid #c31111;
+	font-weight: bold;
+	color: #c31111;
+}
+
+.blockItem.cards .card {
+	padding: 10px;
+	position: relative;
+}
+
+.blockItem.cards .card .tip {
+	position: absolute;
+	bottom: 40px;
+	background: rgba(255, 255, 255, 0.73);
+	height: 21px;
+	line-height: 21px;
+	color: #333333;
+	font-size: 11px;
+	left: 10px;
+	right: 10px;
+	padding: 0 10px;
+}
+
+.blockItem.cards .card .tiptext {
+	float: right;
+	color: #666;
+}
+
+.blockItem.cards .card .tenantLogo.small {
+	position: absolute;
+	width: 50px;
+	height: 40px;
+	background-size: contain;
+	top: 15px;
+	left: 25px;
+}
+
+.blockItem.cards .card .tenantName {
+	position: absolute;
+	font-size: 15px;
+	font-weight: bold;
+	color: #ad3b3b;
+	top: 27px;
+	left: 90px;
+}
+
+.blockItem.cards .barcode {
+	padding: 10px;
+	position: relative;
+}
+
+.blockItem.cards .barcode .tip {
+	position: absolute;
+	bottom: 10px;
+	background: rgba(255, 255, 255, 1);
+	height: 21px;
+	line-height: 21px;
+	color: #666;
+	font-size: 11px;
+	left: 10px;
+	right: 10px;
+	padding: 0 10px;
+}
+
+.blockItem.cards .barcode .tiptext {
+	float: right;
+	color: #999;
+}
+
+.blockItem.cards .fileds li {
+	height: 40px;
+	line-height: 40px;
+	border: #dedede 1px solid;
+	background: #fff;
+	margin-bottom: 10px;
+	padding: 0 10px;
+}
+
+.blockItem.cards .fileds li .icon {
+	line-height: 40px;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 12px 12px;
+	vertical-align: middle;
+}
+
+.blockItem.cards .fileds li .icon.icon1 {
+	background-image: url(../images/member-icon1.png);
+}
+
+.blockItem.cards .fileds li .icon.icon2 {
+	background-image: url(../images/member-icon2.png);
+}
+
+.blockItem.cards .fileds li .icon.icon3 {
+	background-image: url(../images/member-icon3.png);
+}
+
+.blockItem.cards .fileds li .icon.icon4 {
+	background-image: url(../images/member-icon4.png);
+}
+
+.blockItem.cards .fileds li .left {
+	line-height: 40px;
+	vertical-align: middle;
+	font-size: 13px;
+	margin-left: 5px;
+}
+
+.blockItem.cards .fileds li .right {
+	line-height: 40px;
+	vertical-align: middle;
+	float: right;
+	color: #666666;
+}
+
+.blockItem.cards .fileds li .right.red {
+	color: #ae1010;
+}
+
+.blockItem.package .fileds li {
+	height: 38px;
+	border: #dedede 1px solid;
+	background: #fff;
+	margin-top: 15px;
+	padding: 10px;
+	position: relative;
+}
+
+.blockItem.package .fileds li .line1 {
+	line-height: 20px;
+	font-size: 13px;
+	color: #000;
+}
+
+.blockItem.package .fileds li .line2 {
+	line-height: 18px;
+	font-size: 11px;
+	color: #999;
+}
+
+.blockItem.package .fileds li .right {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	color: #666666;
+	font-size: 13px;
+}
+
+/* 消费记录 */
+.blockItem.record .fileds>li {
+	border: #dedede 1px solid;
+	background: #fff;
+	margin-top: 15px;
+	position: relative;
+}
+
+.blockItem.record .fileds .line {
+	border-bottom: #f8f8f8 1px solid;
+	line-height: 40px;
+	height: 40px;
+	padding: 0 10px;
+	font-size: 13px;
+}
+
+.blockItem.record .fileds .line.first {
+	line-height: 27px;
+	height: 27px;
+	background: #ededed;
+}
+
+.blockItem.record .fileds .right {
+	vertical-align: middle;
+	float: right;
+	color: #ae1010;
+}
+
+.blockItem.record .fileds .time {
+	color: #666666;
+	padding-left: 18px;
+	background-image: url(../images/member-icon4.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 12px 12px;
+}
+
+.blockItem.record .fileds .name {
+	color: #666666;
+}
+
+.blockItem.record .fileds .header {
+	width: 20px;
+	height: 20px;
+	border: #fff 1px solid;
+	border-radius: 20px;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+	display: inline-block;
+	margin: 2px 5px 0 0;
+}
+
+.blockItem.record .fileds .header img {
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+}
+
+.blockItem.record .fileds .amount {
+	color: #ae1010;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.blockItem.record .fileds .comment {
+	color: #666666;
+	font-size: 11px;
+	padding-left: 18px;
+	background-image: url(../images/member-comment.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 13px 13px;
+}
+
+.blockItem.record .fileds .comment.green {
+	background-image: url(../images/member-comment-green.png);
+	color: #28a000;
+}
+
+.blockItem.record .commentText {
+	padding: 10px 0;
+	position: relative;
+	background: #ededed;
+}
+
+.blockItem.record .commentText .score {
+	width: 40px;
+	position: absolute;
+	top: 50%;
+	margin-top: -22px;
+	color: #af1111;
+	font-size: 11px;
+	text-align: center;
+	border-right: #dedede 1px solid;
+	height: 45px;
+	line-height: 65px;
+	background-repeat: no-repeat;
+	background-position: center 4px;
+	background-size: 13px 14px;
+}
+
+.blockItem.record .commentText .score.icon1 {
+	background-image: url(../images/member-comment-score1.png);
+}
+
+.blockItem.record .commentText .score.icon2 {
+	background-image: url(../images/member-comment-score2.png);
+}
+
+.blockItem.record .commentText .score.icon3 {
+	background-image: url(../images/member-comment-score3.png);
+}
+
+.blockItem.record .commentText .content {
+	margin-left: 50px;
+	min-height: 45px;
+	font-size: 11px;
+	color: #010101;
+}
+
+.blockItem.record .commentEditor {
+	background: #ededed;
+	padding: 10px;
+	position: relative;
+}
+
+.blockItem.record .commentEditor .score {
+	height: 25px;
+	margin-bottom: 10px;
+}
+
+.blockItem.record .commentEditor .score>li {
+	float: left;
+	width: 50px;
+	background-repeat: no-repeat;
+	background-position: 15px center;
+	background-size: 13px 14px;
+	padding-left: 35px;
+	height: 25px;
+	line-height: 25px;
+	border: #ededed 1px solid;
+	margin-right: 10px;
+	border-radius: 16px;
+}
+
+.blockItem.record .commentEditor .score>li.selected {
+	background-color: #fff;
+	border: #dedede 1px solid;
+}
+
+.blockItem.record .commentEditor .score>li.icon1 {
+	background-image: url(../images/member-comment-score1.png);
+}
+
+.blockItem.record .commentEditor .score>li.icon2 {
+	background-image: url(../images/member-comment-score2.png);
+}
+
+.blockItem.record .commentEditor .score>li.icon3 {
+	background-image: url(../images/member-comment-score3.png);
+}
+
+.blockItem.record .inputPlace {
+	position: relative;
+}
+
+.blockItem.record .inputPlace .textarea {
+	position: relative;
+	border: #adacac 1px solid;
+	padding: 0 5px;
+	display: block;
+	margin-right: 50px;
+	vertical-align: middle;
+	background: #fff;
+}
+
+.blockItem.record .inputPlace .textarea textarea {
+	height: 50px;
+	line-height: 22px;
+	font-size: 12px;
+	padding: 0 5px;
+	margin: 0 -5px;
+	width: 100%;
+	border: none;
+	display: block;
+	background: none;
+	color: #666666;
+}
+
+.blockItem.record .inputPlace .button {
+	width: 40px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	float: right;
+	background: #ae2a2a;
+	color: #fff;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.blockItem.record .commentEditor .arrow {
+	position: absolute;
+	width: 12px;
+	height: 6px;
+	background-image: url(../images/member-comment-arrow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 12px 6px;
+	top: -6px;
+	right: 30px;
+}
+
+.tipMessage {
+	padding: 10px 0;
+	color: gray;
+	text-align: center;
+}
+
+.barcodeHeader {
+	position: absolute;
+	height: 7px;
+	right: 10px;
+	left: 10px;
+	background: rgba(255, 255, 255, 1);
+}
+
+.barcodeLoaderContainer {
+	background: white;
+}
+
+.barcodeLoader {
+	background: url("../images/loading.png") no-repeat center center;
+	-webkit-animation: loadingRotate 1s infinite linear;
+}
+
+img {
+	display: block;
+}
+
+.blockItem.me .header {
+	width: 64px;
+	height: 64px;
+	border: #fff 3px solid;
+	border-radius: 128px;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+	margin: 20px auto 5px auto;
+	/* 	background-image: url(../images/header_f.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain; */
+}
+
+.blockItem.me .header.male {
+	/* 	background-image: url(../images/header_m.png); */
+	
+}
+
+.blockItem.me .header img {
+	width: 100%;
+	height: 100%;
+	border-radius: 128px;
+}
+
+.blockItem.me .name {
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	color: #333;
+	margin: 0 auto 20px auto;
+}
+
+.blockItem.me .fileds li {
+	height: 40px;
+	line-height: 40px;
+	border: #dedede 1px solid;
+	background: #fff;
+	margin-bottom: 10px;
+	padding: 0 10px;
+}
+
+.blockItem.me .fileds li.reservation {
+	color: #28a000;
+	font-weight: bold;
+}
+
+.blockItem.me .fileds li .icon {
+	line-height: 40px;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 12px 12px;
+	vertical-align: middle;
+}
+
+.blockItem.me .fileds li .icon.icon5 {
+	background-image: url(../images/member-icon5.png);
+}
+
+.blockItem.me .fileds li .icon.icon6 {
+	background-image: url(../images/member-icon6.png);
+}
+
+.blockItem.me .fileds li .icon.icon7 {
+	background-image: url(../images/member-icon7.png);
+}
+
+.blockItem.me .fileds li .icon.icon8 {
+	background-image: url(../images/member-icon8.png);
+}
+
+.blockItem.me .fileds li .left {
+	line-height: 40px;
+	vertical-align: middle;
+	font-size: 13px;
+	margin-left: 5px;
+}
+
+.blockItem.me .fileds li .right {
+	line-height: 40px;
+	vertical-align: middle;
+	float: right;
+	color: #666666;
+}
+
+.blockItem.me .fileds li .right.red {
+	color: #ae1010;
+}
+
+.blockItem.me .page-button.quit {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 10px;
+}
+
+.blockItem.coupons .page-button.red.buy{
+	margin:20px 10px;;
+}
+
+.blockItem.coupons .coupon-list{
+	margin:10px;
+}
+
+.blockItem.coupons .coupon-list li {
+height: 86px;
+background-color: #ffffff;
+border-radius: 4px;
+margin-bottom: 20px;
+position: relative;
+border: 1px solid #ededed;
+}
+
+.blockItem.coupons .coupon-list li.expired{
+	opacity:0.3;
+}
+
+.blockItem.coupons .coupon-list .img {
+	float: left;
+	height: 86px;
+	width: 64px;
+	background: rgba(0, 0, 0, 0.05);
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	overflow: hidden;
+	background: #f8f8f8 url(../images/photo.png) no-repeat center center;
+	background-size: 48px 48px;
+}
+
+.blockItem.coupons .coupon-list .img img {
+	height: 100%;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.blockItem.coupons .coupon-list .content {
+	margin: 0 30px 0 75px;
+}
+
+.blockItem.coupons .coupon-list .title {
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 40px;
+	width: 100%;
+	overflow: hidden;
+	height: 40px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.blockItem.coupons .coupon-list .content .time {
+	font-size: 15px;
+	line-height: 40px;
+	width: 100%;
+	overflow: hidden;
+	height: 40px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.blockItem.coupons .coupon-list .content .time span{
+	float: right;
+	color:green;
+}
+
+.blockItem.coupons .coupon-list .content .time.consumed span{
+	color:blue;
+}
+
+.blockItem.coupons .coupon-list .content .time.expired span{
+	color:red;
+}
+
+.blockItem.coupons .coupon-list .desc {
+	height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.blockItem.coupons .coupon-list .detail {
+	position: absolute;
+top: 10px;
+left: 50%;
+width: 80%;
+margin-left: -15%;
+}

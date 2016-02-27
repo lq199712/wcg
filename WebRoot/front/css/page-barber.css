@@ -1,0 +1,221 @@
+﻿@charset "utf-8";
+/* theme  */
+.barber-logo {
+    background:url(../images/barber-logo.png) no-repeat center center;
+    background-size:150px 42px;
+    height:42px;
+}
+.barberList-ul {
+    float:left;
+    width:50%;
+}
+
+/*.barberList-ul {
+    padding:0 15px;
+}
+.barberList-ul li{
+    float:left;
+    width:44%;
+    margin:20px 3% 0 3%;
+    box-shadow:rgba(0,0,0,0.5) 1px 1px 3px;
+}*/
+.barberList-ul li{
+    margin:20px 15px 0 15px;
+    box-shadow:rgba(0,0,0,0.5) 1px 1px 3px;
+}
+.barberList-ul li.am-clickable-active{
+    -webkit-transition: all 50ms ease-in;
+    -webkit-transform: scale(1.1,1.1);
+}
+.barberList-ul .img {
+    padding:2px;
+    min-height:100px;
+    background:#FFF url(../images/bg-barber.png) no-repeat center;
+}
+.barberList-ul img {
+    width:100%;
+    display:block;
+    visibility:hidden;
+}
+.barberList-ul .info {
+    border:2px solid #FFF;
+    border-top:none;
+    background:#000000;
+    color:#FFF;
+    padding:5px 10px;
+}
+    .barberList-ul .num {
+        float:right;
+        line-height:40px;
+        font-size:18px;
+        font-weight:bold;
+    }
+    .barberList-ul .name {
+        font-weight:bold;
+        font-size:14px;
+        line-height:20px;
+    }
+    .barberList-ul .level {
+        font-size:12px;
+        line-height:20px;
+    }
+
+.barberDetail-barber {
+    padding:15px 10px;
+}
+    .barberDetail-barber .left {
+        width:120px;
+        border:1px solid #e8e8e8;
+        height:150px;
+        float:left;
+    }
+    
+    
+    .barberDetail-barber .img{
+        width:100%;
+        height:120px;
+        overflow:hidden;
+        background:#FFF url(../images/bg-barber.png) no-repeat center;
+		background-size:contain;
+    }
+    .barberDetail-barber img {
+        width:100%;
+     /*   display:none;*/
+    }
+    
+     .barberDetail-barber .imgNotNull{
+        width:100%;
+        height:120px;
+        overflow:hidden;
+		background-size:contain;
+    }
+    .barberDetail-barber imgNotNull {
+        width:100%;
+    }
+    
+    
+    .barberDetail-barber .info {
+        margin-left:130px;
+        padding:0 10px;
+        position:relative;
+        height:152px;
+    }
+.barberDetail-barber .name{
+    line-height:32px;
+    font-size:18px;
+    font-weight:bold;
+    color:#c31111;
+}
+.barberDetail-barber .level {
+    line-height:20px;
+}
+    .barberDetail-barber .social {
+        border-top:1px solid #e8e8e8;
+        height:30px;
+    }
+    .barberDetail-barber .page-button {
+        position:absolute;
+        bottom:0;
+        right:0;
+        width:100%;
+    }
+    .barberDetail-barber .social p {
+        float:right;
+        background: url(../images/icon-favor.png) no-repeat 2px center;
+        background-size: 20px 20px;
+        height:30px;
+        line-height:30px;
+        padding:0 5px 0 25px;
+    }
+    .barberDetail-barber p.favor {
+        background: url(../images/icon-favor.png) no-repeat 2px center;
+        background-size: 20px 20px;
+    }
+    .barberDetail-barber p.share {
+        background: url(../images/icon-share.png) no-repeat 2px center;
+        background-size: 20px 20px;
+    }
+.barberDetail-icon {
+    display:inline-block;
+    width:35px;
+    height:25px;
+    border-right:1px solid rgba(255,255,255,0.2);
+    background:url(../images/icon-apoint.png) no-repeat center center;
+    background-size:25px 25px;
+    position:relative;
+    left:-10px;
+    top:6px;
+}
+
+.barberDetail-desc,.barberDetail-pics{
+    padding:5px 10px;
+    border:1px solid #d8d8d8;
+    margin:0 10px;
+}
+    .barberDetail-desc .title ,.barberDetail-pics .title {
+        font-size:15px;
+        font-weight:bold;
+        line-height:30px;
+    }
+.barberDetail-desc .content_box {
+    height:87px;
+    overflow:hidden;
+}
+.barberDetail-desc .content {
+    line-height:23px;
+    font-size:14px;
+    color:#888;
+}
+.barberDetail-desc  .more, .barberDetail-desc  .less{
+    background: url(../images/arrow-down.png) no-repeat right center;
+    background-size: 10px 6px;
+    color: #9f846c;
+    text-align:right;
+    padding-right:15px;
+    line-height:24px;
+}
+.barberDetail-desc .less{
+    background-image: url(../images/arrow-up.png);
+}
+
+.barberDetail-pics {
+    margin-top:15px;
+    position:relative;
+}
+.barberDetail-pics .content{
+    height:80px;
+    overflow:hidden;
+    margin:0 10px;
+    width:auto;
+}
+    .barberDetail-pics ul {
+    }
+    .barberDetail-pics li {
+        float:left;
+        width:25%;
+    }
+        .barberDetail-pics li .img {
+            margin:5px;
+            height:70px;
+            text-align:center;
+            overflow:hidden;
+        }
+
+    .barberDetail-pics .arrow_left {
+        position:absolute;
+        background:url(../images/calender_leftarrow.png) no-repeat center center;
+        background-size:40px 40px;
+        width:40px;
+        height:40px;
+        left:-7px;
+        top:50px;
+    }
+    .barberDetail-pics .arrow_right {
+        position:absolute;
+        background:url(../images/calender_rightarrow.png) no-repeat center center;
+        background-size:40px 40px;
+        width:40px;
+        height:40px;
+        right:-7px;
+        top:50px;
+    }

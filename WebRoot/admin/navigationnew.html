@@ -1,0 +1,274 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<!-- Apple devices fullscreen -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- Apple devices fullscreen -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<base target="mainFrame" />
+<link rel="stylesheet" type="text/css" href="css/wm/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/themes.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/bootstrap_min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/todc_bootstrap.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/inside.css" media="all" />
+<!--<link rel="stylesheet" type="text/css" href="/css/wm/index.css" media="all" />-->
+<link rel="stylesheet" type="text/css" href="css/wm/bootstrap_responsive_min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/album.css" media="all" />
+
+<title>宜兴市城管局</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/yyucadapter.js"></script>
+<script src="http://api.map.baidu.com/api?v=1.5&ak=1b0ace7dde0245f796844a06fb112734"></script>
+<link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body style="height:120%" class="theme-blue">
+	<div id="main">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="box">
+                        <div class="box-title">
+                            <div class="span10">
+                                <h3><i class="icon-edit"></i>编辑菜单</h3>
+                            </div>
+                            <div class="span2"><a class="btn" href="Javascript:window.history.go(-1)">返回</a></div>
+                        </div>
+                        <div class="box-content">
+                            <form action="" method="post" class="form-horizontal form-validate" novalidate id="lbsForm">
+                                <div class="control-group">
+                                    <label for="title" class="control-label">菜单名称：</label>
+                                    <div class="controls">
+									<input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847name" id="weiqi_web_menuname" class="input-xlarge"/>                                     <span class="maroon">*</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label for="picurl" class="control-label">菜单图标：</label>
+                                    <div class="controls" id="twfmpicarea">
+									<input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847img" id="weiqi_web_menuimg" class="input-xlarge"/>									<input type="button" value="选择" onClick="openNewWin('')"/>
+                                    </div>
+									
+                                </div>
+                                <div class="control-group">
+                                    <label for="typename" class="control-label">单击操作：</label>
+                                    <div class="controls" style="vertical-align: middle;padding-top: 5px;">
+									<input type="radio" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847erji" value="0" checked="checked" />打开链接&nbsp;&nbsp;<input type="radio" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847erji" value="1"  />显示二级菜单&nbsp;&nbsp;                                    </div>
+                                </div>
+								<div id="erji0" class="control-group" >
+								<label for="typename" class="control-label">链接地址：</label>
+								<input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847url" id="weiqi_web_menuurl" />                                </div>
+                                <div id="erji1" class="control-group" style="display: none;">
+                                    <label for="endinfo" class="control-label">二级菜单：</label>
+                                    <div class="controls">
+                                        <table id="listTable" class="table table-bordered table-hover dataTable">
+    <thead>
+        <tr><th>菜单名称</th><th>菜单图标</th><th>图片跳转地址以http://开头</th><th>操作</th></tr>
+    </thead>
+<script type="text/javascript">
+function openNewWin(img){
+
+var value=window.showModalDialog("/admin/weiqiwebmenu/img.html",window,"dialogHeight:500px;dialogWidth:800px;status:no;center:yes;help:no;resizable:no;scroll:no;");
+document.getElementById("weiqi_web_menuimg"+img).value = value;
+return document.getElementById("item.shipper").value = value;
+}
+ </script>
+    <tbody id="sjtptr">
+        <tr>
+			<td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847name1" id="weiqi_web_menuname1" /><span class="maroon">*</span>
+            </td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847img1" id="weiqi_web_menuimg1" /><input type="button" value="选择" onClick="openNewWin('1')"/></td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847url1" id="weiqi_web_menuurl1" />            </td>
+            <td>
+                <a href="javascript:void(0);" onclick="delsjtp(this,'sjtptr')" class="del">删除 </a>
+            </td>
+        </tr>
+        <tr>
+			<td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847name2" id="weiqi_web_menuname2" /><span class="maroon">*</span>
+            </td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847img2" id="weiqi_web_menuimg2" /><input type="button" value="选择" onClick="openNewWin('2')"/></td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847url2" id="weiqi_web_menuurl2" />            </td>
+            <td>
+                <a href="javascript:void(0);" onclick="delsjtp(this,'sjtptr')" class="del">删除 </a>
+            </td>
+        </tr>
+        <tr>
+			<td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847name3" id="weiqi_web_menuname3" /><span class="maroon">*</span>
+            </td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847img3" id="weiqi_web_menuimg3" /><input type="button" value="选择" onClick="openNewWin('3')"/></td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847url3" id="weiqi_web_menuurl3" />            </td>
+            <td>
+                <a href="javascript:void(0);" onclick="delsjtp(this,'sjtptr')" class="del">删除 </a>
+            </td>
+        </tr>
+        <tr>
+			<td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847name4" id="weiqi_web_menuname4" /><span class="maroon">*</span>
+            </td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847img4" id="weiqi_web_menuimg4" /><input type="button" value="选择" onClick="openNewWin('4')"/></td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847url4" id="weiqi_web_menuurl4" />            </td>
+            <td>
+                <a href="javascript:void(0);" onclick="delsjtp(this,'sjtptr')" class="del">删除 </a>
+            </td>
+        </tr>
+        <tr>
+			<td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847name5" id="weiqi_web_menuname5" /><span class="maroon">*</span>
+            </td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847img5" id="weiqi_web_menuimg5" /><input type="button" value="选择" onClick="openNewWin('5')"/></td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847url5" id="weiqi_web_menuurl5" />            </td>
+            <td>
+                <a href="javascript:void(0);" onclick="delsjtp(this,'sjtptr')" class="del">删除 </a>
+            </td>
+        </tr>
+        <tr>
+			<td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847name6" id="weiqi_web_menuname6" /><span class="maroon">*</span>
+            </td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847img6" id="weiqi_web_menuimg6" /><input type="button" value="选择" onClick="openNewWin('6')"/></td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847url6" id="weiqi_web_menuurl6" />            </td>
+            <td>
+                <a href="javascript:void(0);" onclick="delsjtp(this,'sjtptr')" class="del">删除 </a>
+            </td>
+        </tr>
+        <tr>
+			<td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847name7" id="weiqi_web_menuname7" /><span class="maroon">*</span>
+            </td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847img7" id="weiqi_web_menuimg7" /><input type="button" value="选择" onClick="openNewWin('7')"/></td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847url7" id="weiqi_web_menuurl7" />            </td>
+            <td>
+                <a href="javascript:void(0);" onclick="delsjtp(this,'sjtptr')" class="del">删除 </a>
+            </td>
+        </tr>
+        <tr>
+			<td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847name8" id="weiqi_web_menuname8" /><span class="maroon">*</span>
+            </td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847img8" id="weiqi_web_menuimg8" /><input type="button" value="选择" onClick="openNewWin('8')"/></td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847url8" id="weiqi_web_menuurl8" />            </td>
+            <td>
+                <a href="javascript:void(0);" onclick="delsjtp(this,'sjtptr')" class="del">删除 </a>
+            </td>
+        </tr>
+        <tr>
+			<td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847name9" id="weiqi_web_menuname9" /><span class="maroon">*</span>
+            </td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847img9" id="weiqi_web_menuimg9" /><input type="button" value="选择" onClick="openNewWin('9')"/></td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847url9" id="weiqi_web_menuurl9" />            </td>
+            <td>
+                <a href="javascript:void(0);" onclick="delsjtp(this,'sjtptr')" class="del">删除 </a>
+            </td>
+        </tr>
+        <tr>
+			<td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847name10" id="weiqi_web_menuname10" /><span class="maroon">*</span>
+            </td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847img10" id="weiqi_web_menuimg10" /><input type="button" value="选择" onClick="openNewWin('10')"/></td>
+            <td>
+            <input type="text"   value="" name="weiqi_web_menuT08d9e827ffbba2efe4413cb064bbf847url10" id="weiqi_web_menuurl10" />            </td>
+            <td>
+                <a href="javascript:void(0);" onclick="delsjtp(this,'sjtptr')" class="del">删除 </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button id="bsubmit" type="submit" data-loading-text="提交中..." class="btn btn-primary">保存</button>
+                                    <button type="button" class="btn" onclick="window.history.go(-1)">取消</button>
+                                </div>                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+var list= $('input:radio:checked').val();
+document.getElementById('erji1').style.display='none';
+document.getElementById('erji0').style.display='none';
+document.getElementById('erji'+list).style.display='';
+$("input:radio").click(function(){
+var list= $('input:radio:checked').val();
+document.getElementById('erji1').style.display='none';
+document.getElementById('erji0').style.display='none';
+document.getElementById('erji'+list).style.display='';
+});
+
+
+
+	function addsjtp(id){
+		if($('#'+id).find('tr:hidden').size()>0){
+			var htr = $('#'+id).find('tr:hidden').eq(0);
+			htr.show();
+		}else{
+			alert('最多允许添加'+$('#'+id).find('tr').size()+'个二级菜单。')
+		}
+		
+	}
+	function delsjtp(o,id){
+		$(o).parent().parent().hide();
+		var trv = $('#'+id).find('tr:visible');
+		var vlen = trv.length;
+		var sjy = [];
+		trv.each(function(){
+			var ssjy = [];
+			$(this).find('td').each(function(){
+				$(this).find('input,select,img').each(function(){
+					ssjy[ssjy.length] = { src:$(this).attr('src'),val:$(this).val()};
+				});
+			});
+			sjy[sjy.length] = ssjy;
+		});
+		var rtr = $('#'+id).find('tr');
+		rtr.hide();
+		
+		for(var i=0;i<vlen;i++){
+			var thetr = rtr.eq(i);
+			var thedata = sjy[i];
+			var inj = 0;
+			thetr.find('td').each(function(){			
+				$(this).find('input,select,img').each(function(j){				
+					var sthedata = thedata[inj];
+					$(this).attr('src',sthedata.src);
+					$(this).val(sthedata.val);
+					inj++;
+				});
+			});
+			thetr.show();
+		}
+		$('#'+id).find('tr:hidden').find('input[type="text"]').val('');
+	}
+	</script>
+<br/><br/><br/>
+</body>
+</html>

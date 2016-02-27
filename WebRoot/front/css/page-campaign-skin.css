@@ -1,0 +1,143 @@
+﻿@charset "utf-8";
+/* theme */
+.page-campaign .am-header .city
+{
+    background: url(../images/arrow-city.png) no-repeat 35px center;
+    background-size: 12px 8px;
+}
+
+.campaign-list li
+{
+    background-color: #f0f0f0;
+}
+
+    .campaign-list li.am-clickable-active
+    {
+        background-color: #ff6a00;
+    }
+
+.campaign-list .favour
+{
+    background: url(../images/icon-favor.png) no-repeat left center;
+    background-size: 20px 20px;
+}
+
+    .campaign-list .favour.am-clickable-active
+    {
+        background-color: #ff6a00;
+    }
+
+.campaignDetail-slider .tag
+{
+    background-image: url(../images/tag.png);
+}
+
+.campaignDetail-slider .finish span
+{
+    color: #ce3000;
+    font-weight: bold;
+}
+
+.campaignDetail-slider .favor
+{
+    background: url(../images/icon-favor.png) no-repeat 2px center;
+    background-size: 20px 20px;
+}
+
+.campaignDetail-slider .share
+{
+    background: url(../images/icon-share.png) no-repeat 2px center;
+    background-size: 20px 20px;
+}
+
+.campaignDetail-slider .save
+{
+    background: url(../images/icon-save.png) no-repeat 2px center;
+    background-size: 20px 20px;
+}
+
+.campaignDetail-slider .collect
+{
+    background: url(../images/icon-collect.png) no-repeat 2px center;
+    background-size: 20px 20px;
+}
+
+.campaignDetail-slider .uncollect
+{
+    background: url(../images/icon-uncollect.png) no-repeat 2px center;
+    background-size: 20px 20px;
+}
+
+.campaignDetail-slider .operation p.am-clickable-active
+{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.campaignDetail-content .title
+{
+    font-weight: bold;
+    color: #000;
+}
+
+.campaignDetail-content .more, .campaignDetail-content .less
+{
+    background: url(../images/arrow-down.png) no-repeat right center;
+    background-size: 10px 6px;
+    color: #9f846c;
+}
+
+.campaignDetail-content .more
+{
+    display: none;
+}
+
+.campaignDetail-content .less
+{
+    background-image: url(../images/arrow-up.png);
+}
+
+.campaignDetail-link .am-clickable
+{
+    background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#ececec));
+    border: 1px solid #e3e3e3;
+}
+
+    .campaignDetail-link .am-clickable.am-clickable-active
+    {
+        background: -webkit-gradient(linear, left top, left bottom, from(#ececec), to(#f9f9f9));
+    }
+
+.campaignDetail-link .name
+{
+    font-weight: bold;
+    border-left: 1px solid #cacaca;
+}
+
+    .campaignDetail-link .name span
+    {
+        color: #ce3000;
+    }
+
+.campaignDetail-link .stores
+{
+    background: url(../images/icon-stores-gray.png) no-repeat center center;
+    background-size: 30px 30px;
+}
+
+.campaignDetail-link .coupons
+{
+    background: url(../images/icon-coupons-gray.png) no-repeat center center;
+    background-size: 30px 30px;
+}
+
+.campaignDetail-link .arrow
+{
+    background: url(../images/arrow-right.png) no-repeat center center;
+    background-size: 25px 25px;
+}
+
+.try-again
+{
+    background-color: rgba(88, 88, 88, 0.498039);
+    color: white;
+}

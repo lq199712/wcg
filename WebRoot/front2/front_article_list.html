@@ -1,0 +1,516 @@
+﻿
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no">
+<meta content="telephone=no" name="format-detection">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>文章列表</title>
+<link type="text/css" rel="stylesheet" href="css/comstyle.css">
+<link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+<link href="css/list3.css" media="screen" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/lib/swipe.min.js"></script>
+<script type="text/javascript" src="js/wsy_ctr.js" ></script>
+<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/lib/iscroll.js"></script>
+<style type="text/css">
+.swipe {
+  width:100%;
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap {
+ width:100%;
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+  background:#ddd;
+}
+.swipe-wrap > div >img{
+	width:100%;
+
+}
+.slideshow_wrap{
+	position:relative;
+	width:100%;
+  overflow: hidden;
+}
+#nav{
+position:absolute;
+bottom:2px;
+right:8px;
+height:15px;
+
+}
+#nav_wrap{
+	position:absolute;
+	bottom:0;
+	height:20px;
+	width:100%;
+	background:#000;
+	opacity:0.4;
+}
+#nav > div{
+	float:left;
+	width:12px;
+	height:12px;
+	margin-left:6px;
+	border-radius:6px;
+	background:#888;
+}
+#nav > div.active{
+	background:#ddd;
+}
+.swipe-wrap .img_intro{
+	position:absolute;
+	bottom:2px;
+	left:5px;
+	font-size:14px;
+	color:#000;
+}
+</style>
+<style type="text/css">
+/**
+ *
+ * Pull down styles
+ *
+ */
+#pullDown, #pullUp {
+	height:40px;
+	line-height:40px;
+	padding:5px 10px;
+	font-weight:bold;
+	font-size:14px;
+	color:#646464;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+	display:block; float:left;
+	width:40px; height:40px;
+	background:url(images/pull-icon@2x.png) 0 0 no-repeat;
+	-webkit-background-size:40px 80px; background-size:40px 80px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+	#wrapper{
+		/*position:relative;
+		width:100%;
+		height:72%;*/
+	}
+	#scroller{
+	/*position:absolute; 
+	z-index:1;
+	width:100%;*/
+	}
+	</style>
+	<script type="text/javascript">
+
+//获取url参数
+function GetRequest() {
+   var url = location.search; //获取url中"?"符后的字串
+   var theRequest = new Object();
+   if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      strs = str.split("&");
+      for(var i = 0; i < strs.length; i ++) {
+         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+      }
+   }
+   return theRequest;
+}
+
+var Request = new Object();
+Request = GetRequest();
+var fromuser=Request['fromuser'];
+if(fromuser){
+window.localStorage.setItem("fromuser", fromuser);
+
+}
+
+if(!fromuser || fromuser=='undefined'){
+ fromuser=window.localStorage.getItem("fromuser");
+}
+
+</script>
+
+<script type="text/javascript">
+function goNextPage(url){
+	var go_url='';
+		if(url){
+			if(url.indexOf("http")!=-1){
+			
+			go_url=url;
+			}else if(url.indexOf("tel")!=-1){ go_url=url;location.href=go_url;return;
+			}else if((url.indexOf(".html")!=-1) || (url.indexOf(".php")!=-1)){
+			
+			go_url=url
+			
+			}else{
+			go_url=url+'.html';	
+			}
+
+			
+			if(go_url.indexOf("?")!=-1){
+			
+			setTimeout(function(){
+					location.href=go_url+'&fromuser='+fromuser+'&wxref=mp.weixin.qq.com';
+			
+				},250);
+			}else{
+			
+			setTimeout(function(){
+					location.href=go_url+'?fromuser='+fromuser+'&wxref=mp.weixin.qq.com';
+			
+				},250);
+			}
+			
+			
+		}else{
+			alert('找不到此页面！');
+		
+		}
+
+	}
+	
+	/*	var myScroll,
+		pullUpEl, pullUpOffset,
+		generatedCount = 0;
+		var page=1;
+		
+		var C_id='29';
+		var col_flag='';
+		var col_id='';
+		var col_id_sub='';
+		if(col_flag){
+			col_id_sub='4337';
+		}else{
+			col_id='4337';
+		
+		}
+	function pullUpAction () {
+		page++;
+			$.ajax({
+				url:'http://115.159.44.46/weixin/plat/app/index.php/Invoke/diy_detail_list/',
+				dataType:'jsonp',
+				data:{"C_id":C_id,"page":page,"col_id":col_id,"col_id_sub":col_id_sub},
+				success:function(data){
+						var html='';
+					if(data){
+						for(var i=0;i<data.length;i++){
+						if(data[i].type==1){
+							html+='<li><a onclick=goNextPage("'+data[i].link+'")><div class="list-img"><b><img src="images/'+data[i].img+'"></b></div><div class="list-text"><h1>'+data[i].name+'</h1><h2>'+data[i].outline.substr(0,30)+'</h2></div></a></li>';
+						}else{
+							html+='<li><a onclick=goNextPage("'+data[i].fileName+'?detail_id='+data[i].id+'&C_id='+C_id+'&col_id='+data[i].col_id+'&col_id_sub='+data[i].parent_id+'")><div class="list-img"><b><img src="images/'+data[i].img+'"></b></div><div class="list-text"><h1>'+data[i].name+'</h1><h2>'+data[i].content_text.substr(0,30)+'</h2></div></a></li>';	
+						}
+					}
+						
+						$('#thelist').append(html);
+						myScroll.refresh();	
+					}else{
+					myScroll.refresh();	
+					}
+					
+					
+					
+				},
+				error:function(r){
+				
+				}
+
+			});
+				
+			
+
+	}
+
+	function loaded() {
+		pullUpEl = document.getElementById('pullUp');	
+		pullUpOffset = pullUpEl.offsetHeight;
+		
+		myScroll = new iScroll('wrapper', {
+			useTransition: true,
+			hideScrollbar:true,
+			onRefresh: function () {
+			if (pullUpEl.className.match('loading')) {
+					pullUpEl.className = '';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+				}
+			},
+			onScrollMove: function () {
+		if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'flip';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '松开加载...';
+					this.maxScrollY = this.maxScrollY;
+				} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+					pullUpEl.className = '';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+					this.maxScrollY = pullUpOffset;
+				}
+			},
+			onScrollEnd: function () {
+			if (pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'loading';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '努力加载中...';				
+					pullUpAction();	// Execute custom function (ajax call?)
+				}
+			}
+		});
+		
+	}*/
+	
+	
+function goPage(url){
+		if(url){
+			location.href=url;
+		}
+
+	}
+	
+function goLink(url){
+	if(url){
+		//  url=url.toLowerCase();
+		if(url.indexOf("http")!=-1 && url.indexOf("weixinpl")!=-1){
+			//跳转到活动
+			url+='&fromuser='+fromuser+'&wxref=mp.weixin.qq.com';
+		}else if(url.indexOf("http")!=-1){
+			url=url;
+		}else if(url.indexOf("php")!= -1){
+					url+='&C_id='+'29'+'&wxref=mp.weixin.qq.com&fromuser='+fromuser;
+		}else{
+		url+='.html?wxref=mp.weixin.qq.com&fromuser='+fromuser;
+		}
+		
+		//alert('===='+url);
+		location.href=url;
+		}
+}
+
+var img_flag=0;
+function loadother(e){
+document.getElementById('slideshow_wrap').style.height=e.offsetHeight+'px';
+	if(!img_flag){
+		var html='<div onclick=goLink("")><img src="images/lunbo2.jpg" ><span class="img_intro"></span></div><div onclick=goLink("")><img src="images/lunbo3.jpg" ><span class="img_intro"></span></div><div onclick=goLink("")><img src="images/lunbo4.jpg" ><span class="img_intro"></span></div>';
+	
+	
+	document.getElementById('swipe-wrap').innerHTML+=html;
+	img_flag=1;
+	setTimeout(function(){
+	init_swipe();
+	},1000);
+	
+	}
+
+}
+function loadother_diy(e){
+document.getElementById('slideshow_wrap').style.height=e.offsetHeight+'px';
+	if(!img_flag){
+		var html='';
+	
+	
+	document.getElementById('swipe-wrap').innerHTML+=html;
+	img_flag=1;
+	setTimeout(function(){
+	init_swipe();
+	},1000);
+	
+	}
+
+}
+</script>
+</head>
+<body>
+     
+
+	
+    <div class="html">
+        <div class="stage" id="stage">
+            <section id="sec-index">
+                <div class="body" >
+                    <div class="list">
+                        <ul>
+							<li>
+										<a onclick="goNextPage('detail.html')">
+											<div class="list-img">
+												<b>
+													<img src="images/54b20d2f075e9.jpg">
+												</b>
+											</div>
+											<div class="list-text">
+												<h1>城东城管中队不等不靠 迅速恢复路面整洁</h1>
+												<h2>宜兴市城管局</h2>
+											</div>
+										</a>
+							</li>
+							<li>
+										<a onclick="goNextPage('detail.html')">
+											<div class="list-img">
+												<b>
+													<img src="images/54b20d2f075e9.jpg">
+												</b>
+											</div>
+											<div class="list-text">
+												<h1>新建中队组织案卷制作考试 精进业务能力</h1>
+												<h2>宜兴市城管局</h2>
+											</div>
+										</a>
+							</li>
+						</ul>
+						<!--<div id="pullUp">
+							<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+						</div>-->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+<style type="text/css">
+.foot{
+	clear:both;
+	width:100%;
+	text-align:center;
+	font-size:12px;
+	margin-bottom:50px;
+}
+</style>
+
+
+<div class="foot" style="color:#000000"   >
+
+技术支持：39MI
+
+</div>
+
+<!--自定义菜单-->
+
+<script type="text/javascript">
+function init(){
+//loaded();
+}
+</script>
+
+<script type="text/javascript">	
+function init_swipe(){
+	window.mySwipe = new Swipe(document.getElementById('slider'), {
+		startSlide: 0,
+		speed: 400,
+		auto: 3000,
+		continuous: true,
+		disableScroll: false,
+		stopPropagation: false,
+		callback: function(index, elem) {
+			document.querySelector('#nav > div.active').className = '';
+			document.querySelector('#nav > div:nth-child(' + (index+1) + ')').className = 'active';
+		},
+		transitionEnd: function(index, elem) {}
+	});
+}
+
+
+
+/****分享设置start****/
+window.shareData = {
+			"imgUrl": "",
+			"link": this.location.href,
+			"title": "" || document.title,
+			"content": "",
+		};
+
+
+		
+function getShareImageUrl(){
+	var share_imgurl = "";
+	if("" == share_imgurl){
+		var shareImgObj = document.getElementsByTagName("img")[0];
+		if('undefined' != typeof(shareImgObj)){
+			share_imgurl = shareImgObj.src;
+		}
+	}
+	return window.shareData.imgUrl || share_imgurl ;
+}
+
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+	// 发送给好友
+	WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+		WeixinJSBridge.invoke('sendAppMessage', { 
+			"img_url": getShareImageUrl(),
+			"img_width": "640",
+			"img_height": "640",
+			"link": window.shareData.link,
+			"desc": window.shareData.content,
+			"title": window.shareData.title
+		}, function (res) {
+			
+		})
+	});
+
+	// 分享到朋友圈
+	WeixinJSBridge.on('menu:share:timeline', function (argv) {
+		WeixinJSBridge.invoke('shareTimeline', {
+			"img_url": getShareImageUrl(),
+			"img_width": "640",
+			"img_height": "640",
+			"link": window.shareData.link,
+			"desc": window.shareData.content,
+			"title": window.shareData.title
+		}, function (res) {
+			
+		});
+	});
+
+	// 分享到微博
+	WeixinJSBridge.on('menu:share:weibo', function (argv) {
+		WeixinJSBridge.invoke('shareWeibo', {
+			"content": window.shareData.content,
+			"url": window.shareData.link
+		}, function (res) {
+			
+		});
+	});
+}, false);		
+/****分享设置end****/
+</script>
+				
+
+<!--  start验证用户是否已经可用-->
+
+ 
+	
+</body></html>

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>投诉办理</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/yyucadapter.js"></script>
+
+<link rel="stylesheet" href="css/admin/bootstrap.min.css">
+<link rel="stylesheet" href="css/admin/admin.css">
+<style type="text/css">
+	table td {
+		min-width:50px;
+		overflow:hidden;text-overflow:ellipsis;
+	}
+	#picsethere{
+		width: 510px;
+		display: block;
+	}
+	#picsethere img{
+		max-width: 500px;
+		display: block;
+	}
+</style>
+</head>
+<body>
+	<h3>投诉办理</h3>
+	<div class="alert alert-info">
+	  	<p><span class="bold">说明：</span>说明内容</p>
+	</div>
+	<form class="form-horizontal" id="lbsForm" action="tousu_query_result.html" method="post"><input type="hidden" value="54dac5d4eee48" name="YYUC_FORM_TOKEN"/><input type="hidden" value = "" name="C1lSS1ttEkIXQ1QYZA1S" id="micro_surveyid" />		
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">投诉类型</label>
+	    	<div class="controls">
+	    	<select name="tousutype">
+	    		<option value="1">黑车</option>
+	    		<option value="2">市容环境</option>
+	    	</select>
+	    	</div>
+	  	</div>
+
+		
+		<div class="control-group">
+	    	<label class="control-label" for="location_p">发起日期</label>
+	    	<div class="controls">
+	    	<input type="text"   value=""  id="micro_surveykssj" class="span4" name="C1lSS1ttEkIXQ1QYZA9FFV0=" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm:ss'})" relobj="yyuccalendar" rel="yyuc"/>	    	</div>
+	  	</div>
+	  
+	  	<div class="control-group">
+	    	<label class="control-label" for="category_f">受理日期</label>
+	    	<div class="controls">
+	    	<input type="text"   value=""  id="micro_surveyjssj" class="span4" name="C1lSS1ttEkIXQ1QYZA5FFV0=" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm:ss'})" relobj="yyuccalendar" rel="yyuc"/>	    	</div>
+	  	</div>
+
+	  	<div class="control-group">
+	    	<label class="control-label" for="category_f">到期日期</label>
+	    	<div class="controls">
+	    	<input type="text"   value=""  id="micro_surveyjssj" class="span4" name="C1lSS1ttEkIXQ1QYZA5FFV0=" onfocus="WdatePicker({ dateFmt:'yyyy-MM-dd HH:mm:ss'})" relobj="yyuccalendar" rel="yyuc"/>	    	</div>
+	  	</div>
+
+	  	<div class="control-group">
+	    	<label class="control-label" for="keyword">投诉人</label>
+	    	<div class="controls">
+	    	<input type="text"   value="" name="C1lSS1ttEkIXQ1QYZANcHA==" id="micro_surveygjz" class="span4"/>	
+	    	</div>
+	  	</div>
+	  	
+	  	<div class="control-group">
+	    	<label class="control-label" for="keyword">投诉主题</label>
+	    	<div class="controls">
+	    	<input type="text"   value="" name="C1lSS1ttEkIXQ1QYZANcHA==" id="micro_surveygjz" class="span4" style="width:520px;"/>	
+	    	</div>
+	  	</div>
+	  	
+
+	  	
+
+ 		<div class="control-group">
+		    <div class="controls">
+		    
+		      <button id="save-btn" type="submit" class="btn btn-primary btn-large">查询</button>
+		    </div>
+	    </div>
+	</form>
+<script type="text/javascript" src="js/comm.js"></script>
+<script type="text/javascript">
+$(function(){
+	 $("#lbsForm").submit(function(){
+		var cansv= true;
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($.trim($(this).val())=='' && $(this).attr('noneed')!='1'){
+				cansv = false;
+				$(this).css('backgroundColor','yellow');
+				$(this).one('focus',function(){
+					$(this).css('backgroundColor','transparent');
+				});
+			}
+		});
+		if(!cansv){
+			tusi('请将信息填写完整');
+			return false;
+		}
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($(this).attr('isint')=='1' && $.trim($(this).val())!=''){
+				var intthis = parseInt2($(this).val());
+				if(intthis+''=='NaN'){
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}else{
+					$(this).val(parseInt($(this).val()));
+				}
+			}
+		});
+		if(!cansv){
+			tusi('标注的项目必须为整数');
+			return false;
+		}
+		
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($(this).attr('isfloat')=='1' && $.trim($(this).val())!=''){
+				var intthis = parseFloat($(this).val());
+				if(intthis+''=='NaN'){
+					$(this).val('0');
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}else{
+					$(this).val(parseFloat($(this).val()));
+				}
+			}
+		});
+		if(!cansv){
+			tusi('标注的项目必须为数字');
+			return false;
+		}
+		
+		if($('#picsethere').find('img').size()<1){
+   		cansv = false;
+   		tusi('请上传活动图片');
+   		return false;
+   	}
+   	return cansv;
+   });
+});
+</script>
+<br/><br/><br/></body>
+
+</html>

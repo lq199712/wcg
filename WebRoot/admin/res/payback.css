@@ -1,0 +1,2800 @@
+.paytype-list .bank {
+	float: left;
+	width: 145px;
+	height: 32px;
+	margin-left: 5px;
+	border: 1px solid #DDD;
+	background-image:
+		url(http://s0.meituan.net/www/css/i/sp-banklist.vf9516058.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	text-indent: -9999px
+}
+
+.paytype-list .bank--alipay {
+	background-position: 0 -1023px;
+	*background-position: 0 -1017px
+}
+
+.paytype-list .bank--maintain {
+	padding-left: 133px;
+	*padding-left: 139px;
+	background-position: 13px -1020px;
+	*background-position: 19px -1017px;
+	color: red
+}
+
+.paytype-list .bank--tenpay {
+	background-position: 0 -1062px;
+	*background-position: 0 -1059px
+}
+
+.paytype-list .bank--chinabank {
+	background-position: 0 -1100px;
+	*background-position: 0 -1097px
+}
+
+.paytype-list .bank--icbc {
+	background-position: 0 -379px;
+	*background-position: 0 -377px
+}
+
+.paytype-list .bank--icbcb2b {
+	background-position: 0 -759px;
+	*background-position: 0 -756px
+}
+
+.paytype-list .bank--cmb {
+	background-position: 0 -418px;
+	*background-position: 0 -417px
+}
+
+.paytype-list .bank--cmbb2b {
+	background-position: 0 -840px;
+	*background-position: 0 -837px
+}
+
+.paytype-list .bank--ccb {
+	background-position: 0 -58px;
+	*background-position: 0 -57px
+}
+
+.paytype-list .bank--abc {
+	background-position: 0 -20px;
+	*background-position: 0 -17px
+}
+
+.paytype-list .bank--spdb {
+	background-position: 0 -338px;
+	*background-position: 0 -337px
+}
+
+.paytype-list .bank--sdb {
+	background-position: 0 -298px;
+	*background-position: 0 -297px
+}
+
+.paytype-list .bank--cib {
+	background-position: 0 -458px;
+	*background-position: 0 -457px
+}
+
+.paytype-list .bank--cebb {
+	background-position: 0 -98px;
+	*background-position: 0 -97px
+}
+
+.paytype-list .bank--boc {
+	background-position: 0 -178px;
+	*background-position: 0 -179px
+}
+
+.paytype-list .bank--cmbc {
+	background-position: 0 -139px;
+	*background-position: 0 -137px
+}
+
+.paytype-list .bank--bob {
+	background-position: 0 -588px;
+	*background-position: 0 -585px
+}
+
+.paytype-list .bank--udpay {
+	background-position: 0 -723px;
+	*background-position: 0 -720px
+}
+
+.paytype-list .bank--gzupay {
+	background-position: 0 -680px;
+	*background-position: 0 -677px
+}
+
+.paytype-list .bank--zxyh {
+	background-position: 0 -259px;
+	*background-position: 0 -257px
+}
+
+.paytype-list .bank--gfyh {
+	background-position: 0 -220px;
+	*background-position: 0 -217px
+}
+
+.paytype-list .bank--gdb {
+	background-position: 0 -220px;
+	*background-position: 0 -217px
+}
+
+.paytype-list .bank--pingan {
+	background-position: 0 -874px;
+	*background-position: 0 -872px
+}
+
+.paytype-list .bank--bofc {
+	background-position: 0 -911px;
+	*background-position: 0 -910px
+}
+
+.paytype-list .bank--postupay {
+	background-position: 0 -500px;
+	*background-position: 0 -497px
+}
+
+.paytype-list .bank--cib_1009 {
+	background-position: 0 -955px;
+	*background-position: 0 -952px
+}
+
+.paytype-list .bank--cib_1059 {
+	background-position: 0 -990px;
+	*background-position: 0 -987px
+}
+
+.paytype-list .bank--cmpay {
+	background-position: 0 -1140px;
+	*background-position: 0 -1137px
+}
+
+.paytype-list .bank--lakala {
+	background-position: 5px -1177px;
+	*background-position: 5px -1174px
+}
+
+.paytype-list .bank--pspc {
+	background-position: 0 -500px
+}
+
+.paytype-list .bank--bjrcb {
+	background-position: 0 -1220px
+}
+
+.paytype-list .bank--hzcb {
+	background-position: 0 -1259px
+}
+
+.paytype-list .bank--shrcb {
+	background-position: 0 -1299px
+}
+
+.paytype-list .bank--upopdebit {
+	background-position: -4px -1377px
+}
+
+.paytype-list .bank--upopcredit {
+	background-position: -4px -1427px
+}
+
+.paytype-list .bank-list {
+	margin-top: 10px;
+	margin-left: 0;
+	overflow: hidden;
+	clear: both;
+	zoom: 1;
+	list-style: none;
+}
+
+.paytype-list .bank-list .tip {
+	display: none;
+	padding: 5px 0 0 32px;
+	font-size: 12px;
+	color: #c33
+}
+
+.paytype-list .bank-list .item {
+	float: left;
+	font-size: 14px;
+	margin: 0 30px 10px 0
+}
+
+.paytype-list .bank-list .radio {
+	float: left;
+	width: 13px;
+	margin-top: 10px;
+	*margin-top: 5px;
+	margin-left: 1px
+}
+
+.paytype-list .bank-list .item--disabled .bank {
+	opacity: .5;
+	filter: Alpha(opacity = 50);
+	cursor: not-allowed
+}
+
+.paytype-list .bank-tip--disabled {
+	color: #ea4f01
+}
+
+.paytype-list .bank-list--xpay {
+	margin: 5px 0 -10px;
+	position: relative;
+	top: -20px;
+	overflow: hidden;
+	clear: both;
+	zoom: 1
+}
+
+.paytype-list .bank-list--xpay .item {
+	margin-bottom: 0;
+	padding: 21px 0 0 0
+}
+
+.paytype-list .bank-list--xpay .bank {
+	height: 40px
+}
+
+.paytype-list .bank-list--xpay .radio {
+	margin-top: 15px;
+	*margin-top: 10px
+}
+
+.paytype-list .bank-list--xpay .item--hastip {
+	position: relative
+}
+
+.paytype-list .bank-list--xpay .item__tip {
+	position: absolute;
+	top: 0;
+	left: 19px;
+	padding: 0 5px;
+	border: 1px solid #d4d4d4;
+	color: #999;
+	font-size: 12px
+}
+
+.paytype-list .bank-list--upop .bank {
+	height: 38px
+}
+
+.paytype-list .bank-type {
+	position: relative;
+	margin: 10px 0;
+	padding: 0 0 0 18px;
+	border: 0;
+	font-size: 14px;
+	font-weight: normal;
+	cursor: pointer
+}
+
+.paytype-list .bank-type__hint {
+	font-size: 12px;
+	color: #999
+}
+
+.paytype-list .bank-type__icon {
+	position: absolute;
+	top: 8px;
+	*top: 5px;
+	left: 2px;
+	_left: -16px;
+	width: 9px;
+	height: 5px;
+	overflow: hidden;
+	background:
+		url(http://s0.meituan.net/www/css/i/sp-fold-icon.vdd0d955e.png)
+		-9999px -9999px no-repeat
+}
+
+.paytype-list .bank-area .bank-type__icon {
+	background-position: 0 0
+}
+
+.paytype-list .bank-area--open .bank-type__icon {
+	background-position: 0 -10px
+}
+
+.paytype-list .bank-area--open .bank-list {
+	display: block
+}
+
+.paytype-list .choose-other-bank {
+	float: left;
+	margin-top: 8px;
+	padding-left: 20px;
+	height: 18px;
+	font-size: 12px
+}
+
+.paytype-list .choose-other-bank .tri {
+	position: absolute;
+	margin-top: 7px;
+	*margin-top: 5px;
+	margin-left: 3px;
+	height: 0;
+	width: 0;
+	border: 5px dashed transparent;
+	border-top: 5px solid #0BB;
+	font-size: 0;
+	line-height: 0
+}
+
+.paytype-list .order-check-tip {
+	float: left;
+	*width: 640px;
+	margin-top: -5px;
+	margin-bottom: 5px;
+	padding-left: 30px;
+	color: #c33;
+	font-size: 12px;
+	clear: both
+}
+
+#bind-mobile-coaccount #content {
+	float: none;
+	width: 100%
+}
+
+#bind-mobile-coaccount .mainbox {
+	padding: 0 20px 20px;
+	border: 1px solid #a3d7df;
+	box-shadow: 0 0 1px #d4edf4;
+	text-align: center
+}
+
+#bind-mobile-coaccount .mainbox h2 {
+	margin: 0 -20px 0;
+	padding: 15px 0 9px 20px;
+	font-size: 30px;
+	background:
+		url(http://s1.meituan.net/www/css/i/content-title-bg.v6f06859e.png)
+		top center repeat-x;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: left
+}
+
+.pg-bind-mobile-coaccount .no-mobile-bound {
+	padding: 20px 0 10px 0
+}
+
+.pg-bind-mobile-coaccount .no-mobile-bound .warning {
+	padding-left: 60px;
+	display: inline-block;
+	background:
+		url(http://s0.meituan.net/www/css/i/sys-icons-48.v6b0ece98.png) left
+		center no-repeat;
+	line-height: 62px;
+	font-size: 22px;
+	font-weight: bold
+}
+
+.pg-bind-mobile-coaccount .mobile-bind-form-wrapper {
+	padding: 30px 30px 30px 30px;
+	width: 500px;
+	display: inline-block;
+	text-align: left
+}
+
+#mobile-bind-form .field-group {
+	margin-bottom: 0;
+	padding: 10px 0 10px 80px
+}
+
+#mobile-bind-form .field-group label {
+	width: 70px
+}
+
+#mobile-bind-form .block-tip {
+	margin-top: 5px;
+	padding-bottom: 15px
+}
+
+#mobile-bind-form .verify-mobile {
+	margin-top: 6px
+}
+
+#mobile-bind-form .verify-btn {
+	padding: 3px;
+	*padding: 4px 3px 2px;
+	cursor: pointer;
+	font-size: 12px;
+	vertical-align: middle
+}
+
+#mobile-bind-form .verify-tip {
+	margin-left: 10px;
+	font-size: 12px;
+	color: #666
+}
+
+#mobile-bind-form .error {
+	color: #C33;
+	zoom: 1
+}
+
+#set-password-coaccount #content {
+	float: none;
+	width: 100%
+}
+
+#set-password-coaccount .mainbox {
+	padding: 0 20px 20px;
+	border: 1px solid #a3d7df;
+	box-shadow: 0 0 1px #d4edf4;
+	text-align: center
+}
+
+#set-password-coaccount .mainbox h2 {
+	margin: 0 -20px 0;
+	padding: 15px 0 9px 20px;
+	font-size: 30px;
+	background:
+		url(http://s1.meituan.net/www/css/i/content-title-bg.v6f06859e.png)
+		top center repeat-x;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: left
+}
+
+.pg-set-password-coaccount .no-password {
+	padding: 20px 0 10px 0
+}
+
+.pg-set-password-coaccount .no-password .warning {
+	padding-left: 60px;
+	display: inline-block;
+	background:
+		url(http://s0.meituan.net/www/css/i/sys-icons-48.v6b0ece98.png) left
+		center no-repeat;
+	line-height: 62px;
+	font-size: 22px;
+	font-weight: bold
+}
+
+.pg-set-password-coaccount .set-password-form-wrapper {
+	padding: 30px 30px 30px 30px;
+	width: 500px;
+	display: inline-block;
+	text-align: left
+}
+
+.pg-set-password-coaccount .set-password-form-wrapper .f-display {
+	margin-bottom: 15px;
+	line-height: 34px
+}
+
+.pg-set-password-coaccount .set-password-form-wrapper .f-display label {
+	line-height: 34px
+}
+
+.pg-set-password-coaccount .set-password-form-wrapper .f-display .inline-link
+	{
+	line-height: 34px
+}
+
+.pg-set-password-coaccount .set-password-form-wrapper .f-display span.text
+	{
+	padding-left: 0
+}
+
+.pg-set-password-coaccount .set-password-form-wrapper .field-group {
+	padding-left: 130px
+}
+
+.pg-set-password-coaccount .set-password-form-wrapper .field-group label
+	{
+	width: 120px
+}
+
+.pg-config-mobile-coaccount {
+	text-align: center
+}
+
+.pg-config-mobile-coaccount .tip-success {
+	margin: 70px auto 70px;
+	width: 285px
+}
+
+.pg-config-mobile-coaccount .tip-success h3 {
+	position: relative;
+	padding: 0 0 0 65px;
+	left: -20px;
+	display: inline-block;
+	background:
+		url(http://s0.meituan.net/www/css/i/sys-icons-48-s.ved3fa5e1.png)
+		no-repeat;
+	text-align: left;
+	font-size: 30px;
+	line-height: 52px;
+	color: #000
+}
+
+.pg-config-mobile-coaccount .detail {
+	margin-top: 5px;
+	color: #333
+}
+
+.pg-config-mobile-coaccount .extra {
+	width: 285px;
+	margin: 0 auto
+}
+
+#signuped #content {
+	float: none;
+	width: 100%
+}
+
+#signuped .mainbox {
+	height: auto;
+	box-shadow: 0 0 1px #d4edf4;
+	overflow: hidden;
+	zoom: 1
+}
+
+#signuped .mainbox h2 {
+	margin: -20px -20px 0;
+	padding: 15px 0 9px 20px;
+	font-size: 30px;
+	background:
+		url(http://s1.meituan.net/www/css/i/content-title-bg.v6f06859e.png)
+		top center repeat-x;
+	border-bottom: 1px solid #e5e5e5
+}
+
+#signuped .notice-content {
+	margin: 30px 80px;
+	padding: 10px;
+	text-align: center;
+	background: #ffffeb;
+	border: 1px solid #eeeed6
+}
+
+#signuped .notice-content p {
+	margin-bottom: 15px
+}
+
+#signuped .notice-content strong {
+	color: #c00
+}
+
+#signuped .help-tip {
+	margin: 30px 80px;
+	padding: 0;
+	text-align: left;
+	font-size: 12px
+}
+
+#signuped .help-tip h3 {
+	margin-bottom: 5px;
+	padding-left: 20px;
+	background:
+		url(http://s1.meituan.net/www/css/i/sys-icons-16.vd2db5315.png) 0
+		-397px no-repeat
+}
+
+#signuped .help-tip li {
+	color: #666
+}
+
+#signuped .help-tip .btn-normal {
+	margin: 0 5px;
+	padding: 2px 5px;
+	vertical-align: bottom;
+	*vertical-align: baseline
+}
+
+#signuped .unverified-box {
+	padding: 20px 130px
+}
+
+#signuped .unverified-box h2 {
+	margin: -20px -130px 0
+}
+
+#signuped .notice {
+	background: #ffffec;
+	margin: 45px 0 20px;
+	padding: 20px 0;
+	border: 1px solid #eeeed6;
+	text-align: center
+}
+
+#signuped .notice .extra {
+	color: #666;
+	font-size: 12px
+}
+
+#signuped .notice span.label {
+	color: #cb0000;
+	font-weight: bold;
+	line-height: 30px
+}
+
+#signuped .unverified-box .verify {
+	margin-top: 15px
+}
+
+#signuped .unverified-box .help-tip {
+	margin: 20px 0;
+	color: #000
+}
+
+#signuped .unverified-box .more {
+	font-size: 12px;
+	color: #666
+}
+
+#reset .field-group {
+	margin-bottom: 0;
+	padding: 10px 0 10px 90px
+}
+
+#reset .field-group label {
+	width: 80px
+}
+
+#resetverify-form .field-group label {
+	width: 80px
+}
+
+#resetverify-form .field-group {
+	padding-left: 90px
+}
+
+#reset .mainbox {
+	height: auto;
+	_height: 400px;
+	box-shadow: 0 0 1px #d4edf4;
+	overflow: hidden;
+	zoom: 1
+}
+
+#reset .mainbox__title {
+	margin: 0 40px 25px;
+	padding: 0 0 10px;
+	font-weight: bold;
+	font-size: 23px;
+	color: #222;
+	border-bottom: 1px solid #e9e9e9
+}
+
+#reset .common-form {
+	padding-left: 40px
+}
+
+#reset .notice {
+	margin: 30px 80px 30px 200px;
+	padding: 10px
+}
+
+#reset .notice__head {
+	font-size: 25px;
+	margin: 20px 0 25px
+}
+
+#reset .notice__title {
+	display: inline-block;
+	height: 45px;
+	line-height: 45px;
+	vertical-align: middle
+}
+
+#reset .notice__icon {
+	display: inline-block;
+	height: 34px;
+	width: 34px;
+	margin-right: 10px;
+	background:
+		url(http://s1.meituan.net/www/css/i/sp-sys-icon.v29a4a9a5.png)
+		no-repeat;
+	vertical-align: middle
+}
+
+#reset .notice__link {
+	color: #0BB
+}
+
+#reset .notice .btn {
+	margin-top: 20px
+}
+
+#reset .notice-success {
+	margin-top: 101px;
+	margin-left: 160px;
+	font-size: 25px
+}
+
+#verify #content {
+	float: none;
+	width: 100%
+}
+
+#verify .mainbox {
+	text-align: center;
+	box-shadow: 0 0 1px #d4edf4;
+	overflow: hidden;
+	zoom: 1
+}
+
+#verify .notice-title {
+	width: 390px;
+	margin: 40px auto 5px;
+	margin-bottom: 30px;
+	padding-left: 60px;
+	text-align: left;
+	font-size: 32px;
+	line-height: 52px;
+	background:
+		url(http://s0.meituan.net/www/css/i/sys-icons-48.v6b0ece98.png) 0 0
+		no-repeat
+}
+
+#verify .auto-redirect {
+	margin-bottom: 30px
+}
+
+#verify .pg-signupok .result-box h3 {
+	margin-bottom: 20px
+}
+
+#verify .pg-signupok .result-operation {
+	margin-top: 30px;
+	text-align: center
+}
+
+#verify .pg-signupok .go-setting {
+	margin-left: 20px
+}
+
+#reverify #content {
+	float: none;
+	width: 100%
+}
+
+#reverify .mainbox {
+	height: auto;
+	box-shadow: 0 0 1px #d4edf4;
+	overflow: hidden;
+	zoom: 1
+}
+
+#reverify .mainbox h2 {
+	margin: -20px -20px 0;
+	padding: 15px 0 9px 20px;
+	font-size: 30px;
+	background:
+		url(http://s1.meituan.net/www/css/i/content-title-bg.v6f06859e.png)
+		top center repeat-x;
+	border-bottom: 1px solid #e5e5e5
+}
+
+#reverify .notice {
+	margin: 20px 0 50px;
+	padding: 0
+}
+
+#reverify .notice h3 {
+	margin-bottom: 20px
+}
+
+#reverify .notice .mobile .mobile-number {
+	margin-right: 20px;
+	line-height: 32px
+}
+
+#reverify .notice .operate input {
+	width: 100px
+}
+
+#reverify .tips {
+	margin: 10px 0;
+	font-size: 12px;
+	color: #666
+}
+
+#reverify .help-tip {
+	font-size: 12px
+}
+
+#reverify .help-tip h3 {
+	margin-bottom: 5px;
+	padding-left: 20px;
+	background:
+		url(http://s1.meituan.net/www/css/i/sys-icons-16.vd2db5315.png) 0
+		-397px no-repeat
+}
+
+#reverify .help-tip li {
+	list-style-position: inside;
+	list-style-type: disc;
+	color: #666
+}
+
+#reverified #content {
+	float: none;
+	width: 100%
+}
+
+#reverified .mainbox {
+	text-align: center;
+	box-shadow: 0 0 1px #d4edf4;
+	overflow: hidden;
+	zoom: 1
+}
+
+#reverified .notice-title {
+	width: 320px;
+	margin: 40px auto 5px;
+	padding-left: 60px;
+	text-align: left;
+	font-size: 32px;
+	line-height: 52px;
+	background:
+		url(http://s0.meituan.net/www/css/i/sys-icons-48.v6b0ece98.png) 0 0
+		no-repeat
+}
+
+#reverified .auto-redirect {
+	margin-bottom: 30px
+}
+
+#bind .bind {
+	color: #333
+}
+
+#bind .bind .head {
+	padding: 30px 10px 25px 40px
+}
+
+#bind .bind .sect {
+	height: 330px
+}
+
+#bind .bind .list {
+	float: left;
+	margin: 10px 30px 10px;
+	_display: inline
+}
+
+#bind .bind .list li {
+	float: left;
+	padding: 15px 10px;
+	list-style-position: inside;
+	list-style-type: none
+}
+
+#bind .bind .list .current {
+	background: #f5f5f5
+}
+
+#bind .bind .list h3 {
+	font-size: 16px;
+	cursor: pointer
+}
+
+#bind .bind .list .input {
+	float: left;
+	width: 37px;
+	margin-top: 3px;
+	*margin-top: 0;
+	_margin-top: 1px
+}
+
+#bind .bind .list .text {
+	float: left;
+	width: 500px
+}
+
+#bind .bind .list .f-text {
+	width: 240px
+}
+
+#bind .bind .list .intro {
+	margin: 10px 0 5px
+}
+
+#bind .bind .list .commit {
+	padding-top: 10px
+}
+
+#bind .bind .list .create {
+	margin-top: 15px
+}
+
+#bind .bind .list .hide {
+	overflow: hidden;
+	height: 0
+}
+
+#bind .bind .list .textbody {
+	overflow: hidden
+}
+
+#bind .bind .enter-account td {
+	padding: 5px 0
+}
+
+#bind .bind #kaixin-bind-list h3 {
+	margin-bottom: 10px
+}
+
+#bind #content .bind-third-title {
+	font-size: 16px;
+	font-weight: normal;
+	padding-left: 20px
+}
+
+#bind-form {
+	margin: 30px 0 100px
+}
+
+#bind-form .bind-box {
+	margin: 5px 20px;
+	padding: 10px 20px
+}
+
+#bind-form .bind-box h3 {
+	margin-bottom: 5px;
+	font-weight: normal;
+	font-size: 16px;
+	cursor: pointer
+}
+
+#bind-form .bind-box .field-group {
+	padding-left: 80px
+}
+
+#bind-form .bind-box label {
+	width: 70px;
+	padding-top: 5px;
+	cursor: pointer
+}
+
+#bind-form .bind-box .content {
+	height: 0
+}
+
+#bind-form .content {
+	position: relative;
+	overflow: hidden;
+	zoom: 1
+}
+
+#bind-form .content p {
+	padding: 6px 20px 0;
+	margin-top: 12px
+}
+
+#bind-form .current {
+	background: #f5f5f5;
+	border-radius: 5px
+}
+
+#bind-form .current .content {
+	height: auto
+}
+
+#bind-form .f-text {
+	padding: 6px;
+	width: 240px;
+	border-radius: 3px
+}
+
+#bind-form .content .submit {
+	padding: 6px 20px 10px 80px
+}
+
+#settings .head {
+	position: relative
+}
+
+#settings .sect h3 {
+	margin: 0 0 10px 10px;
+	font-size: 14px
+}
+
+#settings .settings-box h3 {
+	margin: 0 0 10px 0;
+	font-size: 14px
+}
+
+#settings .field .mobile {
+	width: 120px
+}
+
+#settings .address-add h3 {
+	margin-left: 17px
+}
+
+#settings .whybind {
+	margin: 60px 0 10px;
+	padding: 10px;
+	zoom: 1;
+	background: #fffbcc;
+	border: 1px solid #ffec19
+}
+
+#settings .whybind h3 {
+	margin-bottom: 5px
+}
+
+#settings .whybind ol li {
+	list-style-position: inside;
+	list-style-type: decimal
+}
+
+#settings .mainbox {
+	min-height: 320px
+}
+
+#settings .subscription-form .field-group,#settings .subscription-form .field-group label
+	{
+	font-size: 12px
+}
+
+#settings .subscription-form .field-group .attach {
+	color: #999
+}
+
+#settings .subscription-form .field-group .unsubscribe {
+	color: #ee5238
+}
+
+.settings-form-wrapper .field-group {
+	margin: 5px 0;
+	padding: 0 10px 21px 110px;
+	line-height: 21px
+}
+
+.settings-form-wrapper .field-group label {
+	top: 6px;
+	margin: 0;
+	padding: 0;
+	line-height: 21px
+}
+
+.settings-form-wrapper .field-group .f-text {
+	margin-bottom: 3px;
+	height: 21px;
+	line-height: 21px
+}
+
+.settings-form-wrapper .field-group .readonly {
+	color: #666;
+	background: #f1f1f1
+}
+
+.settings-form-wrapper .f-display {
+	margin: 0;
+	padding: 6px 10px 5px 110px;
+	line-height: 29px
+}
+
+.settings-form-wrapper .f-display label {
+	line-height: 29px
+}
+
+.settings-form-wrapper .f-display span.text {
+	margin-left: 0;
+	line-height: 29px;
+	vertical-align: top;
+	*zoom: 1
+}
+
+.settings-form-wrapper .f-display span.multiple-mobile-bind-warn {
+	font-size: 12px;
+	color: #D00
+}
+
+.settings-form-wrapper .f-display .inline-link {
+	margin-left: 2em;
+	line-height: 29px;
+	vertical-align: top
+}
+
+.settings-form-wrapper .f-password .text {
+	letter-spacing: 5px
+}
+
+.pg-account-basic #settings-form {
+	margin-left: 30px
+}
+
+.pg-account-basic #settings-form .field-group {
+	padding: 4px 10px 3px 60px
+}
+
+.pg-account-basic #settings-form .field-group label {
+	top: 8px;
+	width: 60px;
+	text-align: left;
+	line-height: 21px;
+	color: #222
+}
+
+.pg-account-basic #settings-form .field-group span.text {
+	display: inline-block;
+	width: 100px;
+	color: #222
+}
+
+.pg-account-basic #settings-form .field-group span.mail {
+	display: inline-block;
+	width: auto;
+	color: #222
+}
+
+.pg-account-basic .settings-form-wrapper .f-display span.text {
+	display: inline-block;
+	width: 120px
+}
+
+.pg-account-basic .settings-form-wrapper .f-display span.mail {
+	width: auto
+}
+
+.pg-account-basic .settings-form-wrapper .f-display {
+	height: 29px
+}
+
+#settings .email-verify-container {
+	margin-left: 2em;
+	font-size: 12px;
+	*zoom: 1;
+	width: auto
+}
+
+#settings .email-verify-container .has-link {
+	_zoom: 1;
+	_padding-top: 8px
+}
+
+#settings .email-verify-container .inline-link {
+	margin-left: 0;
+	_line-height: 15px;
+	vertical-align: baseline
+}
+
+#settings-username-reset-dialog .common-form {
+	margin: 30px 0 10px
+}
+
+#settings-username-reset-dialog .field-group {
+	margin: 5px 0;
+	padding: 0 10px 22px 110px;
+	line-height: 22px
+}
+
+#settings-username-reset-dialog .field-group label {
+	top: 6px;
+	margin: 0;
+	padding: 0;
+	line-height: 22px
+}
+
+#settings-username-reset-dialog .field-group .f-text {
+	margin-bottom: 3px;
+	height: 22px;
+	line-height: 22px
+}
+
+#settings-username-reset-dialog .field-group .readonly {
+	color: #666;
+	background: #f1f1f1
+}
+
+#settings-username-reset-dialog .operate {
+	margin: 10px 0 3px
+}
+
+#settings-username-reset-dialog .field-group .oldname {
+	position: relative;
+	padding-left: 6px;
+	top: 6px;
+	color: #999
+}
+
+#settings-password-reset-dialog .common-form {
+	margin: 30px 0 10px
+}
+
+#settings-password-reset-dialog .field-group {
+	margin: 5px 0;
+	padding: 0 10px 22px 110px;
+	line-height: 22px
+}
+
+#settings-password-reset-dialog .field-group label {
+	top: 6px;
+	margin: 0;
+	padding: 0;
+	line-height: 22px
+}
+
+#settings-password-reset-dialog .field-group .f-text {
+	margin-bottom: 3px;
+	height: 22px;
+	line-height: 22px
+}
+
+#settings-password-reset-dialog .field-group .readonly {
+	color: #666;
+	background: #f1f1f1
+}
+
+#settings-password-reset-dialog .operate {
+	margin: 10px 0 3px
+}
+
+.pw-strength {
+	position: absolute;
+	width: 232px;
+	top: 45px;
+	left: 80px;
+	background: #c9e0dd
+}
+
+#J-set-password-form .pw-strength {
+	top: 35px;
+	left: 66px
+}
+
+.pw-strength__bar {
+	background: #c9e0dd;
+	height: 16px;
+	width: 0;
+	overflow: hidden;
+	transition: all .4s linear;
+	-webkit-transition: all .4s linear;
+	-moz-transition: all .4s linear;
+	-o-transition: all .4s linear
+}
+
+.pw-strength__bar--weak {
+	width: 76px;
+	background: #ea9292
+}
+
+.pw-strength__bar--normal {
+	width: 154px;
+	background: #f1d93a
+}
+
+.pw-strength__bar--strong {
+	width: 232px;
+	background: #5aac47
+}
+
+.pw-strength__letter {
+	position: absolute;
+	top: 0;
+	left: 0
+}
+
+.pw-strength__label {
+	display: block;
+	float: left;
+	text-align: center;
+	font-size: 12px;
+	height: 16px;
+	line-height: 16px;
+	width: 76px;
+	border-right: 2px solid #FFF;
+	color: #FFF
+}
+
+.pw-strength__label--noborder {
+	border-right: 0
+}
+
+#settings .subscription-form .subscription-choice {
+	margin-bottom: 10px;
+	line-height: 18px
+}
+
+#settings .subscription-form .subscription-choice input,#settings .subscription-form .subscription-choice label
+	{
+	vertical-align: middle
+}
+
+#settings .subscription-form .field-group {
+	padding-bottom: 0
+}
+
+#settings .subscription-form .f-display {
+	margin: 0;
+	padding: 6px 10px 5px 80px;
+	line-height: 29px
+}
+
+#settings .subscription-form label {
+	width: 70px;
+	text-align: left
+}
+
+#settings .subscription-form .subscribed {
+	padding-left: 80px
+}
+
+#settings .subscription-form .subscribed .more .inline-link {
+	margin-left: 0;
+	font-size: 12px;
+	line-height: 21px
+}
+
+#settings .subscription-form .email {
+	padding: 6px 10px 5px 0;
+	color: #999
+}
+
+#settings .subscription-form .city-wrapper {
+	padding-top: 5px;
+	margin-bottom: 10px
+}
+
+#settings .subscription-form .city-wrapper li.item {
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	margin: 0 10px 10px 0;
+	padding: 0 18px 0 5px;
+	border: 1px solid #c3c3c3;
+	color: #333;
+	*zoom: 1
+}
+
+#settings .subscription-form .city-wrapper li.no-item,#settings .subscription-form .city-wrapper li.no-subscribe
+	{
+	display: inline-block;
+	*display: inline;
+	margin-top: 1px;
+	*zoom: 1;
+	*vertical-align: top
+}
+
+#settings .subscription-form .city-wrapper li.no-subscribe {
+	margin-right: 16px
+}
+
+#settings .subscription-form .city-wrapper .item .existent {
+	margin-right: 1em;
+	font-weight: bold
+}
+
+#settings .subscription-form .city-wrapper .item .close {
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	height: 15px;
+	width: 15px;
+	background:
+		url(http://s0.meituan.net/www/css/i/bg-subscribe-close.v5f56e721.png)
+		0 0 no-repeat;
+	cursor: pointer;
+	text-indent: -9999px
+}
+
+#settings .subscription-form .add-city {
+	position: relative;
+	width: 200px;
+	padding: 10px 20px;
+	background: #f7f7f7
+}
+
+#settings .subscription-form .add-city p {
+	height: 21px;
+	line-height: 21px
+}
+
+#settings .subscription-form .add-city .error {
+	color: #C33
+}
+
+#settings .subscription-form .add-city .add {
+	position: absolute;
+	right: 20px;
+	top: 34px
+}
+
+#settings .subscription-form .operate {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	padding-left: 0
+}
+
+#settings .address-table {
+	margin: 10px 0 0
+}
+
+#settings .address-table th {
+	width: 95px;
+	vertical-align: top;
+	padding: 5px 0;
+	font-weight: normal;
+	text-align: right
+}
+
+#settings .address-table td {
+	padding: 5px;
+	width: 540px
+}
+
+#settings .address-table .blk-error {
+	display: none;
+	width: 440px;
+	border: 1px solid #f60;
+	height: 25px;
+	line-height: 25px;
+	margin: 5px 0 0;
+	padding-left: 28px;
+	padding-right: 10px;
+	background: #fff2e9
+		url(http://s0.meituan.net/www/css/i/bg-sys-icons.v731c417b.gif)
+		no-repeat 5px 5px
+}
+
+#settings .address-div #address-table {
+	table-layout: fixed;
+	border-collapse: separate
+}
+
+#settings .address-div #address-table td {
+	border-top: 1px dotted #e5e5e5;
+	border-bottom: 0
+}
+
+#settings .address-div #address-table tr.first-item td {
+	border-top: 0
+}
+
+#settings .address-div .table-section {
+	margin-top: 20px
+}
+
+#settings .address-div .table-section ul,#settings .address-div .table-section li
+	{
+	display: inline;
+	text-align: right
+}
+
+#settings .address-div .table-section span.separator {
+	color: #666
+}
+
+#settings .address-div .table-section ul {
+	padding-right: 15px
+}
+
+#settings .address-div .table-section .right {
+	text-align: right;
+	padding-right: 0;
+	padding-left: 0
+}
+
+#settings .address-div .table-section th.right {
+	padding-right: 15px
+}
+
+#settings .address-div .table-section .left {
+	text-align: left;
+	padding-right: 0;
+	padding-left: 15px
+}
+
+#settings .address-div .table-section th {
+	color: #666;
+	padding: 11px;
+	background-color: #f4f4f4;
+	border-color: #e8e8e8
+}
+
+#settings .address-div .table-section td {
+	color: #222;
+	padding: 10px 0 10px 15px;
+	text-align: left
+}
+
+#settings .address-div .table-section td.consignee {
+	padding: 10px 15px;
+	text-align: center
+}
+
+#address-form {
+	clear: both
+}
+
+#address-form .error {
+	display: block;
+	width: 440px;
+	border: 1px solid #f60;
+	height: 25px;
+	line-height: 25px;
+	margin: 5px 0 0;
+	padding-left: 28px;
+	padding-right: 10px;
+	background: #fff2e9
+		url(http://s0.meituan.net/www/css/i/bg-sys-icons.v731c417b.gif)
+		no-repeat 5px 5px
+}
+
+#settings .address-div #address-form {
+	text-align: left;
+	padding-left: 0;
+	margin: 0
+}
+
+#settings .address-div #address-form .field-group {
+	padding: 1px 0 20px 105px
+}
+
+#settings .address-div #address-form .field-group label {
+	width: 100px
+}
+
+#settings .address-div #address-form div.comfirm {
+	padding: 7px 0 5px 105px
+}
+
+#settings .address-div div.prompt {
+	margin: 15px 0 20px
+}
+
+#settings .address-div div.prompt th {
+	text-align: left;
+	padding-left: 20px
+}
+
+#settings .address-div ul.hidden a.default {
+	display: none
+}
+
+#settings .address-div p.add {
+	display: none
+}
+
+#settings .address-div .full table {
+	display: none
+}
+
+#settings .address-div .full p.add {
+	display: block
+}
+
+#settings .address-div a.default,#settings .address-div #address-default
+	{
+	padding-right: 10px
+}
+
+#settings .address-div caption {
+	padding: 11px;
+	font-size: 14px;
+	background-color: #f4f4f4;
+	border: 1px solid #e8e8e8
+}
+
+#settings .address-div caption.add-address {
+	border-bottom: 0
+}
+
+#settings .address-div a.text {
+	cursor: text;
+	color: #666;
+	font-weight: bold;
+	text-decoration: none
+}
+
+#settings .address-province {
+	width: 140px;
+	margin-right: 15px
+}
+
+#settings .address-city {
+	width: 140px;
+	margin-right: 15px
+}
+
+#settings .address-district {
+	width: 140px;
+	margin-right: 15px
+}
+
+#settings .address-biz {
+	width: 140px;
+	margin-right: 15px
+}
+
+#settings .address-building {
+	width: 140px;
+	margin-right: 15px
+}
+
+#settings .address-zipcode {
+	width: 120px
+}
+
+#settings .address-detail {
+	width: 470px
+}
+
+#settings .address-city-detail {
+	width: 270px
+}
+
+#settings .address-name {
+	width: 120px
+}
+
+#settings .address-phone {
+	width: 120px
+}
+
+#settings .address-floor {
+	width: 40px
+}
+
+#settings .address-room {
+	width: 60px
+}
+
+#credit .mainbox {
+	padding-bottom: 50px
+}
+
+#credit .filter {
+	padding-top: 15px
+}
+
+#credit .balance {
+	margin: 5px 0 10px
+}
+
+#credit .balance strong {
+	font-size: 24px;
+	color: #c33;
+	vertical-align: -4px;
+	font-family: helvetica, arial, sans-serif
+}
+
+#credit .balance .btn {
+	margin-left: 10px
+}
+
+#credit .info-section strong {
+	font-size: 14px;
+	vertical-align: top;
+	color: #c33
+}
+
+#credit .table-section .detail {
+	text-align: left
+}
+
+#credit .table-section .income {
+	color: #469800;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 20px
+}
+
+#credit .table-section .expense {
+	color: #b2302d;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 20px
+}
+
+#credit .table-section a {
+	color: #666
+}
+
+#credit .table-section .op a {
+	font-size: 12px;
+	color: #0BB
+}
+
+#credit .notice {
+	padding: 10px 0
+}
+
+#credit .side-credit-card .f-input {
+	display: block;
+	width: 185px
+}
+
+#credit .side-credit-card .act {
+	margin-top: 10px
+}
+
+#credit .side-credit-card-notice {
+	padding: 5px 0 5px;
+	color: red
+}
+
+#credit .side-credit-card .captcha {
+	display: none;
+	margin-top: 10px
+}
+
+#credit .side-credit-card .captcha .f-input {
+	margin-bottom: 5px
+}
+
+#credit .side-credit-card .show {
+	display: block
+}
+
+#magiccard .table-section {
+	padding-top: 5px
+}
+
+#magiccard .table-section .remark {
+	text-align: left
+}
+
+#magiccard .table-section .price {
+	text-align: left;
+	padding-left: 10px
+}
+
+#magiccard .table-section .price span {
+	color: #ff6700;
+	font-weight: bold
+}
+
+#magiccard .table-section .used {
+	color: #999
+}
+
+#magiccard .table-section .used .price span {
+	color: #999
+}
+
+#magiccard .mobile-link {
+	position: relative;
+	padding-left: 10px;
+	font-size: 12px
+}
+
+#magiccard .mobile-icon {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 9px;
+	height: 15px;
+	background: url(http://s1.meituan.net/www/css/i/sp-common.v60632a81.png)
+		no-repeat 0 -23px
+}
+
+#points .mainbox {
+	padding-bottom: 50px
+}
+
+#points .spectip {
+	margin-top: 4px;
+	font-size: 12px;
+	color: #ee5238
+}
+
+#points .table-section .detail {
+	text-align: left
+}
+
+#points .info-section strong {
+	color: #c33
+}
+
+#points .points-title {
+	margin: 15px 0 20px;
+	font-size: 12px
+}
+
+#points .points-title strong {
+	font-size: 18px;
+	color: #c33
+}
+
+#growth .mainbox {
+	padding-bottom: 30px
+}
+
+#growth .table-section .detail {
+	text-align: left
+}
+
+#growth .table-section .value {
+	text-align: right;
+	padding-right: 36px
+}
+
+#growth .table-section .growth {
+	position: relative
+}
+
+#growth .table-section .mobile {
+	background:
+		url(http://s1.meituan.net/www/css/i/sp-header-new.v2bf6e2a4.png) -53px
+		-60px no-repeat;
+	margin-left: 3px;
+	width: 10px;
+	height: 15px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	position: absolute;
+	right: -13px
+}
+
+#growth .spectip {
+	margin-top: 12px;
+	font-size: 12px;
+	color: #e95002
+}
+
+#growth .growth-title {
+	margin: 20px 0 5px;
+	font-size: 16px
+}
+
+#growth .upgrade-dialog .info-section {
+	margin: 20px 0
+}
+
+#growth .upgrade-dialog .upgrade-title {
+	margin: 0 auto 12px;
+	width: 190px;
+	padding-left: 40px;
+	font-size: 24px;
+	line-height: 34px;
+	background:
+		url(http://s1.meituan.net/www/css/i/sp-sys-icon.v29a4a9a5.png)
+		no-repeat 0 0;
+	_background-image:
+		url(http://s1.meituan.net/www/css/i/sp-sys-icon-png8.v8210f0d2.png)
+}
+
+#growth .upgrade-dialog .upgrade-summary {
+	padding: 6px 3px;
+	margin: 0 0 6px 0;
+	border-bottom: 1px dashed #dedede;
+	font-size: 14px;
+	font-weight: normal
+}
+
+#growth .upgrade-dialog p {
+	text-align: center;
+	margin-bottom: 12px
+}
+
+#growth .upgrade-dialog .item {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1
+}
+
+#growth .upgrade-dialog .item {
+	margin: 4px 10px 4px 0;
+	vertical-align: top
+}
+
+#growth .upgrade-dialog .item a {
+	display: block;
+	_display: inline;
+	padding: 0 3px;
+	_zoom: 1
+}
+
+#growth .upgrade-dialog .item a span {
+	margin-left: 3px;
+	font-size: 10px;
+	font-family: arial, sans-serif;
+	color: #999
+}
+
+#growth .upgrade-dialog .item a:hover {
+	border-radius: 2px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #45abab
+}
+
+#growth .upgrade-dialog .item a:hover span {
+	color: #fff
+}
+
+#growth .upgrade-dialog .has-more {
+	padding-left: 3px;
+	color: #999
+}
+
+#growth .upgrade-dialog .amount {
+	padding: 0 .1em;
+	color: #e95002
+}
+
+#growth .upgrade-dialog .growth-better-than {
+	font-size: 18px
+}
+
+#growth .growth-log-tip {
+	color: #999;
+	font-size: 12px
+}
+
+.pg-charge .total {
+	color: #c33
+}
+
+.pg-charge .charge {
+	margin-left: 10px
+}
+
+.pg-charge h2 a.back {
+	float: right;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 18px;
+	margin-top: 18px
+}
+
+.pg-charge .number {
+	margin-top: 10px
+}
+
+.pg-charge .number .f-text {
+	width: 150px
+}
+
+.pg-charge .tip {
+	height: 20px;
+	color: #349835
+}
+
+.pg-charge .choose {
+	padding-top: 5px;
+	margin-left: 10px
+}
+
+.pg-charge .paytype-list {
+	margin: 10px 0
+}
+
+.pg-charge .commit {
+	margin-top: 30px
+}
+
+.pg-charge .captcha {
+	margin-top: 10px
+}
+
+.pg-charge .captcha img {
+	height: 30px;
+	vertical-align: top;
+	border: 1px #CCC solid;
+	border-radius: 3px;
+	*height: 30px
+}
+
+.pg-charge .captcha span.change-img {
+	margin: 0 0 0 4px;
+	font-size: 12px;
+	line-height: 32px;
+	vertical-align: top;
+	color: #0BB;
+	cursor: pointer;
+	zoom: 1
+}
+
+.pg-charge .captcha span:hover {
+	text-decoration: underline
+}
+
+.pg-charge #order-check-type-form .field-group {
+	margin-top: 15px;
+	padding-left: 0
+}
+
+.pg-charge .common-form--charge .field-group--charge {
+	padding-left: 85px
+}
+
+.pg-charge .common-form--charge .field-label {
+	width: 75px
+}
+
+.pg-charge .common-form--charge .unit {
+	display: inline-block;
+	*display: inline;
+	margin-left: 5px;
+	padding-top: 4px;
+	zoom: 1
+}
+
+.pg-charge .common-form--charge .money-tip {
+	margin: 0 0 10px 84px
+}
+
+.pg-charge .common-bind-mobile {
+	margin: 15px 0 15px 85px
+}
+
+.pg-charge-return .mainbox {
+	min-height: 0;
+	height: 100px
+}
+
+.pg-withdraw .field-group {
+	margin-bottom: 3px;
+	padding-left: 100px;
+	padding-bottom: 18px
+}
+
+.pg-withdraw .field-group label {
+	width: 90px
+}
+
+.pg-withdraw .field-group .balance {
+	font-family: helvetica, arial, sans-serif
+}
+
+.pg-withdraw .field-group select {
+	margin: 0;
+	padding: 3px 0;
+	height: 32px
+}
+
+.pg-withdraw .field-group .no-branch {
+	margin: 10px 0
+}
+
+.pg-withdraw .field-group .no-branch .normal {
+	width: auto;
+	line-height: 32px;
+	*zoom: 1
+}
+
+.pg-withdraw .bank .tip {
+	margin-bottom: -18px
+}
+
+.pg-withdraw .common-form .normal {
+	padding-left: 0
+}
+
+.pg-withdraw .can-withdraw {
+	color: #C00;
+	font-weight: bold
+}
+
+.pg-withdraw .no-withdraw .inline-tip {
+	padding: 0
+}
+
+.pg-withdraw .common-form .withdraw-money {
+	width: 150px
+}
+
+.pg-withdraw .common-form .withdraw-money-tip {
+	margin: 20px 0 5px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #424242
+}
+
+.pg-withdraw .common-form .withdraw-money-tip span {
+	font-size: 12px
+}
+
+.pg-withdraw .info-section {
+	margin-top: 40px
+}
+
+.pg-withdraw .view-detail {
+	display: inline-block;
+	margin-top: 40px
+}
+
+.pg-withdraw .withdraw-failure {
+	margin-top: 20px;
+	font-size: 16px
+}
+
+.pg-withdraw .withdraw-failure a {
+	margin-left: 20px
+}
+
+.pg-withdraw .withdraw-tip {
+	margin-top: 20px
+}
+
+.pg-withdraw .withdraw-tip li {
+	list-style: inside disc
+}
+
+.pg-withdraw .verify-mobile {
+	line-height: 28px;
+	font-size: 12px
+}
+
+.pg-withdraw .verify-mobile .verify-code {
+	width: 80px
+}
+
+.pg-withdraw .verify-mobile .verify-tip {
+	color: #666
+}
+
+.pg-withdraw .verify-mobile .verify-hint {
+	padding-left: 12px;
+	color: #666
+}
+
+.pg-withdraw .verify-mobile .verify-control {
+	margin-left: 15px
+}
+
+.pg-withdraw .verify-mobile .verify-btn {
+	font-size: 12px;
+	padding: 2px 4px;
+	*padding: 3px 4px 1px
+}
+
+.pg-withdraw .verify-mobile .rebind-link {
+	color: #0BB
+}
+
+.pg-withdraw .verify-mobile .rebind-link:hover {
+	color: #0BB
+}
+
+.pg-withdraw .verify-mobile .error {
+	color: #c33
+}
+
+.withdraw-promt-dialog .body {
+	padding-left: 70px
+}
+
+.withdraw-promt-dialog .body strong {
+	font-size: 16px;
+	color: #C00
+}
+
+.withdraw-promt-dialog .choose {
+	margin: 20px 0
+}
+
+.pg-withdraw-detail .info-section {
+	margin-top: 0
+}
+
+.pg-withdraw-detail .withdraw-bank .intro {
+	margin: 10px 0 20px
+}
+
+.pg-withdraw-detail .withdraw-bank .intro strong {
+	color: #C00
+}
+
+.pg-withdraw-detail .withdraw-bank .field-group {
+	padding-left: 100px;
+	padding-bottom: 18px
+}
+
+.pg-withdraw-detail .withdraw-bank .field-group label {
+	width: 90px
+}
+
+.pg-withdraw-detail .withdraw-bank .field-group select {
+	height: 32px;
+	padding: 3px 0;
+	margin: 0
+}
+
+.pg-withdraw-detail .withdraw-bank .field-group input {
+	vertical-align: middle
+}
+
+.pg-withdraw-detail .withdraw-bank .field-group .no-branch {
+	display: block;
+	margin-top: 10px
+}
+
+.pg-withdraw-detail .withdraw-tip {
+	margin-top: 20px
+}
+
+.pg-withdraw-detail .withdraw-tip li {
+	list-style: inside disc
+}
+
+.pg-withdraw-success .result-operation {
+	margin-bottom: 20px
+}
+
+.pg-withdraw-success .withdraw-tip {
+	margin-top: 15px;
+	margin-bottom: 30px
+}
+
+.pg-withdraw-success .withdraw-tip li {
+	list-style: inside disc;
+	font-size: 12px
+}
+
+.pg-withdraw-success .withdraw-tip h4 {
+	margin-bottom: 10px
+}
+
+.pg-refund-success .result-operation {
+	margin-bottom: 30px
+}
+
+.pg-refund-success .info-section {
+	text-align: left;
+	padding: 15px 16px;
+	line-height: 2em
+}
+
+.pg-refund-success .info-section span.label {
+	font-weight: bold
+}
+
+.pg-refund-success .info-section li ul {
+	position: relative;
+	top: -2em;
+	left: 60px
+}
+
+.pg-refund-success .info-section li li {
+	list-style: disc inside
+}
+
+#verify #bind-mobile {
+	margin: 50px 0 0 0
+}
+
+#bind-mobile .f-text {
+	width: 120px
+}
+
+#bind-mobile .f-verify {
+	margin-left: 10px;
+	padding: 3px 5px 3px;
+	*padding: 5px 1px 0;
+	margin-top: -3px;
+	cursor: pointer;
+	font-size: 14px
+}
+
+#bind-mobile .error {
+	color: #c33
+}
+
+#password-set-dialog .common-form {
+	margin: 30px 0 15px
+}
+
+#password-set-dialog .field-group {
+	margin: 5px 0;
+	padding: 0 10px 22px 110px;
+	line-height: 22px
+}
+
+#password-set-dialog .field-group label {
+	top: 6px;
+	margin: 0;
+	padding: 0;
+	line-height: 22px
+}
+
+#password-set-dialog .field-group .f-text {
+	margin-bottom: 3px;
+	height: 22px;
+	line-height: 22px
+}
+
+#password-set-dialog .operate {
+	margin: 5px 0 3px
+}
+
+#email-bind-dialog .common-form {
+	margin: 30px 0 15px
+}
+
+#email-bind-dialog .field-group {
+	margin: 5px 0;
+	padding: 0 10px 22px 110px;
+	line-height: 20px
+}
+
+#email-bind-dialog .field-group .oldname {
+	position: relative;
+	padding-left: 6px;
+	top: 6px;
+	color: #999
+}
+
+#email-bind-dialog .field-group label {
+	top: 6px;
+	margin: 0;
+	padding: 0;
+	line-height: 20px
+}
+
+#email-bind-dialog .field-group .f-text {
+	margin-bottom: 3px;
+	height: 20px;
+	line-height: 20px
+}
+
+#email-bind-dialog .field-group .readonly {
+	color: #666;
+	background: #f1f1f1
+}
+
+#email-bind-dialog .operate {
+	margin: 5px 0 3px
+}
+
+#email-bind-dialog .email-activate {
+	margin: 10px 0 20px;
+	line-height: 32px
+}
+
+#email-bind-dialog .email-activate .email-bind-result {
+	text-align: center
+}
+
+#email-bind-dialog .email-activate .email-bind-result .activation-remind
+	{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	text-align: left
+}
+
+#email-bind-dialog .email-activate .email-to-be-activated {
+	font-weight: bold;
+	color: #C00
+}
+
+#email-bind-dialog .email-activate .operate {
+	margin-top: 10px;
+	text-align: center
+}
+
+#email-bind-dialog .inline-link {
+	margin-left: 20px;
+	font-size: 12px;
+	line-height: 32px
+}
+
+#email-bind-dialog .captcha-refresh {
+	margin-left: 0
+}
+
+#mobile-unbind-dialog .common-form {
+	margin: 30px auto 10px;
+	width: 360px
+}
+
+#mobile-unbind-dialog .field-group {
+	margin: 5px 0;
+	padding: 0 10px 22px 110px;
+	line-height: 22px
+}
+
+#mobile-unbind-dialog .field-group label {
+	top: 6px;
+	margin: 0;
+	padding: 0;
+	line-height: 22px
+}
+
+#mobile-unbind-dialog .field-group .f-text {
+	margin-bottom: 3px;
+	width: 160px;
+	height: 22px;
+	line-height: 22px
+}
+
+#mobile-unbind-dialog .field-group .readonly {
+	color: #666;
+	background: #f1f1f1
+}
+
+#mobile-unbind-dialog .operate {
+	margin: 10px 0 3px
+}
+
+#mobile-unbind-dialog .mobile .error {
+	padding-left: 18px;
+	color: #D00;
+	background:
+		url(http://s1.meituan.net/www/css/i/sys-icons-16.vd2db5315.png) 0
+		-199px no-repeat
+}
+
+#mobile-bind-dialog .common-form {
+	margin: 30px auto 10px;
+	width: 360px
+}
+
+#mobile-bind-dialog .field-group {
+	margin: 5px 0;
+	padding: 0 10px 22px 110px;
+	line-height: 22px
+}
+
+#mobile-bind-dialog .field-group label {
+	top: 6px;
+	margin: 0;
+	padding: 0;
+	line-height: 22px
+}
+
+#mobile-bind-dialog .field-group .f-text {
+	margin-bottom: 3px;
+	height: 22px;
+	line-height: 22px
+}
+
+#mobile-bind-dialog .field-group .readonly {
+	color: #666;
+	background: #f1f1f1
+}
+
+#mobile-bind-dialog .operate {
+	margin: 10px 0 3px
+}
+
+#mobile-bind-dialog .mobile .f-text {
+	width: 160px
+}
+
+#mobile-bind-dialog .mobile .tip {
+	display: block;
+	margin: 0 0 -22px;
+	height: 18px;
+	line-height: 18px
+}
+
+#mobile-bind-dialog .mobile .error {
+	padding-left: 18px;
+	color: #D00;
+	background:
+		url(http://s1.meituan.net/www/css/i/sys-icons-16.vd2db5315.png) 0
+		-199px no-repeat
+}
+
+#mobile-bind-dialog .f-block-verify {
+	padding-bottom: 0
+}
+
+#mobile-bind-dialog .f-block-verify .tip {
+	margin: 0;
+	height: auto
+}
+
+#mobile-bind-dialog .f-block-verify .f-verify {
+	width: 100px;
+	margin: 9px 0;
+	line-height: 24px;
+	font-size: 12px;
+	vertical-align: top;
+	cursor: pointer
+}
+
+.pg-bonus .amount {
+	color: #D00;
+	font-style: normal
+}
+
+.pg-bonus .special-amount {
+	font-weight: bold;
+	margin: 0 2px;
+	font-size: 14px
+}
+
+.pg-bonus .deadline {
+	margin: 0 2px;
+	font-size: 1.5em
+}
+
+.pg-bonus .td {
+	vertical-align: top;
+	padding: 15px
+}
+
+.pg-bonus .card-detail {
+	vertical-align: middle
+}
+
+.pg-bonus .growth-info .level-avatar {
+	margin-right: 5px
+}
+
+.pg-bonus .card-hint {
+	color: #999
+}
+
+.pg-bonus .card-view {
+	position: relative;
+	padding: 10px;
+	background: #fff
+		url(http://s1.meituan.net/www/css/hotel/bg-hotel-search.vd37daac1.png);
+	border: 1px solid #eae9e9;
+	border-radius: 5px;
+	text-align: center
+}
+
+.pg-bonus .card-view-fixed {
+	width: 145px;
+	padding: 15px;
+	margin: 15px auto
+}
+
+.pg-bonus .card-info-row {
+	color: #666
+}
+
+.pg-bonus .card-view .card-rush {
+	position: absolute;
+	top: -10px;
+	left: -14px;
+	background:
+		url(http://s1.meituan.net/www/css/i/sp-vip-magic-card.vef11f669.png)
+		left top no-repeat;
+	width: 30px;
+	height: 30px
+}
+
+.pg-bonus .card-view .card-value {
+	display: inline-block;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 1;
+	color: #f70;
+	background:
+		url(http://s1.meituan.net/www/css/i/sp-vip-magic-card.vef11f669.png)
+		left -67px no-repeat
+}
+
+.pg-bonus .card-view .card-type {
+	display: inline-block;
+	height: 22px;
+	width: 56px;
+	background:
+		url(http://s1.meituan.net/www/css/i/sp-vip-magic-card.vef11f669.png)
+		left -40px no-repeat
+}
+
+.pg-bonus .card-view .new-num {
+	padding-left: 10px
+}
+
+.pg-bonus .detail-view {
+	text-align: left;
+	line-height: 22px
+}
+
+.pg-bonus .card-condition {
+	text-align: left;
+	line-height: 22px
+}
+
+.pg-bonus .card-action {
+	text-align: right
+}
+
+.pg-bonus .btn-fetch {
+	padding: 3px 15px
+}
+
+.pg-bonus .bubble-tip {
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 3px 8px;
+	margin-top: 8px;
+	text-align: center;
+	border: 1px solid #eae9e9;
+	color: #666;
+	border-radius: 3px
+}
+
+.pg-bonus .bubble-tip-top {
+	background:
+		url(http://s1.meituan.net/www/css/i/sp-header-new.v2bf6e2a4.png) -38px
+		-63px no-repeat;
+	width: 9px;
+	height: 5px;
+	position: absolute;
+	top: -5px;
+	left: 70%
+}
+
+.pg-bonus .dialog {
+	text-align: center
+}
+
+.pg-bonus .dialog--confirm {
+	text-align: left
+}
+
+.pg-bonus .dialog__header {
+	margin: 15px 84px 8px;
+	padding-left: 40px;
+	font-size: 24px;
+	line-height: 34px;
+	background:
+		url(http://s1.meituan.net/www/css/i/sp-sys-icon.v29a4a9a5.png)
+		no-repeat 0 0;
+	_background-image:
+		url(http://s1.meituan.net/www/css/i/sp-sys-icon-png8.v8210f0d2.png)
+}
+
+.pg-bonus .dialog__footer {
+	margin: 15px auto
+}
+
+.pg-bonus .dialog__msg-list {
+	margin-bottom: 10px
+}
+
+.pg-bonus .dialog__msg-item {
+	list-style: inside disc;
+	line-height: 1.8
+}
+
+.pg-bonus .dialog__msg-item--important {
+	font-weight: bold;
+	color: #D00
+}
+
+.pg-bonus .dialog .btn {
+	margin-right: 15px
+}
+
+.pg-bonus .txt-right {
+	text-align: right
+}
+
+.pg-bonus .vote-tip {
+	color: #D00;
+	font-size: 12px
+}
+
+.pg-bonus #sidebar {
+	padding-top: 37px
+}
+
+.pg-bonus .uix-tooltip-tip {
+	width: 240px
+}
+
+.blk-share {
+	height: 16px;
+	padding: 5px 0;
+	line-height: 16px
+}
+
+.blk-share .share-tip {
+	font-size: 12px;
+	color: #999;
+	vertical-align: top
+}
+
+.blk-share .share-list {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	line-height: 16px
+}
+
+.blk-share .share-item {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin-left: 5px;
+	width: 16px;
+	height: 16px;
+	background:
+		url(http://s0.meituan.net/www/css/i/icons-share.v186f5c42.gif)
+		no-repeat 0 0;
+	outline: 0;
+	overflow: hidden
+}
+
+.blk-share .has-text .share-item {
+	padding-left: 18px;
+	width: auto;
+	font-size: 12px
+}
+
+.blk-share .share-kaixin {
+	background-position: 0 -40px
+}
+
+.blk-share .share-renren {
+	background-position: 0 -80px
+}
+
+.blk-share .share-douban {
+	background-position: 0 -120px
+}
+
+.blk-share .share-email {
+	background-position: 0 -161px
+}
+
+.blk-share .share-sina {
+	background-position: 0 -202px
+}
+
+.blk-share .share-t139 {
+	background-position: 0 -241px
+}
+
+.blk-share .share-qq {
+	background-position: 0 -280px
+}
+
+.blk-share .share-qzone {
+	background-position: 0 -320px
+}
+
+.pg-userexinfo .userexinfo-form {
+	padding-bottom: 20px
+}
+
+.pg-userexinfo .userexinfo-form__section {
+	position: relative;
+	margin: 30px 0;
+	padding-left: 90px;
+	color: #555;
+	height: 24px;
+	line-height: 24px
+}
+
+.pg-userexinfo .userexinfo-form p {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 90px;
+	text-align: right;
+	color: #333
+}
+
+.pg-userexinfo .userexinfo-form span {
+	margin-right: 15px;
+	display: inline-block
+}
+
+.pg-userexinfo .userexinfo-form label {
+	margin-left: 5px
+}
+
+.pg-userexinfo .userexinfo-form select {
+	width: 60px
+}
+
+.pg-userexinfo .userexinfo-form .btn {
+	margin-left: 90px;
+	margin-top: 50px;
+	_margin-top: 0
+}
+
+.pg-userexinfo .userexinfo-form .tip {
+	display: block;
+	font-size: 12px;
+	color: #999
+}

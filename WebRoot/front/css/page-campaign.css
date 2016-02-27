@@ -1,0 +1,257 @@
+﻿@charset "utf-8";
+/* common */
+.page-campaign .am-header .city {
+    text-align: right;
+    padding-right: 25px;
+    width: auto;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+    .page-campaign .am-header .city.am-clickable-active {
+        text-shadow: rgba(0,0,0,0.75) 1px 1px 1px;
+    }
+
+.campaign-list {
+    padding: 12px 6px 1px 6px;
+}
+
+    .campaign-list li {
+        padding: 2px;
+        margin-bottom: 12px;
+        position: relative;
+    }
+    .campaign-list li.empty {
+    	padding-top:50px;
+        line-height:200px;
+        background:#FFF url(../images/emotion_sad.png) no-repeat center 70px;
+        background-size:64px 64px;
+        text-align:center;
+        font-size:14px;
+        color:#888;
+    }
+
+    .campaign-list .img {
+        border: 2px solid #FFF;
+        min-height:115px;
+        background:#f8f8f8 url(../images/photo.png) no-repeat center center;
+        background-size:64px 64px; 
+    }
+
+        .campaign-list .img img {
+            width: 100%;
+            display:block;
+        }
+
+    .campaign-list .title {
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 25px;
+        padding-left: 10px;
+        margin-right:50px;
+    }
+
+    .campaign-list .time {
+        font-size: 12px;
+        color: #8e8e8e;
+        line-height: 18px;
+        padding-left: 10px;
+    }
+
+    .campaign-list .favour {
+        position: absolute;
+        bottom: 0px;
+        right: 5px;
+        line-height: 44px;
+        height: 44px;
+        font-size: 11px;
+        padding: 0 5px 0 22px;
+    }
+
+.campaignDetail-slider {
+    /*height: 160px;*/
+    padding: 10px 7px;
+}
+
+    .campaignDetail-slider .box {
+        /*height: 156px;*/
+        background: #f0f0f0;
+        padding: 2px;
+        position: relative;
+    }
+
+    .campaignDetail-slider .img {
+        /*height: 115px;*/
+        border: 2px solid #FFF;
+        position: relative;
+    }
+
+    .campaignDetail-slider .tag {
+        width: 18px;
+        height: 42px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 25px;
+        top: 0;
+    }
+.coupon-list .img {
+        float: left;
+        height: 86px;
+        width: 64px;
+        background: rgba(0,0,0,0.05);
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        overflow: hidden;
+    }
+
+        .coupon-list .img img {
+            height: 100%;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+    .coupon-list .content {
+        margin: 0 70px 0 75px;
+    }
+    .campaignDetail-slider .count {
+        width: 100%;
+        height: 3px;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+    }
+
+        .campaignDetail-slider .count p {
+            height: 3px;
+            background: rgba(255,255,255,0.8);
+            margin-right: 1px;
+            -webkit-box-flex: 1;
+        }
+
+            .campaignDetail-slider .count p:last-child {
+                margin-right: 0;
+            }
+
+            .campaignDetail-slider .count p.selected {
+                background-color: #ff523e;
+                opacity: 0.8;
+            }
+
+    .campaignDetail-slider .am-carrousel, .campaignDetail-slider .am-carrousel-inner {
+        height: 100%;
+    }
+
+    .campaignDetail-slider .item {
+        width: 100%;
+        height: 100%;
+    }
+
+    .campaignDetail-slider .finish {
+        line-height: 36px;
+        padding-left: 10px;
+        height:36px;
+    }
+
+        .campaignDetail-slider .finish span {
+            font-size: 18px;
+        }
+
+    .campaignDetail-slider .operation {
+        position: absolute;
+        bottom: 10px;
+        right: 5px;
+    }
+
+        .campaignDetail-slider .operation p {
+            float: left;
+            padding: 0 5px 0 25px;
+            border-left: 1px solid #FFF;
+            border-right: 1px solid #d1d1d1;
+            line-height: 18px;
+        }
+
+            .campaignDetail-slider .operation p.favor {
+                border-left: none;
+            }
+
+            .campaignDetail-slider .operation p.save,.campaignDetail-slider .operation p.collect,.campaignDetail-slider .operation p.uncollect {
+                border-right: none;
+            }
+
+.campaignDetail-content {
+    border: 1px solid #eeeeee;
+    padding: 8px 8px 4px 8px;
+    margin: 0 7px;
+}
+
+    .campaignDetail-content .title {
+        font-size: 15px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .campaignDetail-content .desc {
+        line-height:20px;
+        min-height:80px;
+        overflow:hidden;
+    }
+    .campaignDetail-content .more,.campaignDetail-content .less {
+        text-align:right;
+        padding-right:15px;
+        line-height:24px;
+    }
+.campaignDetail-link {
+    padding:7px 7px 1px 7px;
+}
+    .campaignDetail-link .am-clickable {
+        margin-bottom:7px;
+        height:40px;
+        border-radius:5px;
+    }
+    .campaignDetail-link .icon,.campaignDetail-link .arrow {
+        float:left;
+        width:38px;
+        height:40px;
+    }
+    .campaignDetail-link .arrow {
+        float:right;
+    }
+    .campaignDetail-link .name {
+        margin:7px 38px;
+        line-height:26px;
+        padding-left:6px;
+    }
+
+.try-again
+{
+    width: 80%;
+    height: 80px;
+    margin: 100px auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    line-height: 80px;
+    display:none;
+}
+
+
+.loading-inner-text {
+    float:left;
+    background-image: url(../images/loading2.png);
+background-size: 16px 16px;
+line-height: 16px;
+height: 16px;
+width: 16px;
+-webkit-animation: animation-loading infinite linear 1s;
+}
+
+.am-disabled {
+    color: gray;
+}

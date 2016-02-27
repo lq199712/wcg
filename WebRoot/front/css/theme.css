@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+/* CSS Document */
+div.home-logo{
+    top:10px;
+    left:10px;
+	background-image:url(logo.png);
+	background-repeat:no-repeat;
+	background-position:left top;
+	background-size:auto;
+	width:200px;
+	height:150px;
+}
+div.page-home{
+    background-image:url(background.jpg);
+}
+div.home-text{
+    background-image: url(storeLogo.png);
+}
+.am-header div.home{
+	background-image:url(titlebarLogo.png);
+}
+ul.nav-ul .logo{
+	background-image:url(navLogo.png);
+}
+
+.am-header {
+    background: -webkit-gradient(linear, left top, left bottom, from(#833713), to(#ffc800));
+}
+.page-button.red {
+    border-bottom: 2px solid #1d1819;
+    background: #332b2d;
+}
+.page-button.blue {
+    background: #328ce0;
+}
+.page-comfirmBox .title{
+	background: -webkit-gradient(linear, left top, left bottom, from(#332b2d), to(#1d1819));
+}

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>填写资料</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/yyucadapter.js"></script>
+<link type="text/css" rel="stylesheet" href="res/wdy/style/examine.css" />
+<style type="text/css">
+/*window*/
+.window {
+	width:289px;
+	position:absolute;
+	display:none;
+	margin:0px auto 0 -136px;
+	padding:2px;
+	bottom:70px;
+	left:50%;
+	border-radius:0.6em;
+	-webkit-border-radius:0.6em;
+	-moz-border-radius:0.6em;
+	background-color: #f1f1f1;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	-o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	font:14px/1.5 Microsoft YaHei, Helvitica, Verdana, Arial, san-serif;
+	z-index:1000;
+}
+.window .wtitle {
+	background-color: #585858;
+	line-height: 26px;
+	padding: 5px 5px 5px 10px;
+	color:#ffffff;
+	font-size:16px;
+	border-radius:0.5em 0.5em 0 0;
+	-webkit-border-radius:0.5em 0.5em 0 0;
+	-moz-border-radius:0.5em 0.5em 0 0;
+}
+.window .content {
+	/*min-height:100px;*/
+	overflow:auto;
+	padding:10px;
+	color: #222222;
+	text-shadow: 0 1px 0 #FFFFFF;
+}
+.window #txt {
+	min-height:30px;
+	font-size:14px;
+	line-height:20px;
+	
+}
+.window .content p {
+	margin:10px 0 0 0;
+}
+
+.window .wtitle .close {
+	float:right;
+	background-image: url("../../../media/images/mwm/msg/12QJ8o7KOek84fkCWSBtfL+Ny2MPpCkPFMH6PWEhWhKncIyEk69VfiUuVhqJefds+YcwNbEwxGqGIFWYAAAAASUVORK5CYII=");
+	width:26px;
+	height:26px;
+	display:block;
+}
+#overlay {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#000000;
+	opacity:0.5;
+	filter:alpha(opacity=0);
+	display:none;
+	z-index: 9;
+}
+
+</style>
+
+</head>
+<body>
+
+	
+<div class="wrapper1">
+	<div class="cardexplain">
+			<div class="window" id="windowcenter">
+				<div id="title" class="wtitle">操作提示<span class="close" id="alertclose"></span></div>
+				<div class="content">
+					<div id="txt"></div>
+				</div>
+			</div>
+	<img class="bg" src="res/wdy/images/bg.jpg">
+	<div class="inner-cont">
+		<div class="qtitle">请先填写您的资料：</div>
+		<form action="wdyAction!goToAnswers" method="post" id="theform"  onsubmit="return checkform();">
+		<div class="field-contain">
+			<label for="username" class="input-label">请输入您的名称:</label>
+			<input type="text" name="username" id="username" class="input-text" >
+		</div>
+		<div class="field-contain">
+			<label for="phone" class="input-label">请输入您的手机号码:</label>
+			<input type="tel" name="telphone" id="telphone" class="input-text" >
+			<span class="tip">*请务必填写正确，此手机号将作为您以后领奖的依据</span>
+		</div>
+		<div class="btn-wrapper">
+			<input type="submit" value="开始" class="next-btn1"></input>
+		</div>
+	</div>
+ 	<p class="page-url">
+		<a href="/" target="_blank" class="page-url-link"></a>
+	</p>
+</div>
+<script type="text/javascript">
+function lingqu(){
+	var un = $.trim($('#un').val());
+	var tel = $.trim($('#tel').val());
+	if(un=='' || tel==''){
+		tusi('请完善用户信息');
+		return;
+	}
+	ajax('wdyans-10972.html',{ tel:tel,un:un,id:'10972'},function(m){
+		location.href='wdyans-10972.html';
+	});	
+}
+
+function alert(title){ 
+			window.scrollTo(0, -1);
+			$("#windowcenter").slideToggle("slow"); 
+			$("#txt").html(title);
+			setTimeout(function(){ $("#windowcenter").slideUp(500);},4000);
+		}
+		
+		function checkform(){
+		var username = document.getElementById('username').value;
+		var telphone = document.getElementById('telphone').value;
+		
+		
+		if(username=='')
+		{
+			alert("请输入您的姓名.");
+			return false;
+		}
+		if(telphone=='')
+		{
+			alert("请输入您的电话.");
+			return false;
+		}
+		if(!(/(^(\d{3,4}-)?\d{7,8})$|(^1[3|4|5|8][0-9]{9})/.test(telphone))||telphone.length>11){
+	        alert("不是正确的11位手机号,请重新输入.");
+			return false;
+	    }
+	return true;
+}
+
+</script>
+</body>
+</html>

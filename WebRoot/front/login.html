@@ -1,0 +1,159 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>会员中心</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--  libs css -- start -->
+<link href="libs/am.css" rel="stylesheet" type="text/css" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/theme.css" rel="stylesheet" type="text/css" />
+<!-- link href="/themes/wakeup_module6/theme.css" rel="stylesheet" type="text/css" />-->
+<link rel="apple-touch-icon-precomposed" href="images/other/icon.png" />
+<link rel="Shortcut Icon" type="image/x-icon" href="images/other/icon.png" />
+<!--  libs css -- end -->
+<script src="libs/jquery-2.1.0.min.js" type="text/javascript"></script>
+
+
+<div class="nav-container" id="nav" style="display: none;">
+	<div class="nav">
+		<ul class="nav-ul">
+			<li class="logo"></li>
+			
+			<!--<li class="logo am-clickable"></li>  -->
+			<li class="am-clickable home " href="index4.jsp">
+				<div class="icon"></div>
+				返回首页
+			</li>
+			<li class="am-clickable campaign "  href="newlists.html">
+				<div class="icon"></div>
+				最新活动
+			</li>
+			<li class="am-clickable service "  href="servicelists.html">
+				<div class="icon"></div>
+				服务指南
+			</li>
+			<li class="am-clickable coupon "  href="newlists_no.html">
+				<div class="icon"></div>
+				优惠券
+			</li>
+			<li class="am-clickable card "  href="memberlists.html">
+				<div class="icon"></div>
+				会员特惠
+			</li>
+			
+			<!-- set class active to make it as the CURRENT module -->
+			<li class="am-clickable barber active"  href="lists.html">
+				<div class="icon"></div>
+				设计师团队
+			</li>
+			<li class="am-clickable user "  href="tel:15250838555">
+				<div class="icon"></div>
+				在线预约</li>
+			<li class="am-clickable interact "  href="dianping.html">
+				<div class="icon"></div>
+				点评</li>
+			<li class="am-clickable complain "  href="tel:15250838555">
+				<div class="icon"></div>
+				我要投诉</li>
+			
+		</ul>
+		<div class="nav-bg am-clickable"></div>
+	</div>
+</div>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<!--  business css -- start -->
+<link href="css/page-barber.css" rel="stylesheet"
+	type="text/css" />
+<link href="css/page-member-login.css"
+	rel="stylesheet" type="text/css" />
+<!--  business css -- end -->
+<script src="scripts/config.js" type="text/javascript"></script>
+<script src="scripts/init.js" type="text/javascript"></script>
+<script src="scripts/page.member-login.js"
+	type="text/javascript"></script>
+</head>
+
+<body>
+	<div class="am-app">
+		<div class="am-page page-member-login" id="page_login">
+			<div class="am-header">
+				<p>会员中心</p>
+				
+				<div class="am-clickable menu"></div>
+				<div class="am-clickable home" onvclick="location.href='index4.jsp'"></div>
+				
+			</div>
+			<div class="am-body-wrap">
+				<div class="am-body-inner">
+					<div class="header">
+						<img src="images/head_male.png">
+					</div>
+					<form class="member-login-form" method="post"
+						action="center.html"
+						id="member-login-form">
+
+						<div class="cpnt-input icon1">
+							<input maxlength="20" type="text" value="" name="phone"
+								id="phone" placeholder="输入登记的手机号" /> <span class="clear"></span>
+						</div>
+						<div class="cpnt-input code">
+							<input maxlength="20" type="text" value="" name="smscode"
+								id="smscode" placeholder="输入密码" />
+						</div>
+						
+						<div class="tanantChoose" style="display:none">
+                            <p>您在多家商户有会员记录，请选择：</p>
+                            <ul>
+                            </ul>
+                        </div>
+                        
+                        <div class="register"><a href="register.html">还没有账号?</a></div>
+                        
+						<div class="page-button red" id="login"><a href="center.html">登 录</a></div>
+						<div class="tip">通过微信登录绑定账户后，可随时随地查看账户余额，消费记录，使用电子会员卡；并可通过微信随时了解卡金的变动情况，确保账户安全。</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+<script src="libs/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="libs/am.js" type="text/javascript"></script>
+<script src="libs/am.events.js" type="text/javascript"></script>
+<script src="libs/am.Carrousel.js" type="text/javascript"></script>
+<script src="libs/am.Tab.js" type="text/javascript"></script>
+<script src="libs/am.debug.js" type="text/javascript"></script>
+<script src="libs/dateFormat.js" type="text/javascript"></script>
+<script src="scripts/config.js" type="text/javascript"></script>
+<script src="scripts/init.js" type="text/javascript"></script>
+<script src="scripts/nav.js" type="text/javascript"></script>
+<script src="scripts/common.js" type="text/javascript"></script>
+<script type="text/javascript">
+	window.amGloble.RATINGURLS = {
+		coupon: "/coupon/like",
+		store: "/store/like",
+		campaign: "/campaign/like",
+		barber:"/barber/like",
+		product:"/product/like"
+	};
+	config.homeUrl = "index4.jsp";
+	
+	var dataForWeixin={
+		TLImg:"images/other/icon.png"
+	};
+</script>
+</html>

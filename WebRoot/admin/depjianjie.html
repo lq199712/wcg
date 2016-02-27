@@ -1,0 +1,233 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<!-- Apple devices fullscreen -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- Apple devices fullscreen -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<base target="mainFrame" />
+<link rel="stylesheet" type="text/css" href="css/wm/index.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/bootstrap_min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/bootstrap_responsive_min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/themes.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/todc_bootstrap.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/inside.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/album.css" media="all" />
+<title>39MI—国内最大的微信公众服务平台</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/yyucadapter.js"></script>
+
+<script src="http://api.map.baidu.com/api?v=1.5&ak=1b0ace7dde0245f796844a06fb112734"></script>
+</head>
+<body class="theme-blue">
+	<div id="main">
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="box">
+						<div class="box-title">
+							<div class="span12">
+								<h3><i class="icon-cog"></i>政务简介</h3>
+							</div>
+						</div>
+						<div class="box-content">
+							<form action="" method="post" id="lbsForm" class="form-horizontal form-validate" ><input type="hidden" value="54e040a6975ab" name="YYUC_FORM_TOKEN"/><input type="hidden" value = "" name="DFsBFApqSQ0HDAQRFGpGXBJgWFI=" id="micro_zhengwu_setid" />								<div class="control-group">
+									<label for="title" class="control-label">图文消息标题：</label>
+									<div class="controls">
+									<input type="text"   value="" name="DFsBFApqSQ0HDAQRFGpGXBJgX1cJAQ==" id="micro_zhengwu_setname" class="input-xlarge" required="required"/>										<span class="maroon">*</span>
+										<span class="help-inline">触发关键词后返回的图文消息标题</span>
+									</div>
+								</div>
+								<div class="control-group">
+									<label for="keyword" class="control-label">图文消息触发关键词：</label>
+									<div class="controls">
+										<input type="text"   value="" name="DFsBFApqSQ0HDAQRFGpGXBJgVlwe" id="micro_zhengwu_setgjz" class="input-xlarge" required="required"/>										<span class="maroon">*</span>
+										<span class="help-inline"></span>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">图文消息封面：</label>
+									<div class="controls">
+										<img class="thumb_img" src="res/zhengwu/artpic.jpg" id="pic_pic" style="max-height:100px;" />
+										<input type="hidden" value = "res/zhengwu/artpic.jpg" name="DFsBFApqSQ0HDAQRFGpGXBJgQV8H" id="micro_zhengwu_setpic" />										<span class="help-inline">
+											<button class="btn select_img" type="button" onclick="setpic('pic_pic','micro_zhengwu_setpic');">选择封面</button>
+											<span class="help-inline">建议尺寸：宽720像素，高400像素</span>
+										</span>
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label">政务部门头部图片：</label>
+									<div class="controls">
+									<img class="thumb_img" src="res/zhengwu/headpic.jpg" id="pic_headpic"  style="max-height:100px;" />
+										<input type="hidden" value = "res/zhengwu/headpic.jpg" name="DFsBFApqSQ0HDAQRFGpGXBJgWVMFAERaUQ==" id="micro_zhengwu_setheadpic" />										<span class="help-inline">
+											<button class="btn select_img" type="button" onclick="setpic('pic_headpic','micro_zhengwu_setheadpic');">选择图片</button>
+											<span class="help-inline">建议尺寸：宽720像素，高350像素</span>
+										</span>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">服务类型头部图片：</label>
+									<div class="controls">
+									<img class="thumb_img" src="res/zhengwu/headpic1.jpg" id="pic_apartpic" style="max-height:100px;" />
+									<input type="hidden" value = "res/zhengwu/headpic1.jpg" name="DFsBFApqSQ0HDAQRFGpGXBJgUEYFFkBDWwc=" id="micro_zhengwu_setapartpic" />									
+										<span class="help-inline">
+											<button class="btn select_img" type="button" onclick="setpic('pic_apartpic','micro_zhengwu_setapartpic');">选择图片</button>
+											<span class="help-inline">建议尺寸：宽720像素，高350像素</span>
+										</span>
+									</div>
+								</div>
+								<div class="control-group">
+									<label for="suggestId" class="control-label">地图标识：</label>
+									<div class="controls">
+										<div class="input-append">
+										<input type="text"   value="" name="DFsBFApqSQ0HDAQRFGpGXBJgUFIAFg==" id="micro_zhengwu_setaddr" class="input-xlarge" required="required"/>	
+											<button class="btn" type="button" id="positioning">搜索</button>
+										</div>
+										<span class="maroon">注意：这个只是模糊定位，准确位置请地图上标注！</span>
+										<div id="l-map">
+											<i class="icon-spinner icon-spin icon-large"></i>地图加载中...
+										</div>
+										<div id="r-result">
+										<input type="text"   value="116.403694" name="DFsBFApqSQ0HDAQRFGpGXBJgW1I=" id="micro_zhengwu_setjd" />										<input type="text"   value="39.916042" name="DFsBFApqSQ0HDAQRFGpGXBJgRlI=" id="micro_zhengwu_setwd" />										</div>
+									</div>
+								</div>
+								<div class="control-group">
+									<label for="estate_desc" class="control-label">服务理念简介：</label>
+									<div class="controls">
+									<textarea style="width:600px;height:100px;" width="600px" height="100px" name="DFsBFApqSQ0HDAQRFGpGXBJgW18FCl5aVw==" id="micro_zhengwu_setjianjie"></textarea><input type="hidden" relobj="kindeditor" rel="yyuc" editorid="micro_zhengwu_setjianjie" value="{langType:&quot;zh-cn&quot;,allowImageUpload:true,allowFlashUpload:true,allowMediaUpload:true,allowFileManager:false,items:kindeditor_item0}" />									</div>
+								</div>
+								<div class="control-group">
+									<label for="object_desc" class="control-label">政务部门简介：</label>
+									<div class="controls">
+										<textarea style="width:600px;height:100px;" width="600px" height="100px" name="DFsBFApqSQ0HDAQRFGpGXBJgSV8FClNeRw==" id="micro_zhengwu_setxiangmu"></textarea><input type="hidden" relobj="kindeditor" rel="yyuc" editorid="micro_zhengwu_setxiangmu" value="{langType:&quot;zh-cn&quot;,allowImageUpload:true,allowFlashUpload:true,allowMediaUpload:true,allowFileManager:false,items:kindeditor_item0}" />									</div>
+								</div>
+								<div class="control-group">
+									<label for="traffic_desc" class="control-label">特别提醒：</label>
+									<div class="controls">
+										<textarea style="width:600px;height:100px;" width="600px" height="100px" name="DFsBFApqSQ0HDAQRFGpGXBJgW18FC0BcXAM=" id="micro_zhengwu_setjiaotong"></textarea><input type="hidden" relobj="kindeditor" rel="yyuc" editorid="micro_zhengwu_setjiaotong" value="{langType:&quot;zh-cn&quot;,allowImageUpload:true,allowFlashUpload:true,allowMediaUpload:true,allowFileManager:false,items:kindeditor_item0}" />									</div>
+								</div>								
+								
+								<div class="form-actions">
+									<button type="submit" id="bsubmit" data-loading-text="提交中..." class="btn btn-primary">保存</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<br/><br/><br/></body>
+	<script type="text/javascript">
+	function setpic(imgid,hideid){
+		window.piccbk = function(m){
+			$('#'+imgid).attr('src',m);
+			$('#'+hideid).val(m);
+			window.piccbk = null;
+		}
+		window.curpic = null;
+		openpicset();	
+	} 
+	function openpicset(){
+		pophtml('<iframe src="wspicif.html" style="width:630px;height:470px;border:none;background-color: #dfdfdf;" width="630px" height="475px"></iframe>',670,510,true);
+	}
+
+	
+	
+	//是否从未保存过定位信息，如果从未保存过，并且有填地址信息，那么进入页面后自动定位
+	var located = true;
+	//定位坐标
+	var destPoint = new BMap.Point($('#micro_zhengwu_setjd').val(),$('#micro_zhengwu_setwd').val());
+	$(function(){		
+		/**开始处理百度地图**/
+		var map = new BMap.Map("l-map");
+		map.centerAndZoom(new BMap.Point(destPoint.lng, destPoint.lat), 12);//初始化地图
+		map.enableScrollWheelZoom();
+		map.addControl(new BMap.NavigationControl());
+		var marker = new BMap.Marker(destPoint);
+		map.addOverlay(marker);//添加标注
+		
+		map.addEventListener("click", function(e){
+			if(confirm("确认选择这个位置？")){
+				destPoint = e.point;
+				$('#micro_zhengwu_setjd').val(destPoint.lng);
+				$('#micro_zhengwu_setwd').val(destPoint.lat);
+				map.clearOverlays();
+				var marker1 = new BMap.Marker(destPoint);  // 创建标注
+				map.addOverlay(marker1); 
+			}
+		});
+		
+		
+		
+		var myValue;
+
+		var local;
+		function setPlace(){
+		    map.clearOverlays();    //清除地图上所有覆盖物
+		    local = new BMap.LocalSearch(map, { //智能搜索
+		      renderOptions:{ map: map}
+		    });
+		    located = true;
+		    local.setMarkersSetCallback(callback);
+		    local.search(myValue);
+		}
+		
+		function addEventListener(marker){
+			marker.addEventListener("click", function(data){
+				destPoint = data.target.getPosition(0);
+			});
+		}
+		function callback(posi){
+			$("#micro_zhengwu_setaddr").removeAttr("disabled");
+			for(var i=0;i<posi.length;i++){
+				if(i==0){
+					destPoint = posi[0].point;
+				}
+				posi[i].marker.addEventListener("click", function(data){
+					destPoint = data.target.getPosition(0);
+				});  
+			}
+		}
+		
+		
+		$("#positioning").click(function(){
+			if($("#micro_zhengwu_setaddr").val() == ""){
+				alert("请输地址！");
+				return ;
+			}
+			$("#locate-btn").prop("disabled",true);
+			local = new BMap.LocalSearch(map, { //智能搜索
+				renderOptions:{ map: map}
+			});
+			located = true;
+			local.setMarkersSetCallback(callback);
+			local.search($("#micro_zhengwu_setaddr").val());
+			return false;
+		});
+		
+		 $("#lbsForm").submit(function(){
+			var cansv= true;
+			$(this).find('input[type="text"],select,textarea').filter('[required="required"]').each(function(){
+				if($.trim($(this).val())==''){
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}
+			});
+			if(!cansv){
+				tusi('请将信息填写完整');
+			}
+	    	return cansv;
+	    });
+	});
+	</script>
+</html>

@@ -1,0 +1,195 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/**
+* reset:
+*/
+/**{-webkit-tap-highlight-color: rgba(0,0,0,0);}*/
+iframe {
+    opacity: 0;
+}
+
+a, input, div, textarea {
+    outline: none;
+}
+
+html, body, h1, h2, h3, h4, ul, li, ol, dl, dt, dd, form, p, input, textarea {
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+/*input,textarea{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-modify: read-write-plaintext-only;}*/
+html, body {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+}
+
+ul, dl, ol, li {
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    font-size: 12px;
+    color: #000;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: none;
+}
+.am-app {
+    max-width:500px;min-height:100%;position:relative;margin:0 auto;background: #FFF;
+}
+img {
+    border: none;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+.clear {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+/***/
+
+.am-header {
+    height: 50px;
+    background: #CCC;
+}
+
+    .am-header div.am-clickable {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .am-header div.am-backbutton {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .am-header p {
+        text-align: center;
+    }
+
+
+/** Carrousel */
+.am-carrousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.am-carrousel-inner {
+    height: 100%;
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+    .am-carrousel-inner img {
+        width: 100%;
+    }
+
+
+.am-photoViewer {
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9;
+    background-color:#000;
+    display:none;
+    overflow:hidden;
+}
+
+.am-photoViewer .am-carrousel-inner li{
+    height:100%;
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    position:relative;
+    background:url(../images/018.gif) no-repeat center center;
+}
+.am-photoViewer-ctrls {
+    position:absolute;
+    top:5px;
+    left:0;
+    width:100%;
+}
+    .am-photoViewer-ctrls li {
+        width:50px;
+        height:40px;
+        float:right;
+    }
+    .am-photoViewer-ctrls .am-clickable {
+        height:40px;
+        width:40px;
+        margin:0 auto;
+    }
+    .am-photoViewer-ctrls .prev {
+        background:url(../images/br_prev.png) no-repeat center center;
+        background-size:25px 25px;
+    }
+    .am-photoViewer-ctrls .next {
+        background:url(../images/br_next.png) no-repeat center center;
+        background-size:25px 25px;
+    }
+    .am-photoViewer-ctrls .zoomIn {
+        background:url(../images/12_Zoom_in-64.png) no-repeat center center;
+        background-size:25px 25px;
+    }
+    .am-photoViewer-ctrls .zoomOut {
+        background:url(../images/13_Zoom_out-64.png) no-repeat center center;
+        background-size:25px 25px;
+    }
+    .am-photoViewer-ctrls .close {
+        background:url(../images/cancel.png) no-repeat center center;
+        background-size:25px 25px;
+    }
+    .am-photoViewer-ctrls .am-clickable.am-clickable-active {
+        border-color:#FFF;
+    }
+    .am-photoViewer-ctrls .zoomIn.am-clickable-active {
+        background-image:url(../images/12_Zoom_in-64_active.png);
+    }
+    .am-photoViewer-ctrls .zoomOut.am-clickable-active {
+        background-image:url(../images/13_Zoom_out-64_active.png);
+    }
+    .am-photoViewer-ctrls .prev.am-clickable-active  {
+        background-image:url(../images/br_prev_active.png);
+    }
+    .am-photoViewer-ctrls .next.am-clickable-active {
+        background-image:url(../images/br_next_active.png);
+    }
+    .am-photoViewer-ctrls .close.am-clickable-active  {
+        background-image:url(../images/cancel_active.png);
+    }
+.am-photoViewer .text {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    line-height:20px;
+    background-color:rgba(50,50,50,0.1);
+    color:#FFF;
+}
+.am-photoViewer .text_inner {
+    padding:5px 10px;
+}
+.am-carrousel-inner img.hide{
+	display:none;
+}
+.am-carrousel-inner .item{
+	background:#f3f3f3 url(../images/photo.png) no-repeat center center;
+	background-size:64px 64px;
+}
+.am-carrousel-inner .item.cloneItem img{display:inline;}

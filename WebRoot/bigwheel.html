@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>幸运大转盘</title>
+<script type="text/javascript">var yyuc_jspath = "/@system/";</script>
+<script type="text/javascript" src="bigwheel/js/jquery.js"></script>
+<script type="text/javascript" src="bigwheel/js/yyucadapter.js"></script>
+<link rel="stylesheet" href="bigwheel/css/bootstrap.min.css">
+<link rel="stylesheet" href="bigwheel/css/admin.css">
+<style type="text/css">
+	table td {
+		min-width:50px;
+		overflow:hidden;text-overflow:ellipsis;
+	}
+	#picsethere{
+		width: 510px;
+		display: block;
+	}
+	#picsethere img{
+		max-width: 500px;
+		display: block;
+	}
+</style>
+<link href="bigwheel/css/WdatePicker.css" rel="stylesheet" type="text/css"></head>
+<body>
+	<h3>幸运大转盘设置</h3>
+	<div class="alert alert-info">
+	  	<p><span class="bold">说明：</span>幸运大转盘是一种游戏促销模式。</p>
+	</div>
+	<form class="form-horizontal" id="lbsForm" action="" method="post"><input type="hidden" value="542ca0ebb931d" name="YYUC_FORM_TOKEN"><input type="hidden" value="" name="SksCHBNtDFw=" id="xydzpid">		<div class="control-group">
+	    	<label class="control-label" for="keyword">幸运大转盘名称</label>
+	    	<div class="controls">
+	    	<input type="text" value="" name="SksCHBNtC1lfBw==" id="xydzpname" class="span4">		    	<span class="maroon">*</span>
+		    	<span class="help-inline">最多只能输入30个字符。</span>
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	    	<label class="control-label" for="keyword">活动关键字</label>
+	    	<div class="controls">
+	    	<input type="text" value="" name="SksCHBNtAlJI" id="xydzpgjz" class="span4">		    	<span class="maroon">*</span>
+		    	<span class="help-inline">最多只能输入20个字符。</span>
+	    	</div>
+	  	</div>
+		<div class="control-group">
+	    	<label class="control-label" for="location_p">活动开始时间</label>
+	    	<div class="controls">
+	    	<input type="text" value="" id="xydzpkssj" class="span4" name="SksCHBNtDktBCA==" onfocus="WdatePicker({ dateFmt:&#39;yyyy-MM-dd HH:mm:ss&#39;})" relobj="yyuccalendar" rel="yyuc">	    	</div>
+	  	</div>
+	  
+	  	<div class="control-group">
+	    	<label class="control-label" for="category_f">活动结束时间</label>
+	    	<div class="controls">
+	    	<input type="text" value="" id="xydzpjssj" class="span4" name="SksCHBNtD0tBCA==" onfocus="WdatePicker({ dateFmt:&#39;yyyy-MM-dd HH:mm:ss&#39;})" relobj="yyuccalendar" rel="yyuc">	    	</div>
+	  	</div>
+		<div class="control-group">
+		    <label class="control-label" for="">活动展示图片</label>
+		    <div class="controls">
+			    <div class="cover-area">
+					<table style="height: 30px;overflow: hidden;">
+					<tbody><tr>
+					<td><iframe name="YYUC_806191a574edd625c1d0ad21d30b355d_if" style="position:absolute; left:-10000px;"></iframe>
+<table style="border:none;padding:0;margin:0;width:auto;display: inline-block;"><tbody><tr style="border:none;padding:0;margin:0;"><td style="border:none;padding:0;margin:0;width:auto;">
+
+</td><td style="border:none;padding:0;margin:0;width:auto;">
+<span id="YYUC_806191a574edd625c1d0ad21d30b355d_span" style="display:-moz-inline-box;display:inline-block;width:100px;height:32px;">
+</span>
+</td><td style="border:none;padding:0;margin:0;width:auto;"><span id="YYUC_806191a574edd625c1d0ad21d30b355d_loadpic" style="display: none;"><img src="18.gif"></span></td></tr></tbody></table>
+<input type="hidden" name="xydzpT08d9e827ffbba2efe4413cb064bbf847pic" id="YYUC_806191a574edd625c1d0ad21d30b355d_text" value="">
+<script>
+$(function(){
+	var YYUC_806191a574edd625c1d0ad21d30b355d_form = window.YYUC_806191a574edd625c1d0ad21d30b355d_form = $('<form style="position: absolute;left:-10000px;" id="YYUC_806191a574edd625c1d0ad21d30b355d" action="/@system/upload.html" method="post" enctype="multipart/form-data" target="YYUC_806191a574edd625c1d0ad21d30b355d_if"></form>');
+	$('body').append(YYUC_806191a574edd625c1d0ad21d30b355d_form);
+	YYUC_806191a574edd625c1d0ad21d30b355d_form.html($('#YYUC_806191a574edd625c1d0ad21d30b355d_div').html());
+	$('#YYUC_806191a574edd625c1d0ad21d30b355d_div').remove();
+	window.YYUC_806191a574edd625c1d0ad21d30b355d_resize = function(){
+	if($('#YYUC_806191a574edd625c1d0ad21d30b355d_span').is(':hidden')){
+		YYUC_806191a574edd625c1d0ad21d30b355d_form.hide();
+	}else{
+		YYUC_806191a574edd625c1d0ad21d30b355d_form.show();
+		var YYUC_806191a574edd625c1d0ad21d30b355d_offset = $('#YYUC_806191a574edd625c1d0ad21d30b355d_span').offset();
+		YYUC_806191a574edd625c1d0ad21d30b355d_form.css('left',YYUC_806191a574edd625c1d0ad21d30b355d_offset.left).css('top',YYUC_806191a574edd625c1d0ad21d30b355d_offset.top);
+	}
+  		
+	};
+	setInterval(window.YYUC_806191a574edd625c1d0ad21d30b355d_resize,55);
+	var YYUC_806191a574edd625c1d0ad21d30b355dpic = $('#YYUC_806191a574edd625c1d0ad21d30b355d').find('input[name="YYUC_UPLOAD_file"]');
+	YYUC_806191a574edd625c1d0ad21d30b355dpic.css('opacity',0);
+	YYUC_806191a574edd625c1d0ad21d30b355dpic.change(function(){
+		var thefiles = $(this).val().replaceAll('\\','/').split('/');
+		var filename = thefiles[thefiles.length-1];
+		//后缀校验
+		var needsuffixs = ',png,jpeg,jpg,gif,bmp,'.toLowerCase();
+		var suffixs = filename.split('.');
+		if(needsuffixs.indexOf((','+suffixs[suffixs.length-1]+',').toLowerCase())==-1){
+			if(alert){
+				alert('文件格式不被允许',$('#YYUC_806191a574edd625c1d0ad21d30b355d'),1,'YYUC_806191a574edd625c1d0ad21d30b355d');
+			}
+		}else{			$('#YYUC_806191a574edd625c1d0ad21d30b355d_name').html(filename);
+			window.YYUC_806191a574edd625c1d0ad21d30b355d_jd = 0;
+			YYUC_806191a574edd625c1d0ad21d30b355d_process()
+			$('#YYUC_806191a574edd625c1d0ad21d30b355d').submit();
+			$('#YYUC_806191a574edd625c1d0ad21d30b355d_loadpic').show();
+
+			$('iframe[name="YYUC_806191a574edd625c1d0ad21d30b355d_if"]').unbind('load').load(function(){
+				if(!window.YYUC_806191a574edd625c1d0ad21d30b355d){
+					$('#YYUC_806191a574edd625c1d0ad21d30b355d_loadpic').hide();
+					$('#YYUC_806191a574edd625c1d0ad21d30b355d_bfb').html('');	
+					if(alert){
+						alert('网络连接超时或文件大小超出',$('#ttid'),3,'YYUC_806191a574edd625c1d0ad21d30b355d');
+						clearTimeout(window.YYUC_806191a574edd625c1d0ad21d30b355djdproc);						
+					}
+				}
+			});
+		}
+	});
+
+});
+function YYUC_806191a574edd625c1d0ad21d30b355d_process(){
+	if(window.YYUC_806191a574edd625c1d0ad21d30b355d_jd < 99){
+		var nexttime = parseInt(Math.sqrt(window.YYUC_806191a574edd625c1d0ad21d30b355d_jd)*100)*2;
+		window.YYUC_806191a574edd625c1d0ad21d30b355d_jd = window.YYUC_806191a574edd625c1d0ad21d30b355d_jd+1;
+		$('#YYUC_806191a574edd625c1d0ad21d30b355d_bfb').html(window.YYUC_806191a574edd625c1d0ad21d30b355d_jd+'%');
+		window.YYUC_806191a574edd625c1d0ad21d30b355djdproc = setTimeout(function(){
+			YYUC_806191a574edd625c1d0ad21d30b355d_process();
+		},nexttime);
+	}else{
+		$('#YYUC_806191a574edd625c1d0ad21d30b355d_bfb').html('');
+		$('#YYUC_806191a574edd625c1d0ad21d30b355d_loadpic').hide();
+		if(alert){
+			alert('网络连接超时或文件大小超出',$('#ttid'),3,'YYUC_806191a574edd625c1d0ad21d30b355d');
+		}
+	}
+}
+function YYUC_806191a574edd625c1d0ad21d30b355d_success(url,key){
+	$('#YYUC_806191a574edd625c1d0ad21d30b355d_del').show();
+	window.YYUC_806191a574edd625c1d0ad21d30b355d_jd = 100;
+	$('#YYUC_806191a574edd625c1d0ad21d30b355d_bfb').html('100%');
+	$('#YYUC_806191a574edd625c1d0ad21d30b355d_loadpic').hide();
+	clearTimeout(window.YYUC_806191a574edd625c1d0ad21d30b355djdproc);
+	var oldkey = $('#YYUC_806191a574edd625c1d0ad21d30b355d_text').val();
+	if(oldkey.indexOf('@-@')!=-1){
+		var oldkey2 = oldkey.split('@-@');
+		$('#YYUC_806191a574edd625c1d0ad21d30b355d_text').val(key+'@-@'+oldkey2[1]);
+	}else if(oldkey.indexOf('/')==0){
+		$('#YYUC_806191a574edd625c1d0ad21d30b355d_text').val(key+'@-@'+oldkey);
+	}else{
+		$('#YYUC_806191a574edd625c1d0ad21d30b355d_text').val(key);
+	}	window.YYUC_806191a574edd625c1d0ad21d30b355d_upimg = $('<img id="YYUC_806191a574edd625c1d0ad21d30b355d_realpic" src="'+url+'"/>');
+	$('#picsethere').html('').append(window.YYUC_806191a574edd625c1d0ad21d30b355d_upimg);}
+function YYUC_806191a574edd625c1d0ad21d30b355d_failure(size,type){
+	if(alert){
+		if(type==2){
+			alert('文件大小为：'+size+'K，超出了600K的限制,上传失败！',$('#ttid'),2,'YYUC_806191a574edd625c1d0ad21d30b355d');
+		}else{
+			alert('文件上传发生未知错误',$('#ttid'),4,'YYUC_806191a574edd625c1d0ad21d30b355d');
+		}
+		clearTimeout(window.YYUC_806191a574edd625c1d0ad21d30b355djdproc);
+		$('#YYUC_806191a574edd625c1d0ad21d30b355d_bfb').html('');
+		$('#YYUC_806191a574edd625c1d0ad21d30b355d_name').html('');
+		$('#YYUC_806191a574edd625c1d0ad21d30b355d_loadpic').hide();
+	}
+}
+</script></td>
+					<td valign="top" style="line-height: 30px;color:gray;">建议尺寸：700像素 * 380像素</td>
+					</tr>
+					</tbody></table>
+					<p class="img-area cover-bd" id="picsethere"><img src="demopic.jpg"></p>
+				</div>
+		    </div>
+	  	</div>
+	  	<div class="control-group">
+			<label class="control-label" for="detail">活动简述:</label>
+			<div class="controls">
+			<textarea name="SksCHBNtCEs=" id="xydzpms" class="span5" style="height:90px;width:520px;"></textarea>				<span class="maroon">*</span><br><span class="help-inline">最多为1000个字符。</span>
+			</div>
+		</div>
+  	
+	  	<div class="cont fn-clear control-group">
+		<h3 style="text-align: center;">奖项设置</h3>
+		<table class="prizetable" style="margin-left: 80px;">
+			<thead>
+				<tr>
+					<th width="100" height="30px;"></th>
+					<th>奖项名称<br>(<span class="maroon">*</span><span class="help-inline">不能超过50个字 </span>)</th>
+					<th>奖品<br>(<span class="maroon">*</span><span class="help-inline">不能超过50个字 </span>)</th>
+					<th>奖品数量<br>(<span class="maroon">*</span><span class="help-inline">必须大于0 </span>)</th>
+					<th>中奖概率<br>(<span class="maroon">*</span><span class="help-inline">0-100, 支持小数点</span>)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>奖项一</td>
+					<td><input type="text" value="" name="SksCHBNtDwlfAQ==" id="xydzpj1mc" class="span3"></td>
+					<td><input type="text" value="" name="SksCHBNtDwlfEQ==" id="xydzpj1ms" class="span3"></td>
+					<td><input type="text" value="" name="SksCHBNtDwlBDg==" id="xydzpj1sl" class="span1" isint="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDwlVDg==" id="xydzpj1gl" class="span1" isfloat="1">%</td>
+				</tr>
+				<tr>
+					<td>奖项二</td>
+					<td><input type="text" value="" name="SksCHBNtDwpfAQ==" id="xydzpj2mc" class="span3" noneed="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDwpfEQ==" id="xydzpj2ms" class="span3" noneed="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDwpBDg==" id="xydzpj2sl" class="span1" noneed="1" isint="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDwpVDg==" id="xydzpj2gl" class="span1" noneed="1" isfloat="1">%</td>
+				</tr>
+				<tr>
+					<td>奖项三</td>
+					<td><input type="text" value="" name="SksCHBNtDwtfAQ==" id="xydzpj3mc" class="span3" noneed="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDwtfEQ==" id="xydzpj3ms" class="span3" noneed="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDwtBDg==" id="xydzpj3sl" class="span1" noneed="1" isint="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDwtVDg==" id="xydzpj3gl" class="span1" noneed="1" isfloat="1">%</td>
+				</tr>
+				<tr class="more" style="display:none;">
+					<td>奖项四</td>
+					<td><input type="text" value="" name="SksCHBNtDwxfAQ==" id="xydzpj4mc" class="span3" noneed="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDwxfEQ==" id="xydzpj4ms" class="span3" noneed="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDwxBDg==" id="xydzpj4sl" class="span1" noneed="1" isint="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDwxVDg==" id="xydzpj4gl" class="span1" noneed="1" isfloat="1">%</td>
+				</tr>
+				<tr class="more" style="display:none;">
+					<td>奖项五</td>
+					<td><input type="text" value="" name="SksCHBNtDw1fAQ==" id="xydzpj5mc" class="span3" noneed="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDw1fEQ==" id="xydzpj5ms" class="span3" noneed="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDw1BDg==" id="xydzpj5sl" class="span1" noneed="1" isint="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDw1VDg==" id="xydzpj5gl" class="span1" noneed="1" isfloat="1">%</td>
+				</tr>
+				<tr class="more" style="display:none;">
+					<td>奖项六</td>
+					<td><input type="text" value="" name="SksCHBNtDw5fAQ==" id="xydzpj6mc" class="span3" noneed="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDw5fEQ==" id="xydzpj6ms" class="span3" noneed="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDw5BDg==" id="xydzpj6sl" class="span1" noneed="1" isint="1"></td>
+					<td><input type="text" value="" name="SksCHBNtDw5VDg==" id="xydzpj6gl" class="span1" noneed="1" isfloat="1">%</td>
+				</tr>
+<!--				<tr class="more" style="display:none;">
+					<td>奖项七</td>
+					<td><input type="text"   value="" name="SksCHBNtDw9fAQ==" id="xydzpj7mc" class="span3" noneed="1"/></td>
+					<td><input type="text"   value="" name="SksCHBNtDw9fEQ==" id="xydzpj7ms" class="span3" noneed="1"/></td>
+					<td><input type="text"   value="" name="SksCHBNtDw9BDg==" id="xydzpj7sl" class="span1" noneed="1" isint="1"/></td>
+					<td><input type="text"   value="" name="SksCHBNtDw9VDg==" id="xydzpj7gl" class="span1" noneed="1" isfloat="1"/>%</td>
+				</tr>
+				<tr class="more" style="display:none;">
+					<td>奖项八</td>
+					<td><input type="text"   value="" name="SksCHBNtDwBfAQ==" id="xydzpj8mc" class="span3" noneed="1"/></td>
+					<td><input type="text"   value="" name="SksCHBNtDwBfEQ==" id="xydzpj8ms" class="span3" noneed="1"/></td>
+					<td><input type="text"   value="" name="SksCHBNtDwBBDg==" id="xydzpj8sl" class="span1" noneed="1" isint="1"/></td>
+					<td><input type="text"   value="" name="SksCHBNtDwBVDg==" id="xydzpj8gl" class="span1" noneed="1" isfloat="1"/>%</td>
+				</tr>-->
+				
+				<tr><td><button id="more_jx" type="button">更多奖项</button></td><td>提示:请依次填写奖项</td></tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="cont fn-clear other-setting">
+		<div class="cont-left msg-preview">
+		<h3 style="text-align: center;">其他设置</h3>
+		</div>
+		<div class="cont-right">
+			<div class="form-horizontal">
+			  <div class="control-group">
+			   <label class="control-label" for="showamount">是否显示奖品数量</label>
+			    <div class="controls">				    
+				    <input type="hidden" name="SksCHBNtDEtBClhPQV0=" value="0"><input type="checkbox" value="1" name="SksCHBNtDEtBClhPQV0=" checked="checked" id="xydzpisshowsl" style="margin: 8px; outline: none;">				    
+			      	<span class="maroon">*</span><span class="help-inline">取消选择后在活动页面中将不会显示奖品数量 </span>
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label" for="playtotal">每人参与的总次数</label>
+			    <div class="controls">
+			    <input type="text" value="" name="SksCHBNtCEpIEQ==" id="xydzpmrzs" class="span1" isint="1">			    <span class="maroon">*</span><span class="help-inline">必填 ，数量必须是大于1且小于100000</span>
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label" for="playperday">每人每天可参与次数</label>
+			    <div class="controls">
+			    	<input type="text" value="" name="SksCHBNtCExBDg==" id="xydzpmtsl" class="span1" isint="1">			      	<span class="maroon">*</span><span class="help-inline">必填 ，数量必须是大于1且不能大于每人可以参与刮奖的总次数</span>
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label" for="playperday">每天最多出奖数量</label>
+			    <div class="controls">
+			    	<input type="text" value="0" name="SksCHBNtCEpIBg==" id="xydzpmrzd" class="span1" isint="1">			      	<span class="maroon">*</span><span class="help-inline">必填 ，0为不限制出奖数</span>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+ 		<div class="control-group">
+		    <div class="controls">
+		    
+		      <button id="save-btn" type="submit" class="btn btn-primary btn-large">保存并开启</button>
+		     
+		    </div>
+	    </div>
+	</form>
+<script type="text/javascript" src="comm.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#more_jx").click(function(){
+		 $(".more").toggle();
+		 
+	 });
+	 $("#lbsForm").submit(function(){
+		var cansv= true;
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($.trim($(this).val())=='' && $(this).attr('noneed')!='1'){
+				cansv = false;
+				$(this).css('backgroundColor','yellow');
+				$(this).one('focus',function(){
+					$(this).css('backgroundColor','transparent');
+				});
+			}
+		});
+		if(!cansv){
+			tusi('请将信息填写完整');
+			return false;
+		}
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($(this).attr('isint')=='1' && $.trim($(this).val())!=''){
+				var intthis = parseInt2($(this).val());
+				if(intthis+''=='NaN'){
+					$(this).val('0');
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}else{
+					$(this).val(parseInt($(this).val()));
+				}
+			}
+		});
+		if(!cansv){
+			tusi('标注的项目必须为整数');
+			return false;
+		}
+		
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($(this).attr('isfloat')=='1' && $.trim($(this).val())!=''){
+				var intthis = parseFloat($(this).val());
+				if(intthis+''=='NaN'){
+					$(this).val('0');
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}else{
+					$(this).val(parseFloat($(this).val()));
+				}
+			}
+		});
+		if(!cansv){
+			tusi('标注的项目必须为数字');
+			return false;
+		}
+		
+		if($('#picsethere').find('img').size()<1){
+    		cansv = false;
+    		tusi('请上传活动图片');
+    		return false;
+    	}
+    	return cansv;
+    });
+});
+</script>
+<br><br><br>
+
+<form style="position: absolute; left: 251px; top: 356px;" id="YYUC_806191a574edd625c1d0ad21d30b355d" action="" method="post" enctype="multipart/form-data" target="YYUC_806191a574edd625c1d0ad21d30b355d_if">
+<span style="display:-moz-inline-box;display:inline-block;width:100px;height:32px;line-height: 32px;position: relative;">
+<input name="YYUC_UPLOAD_file" style="position: absolute; height: 100%; width: 100px; right: 0px; z-index: 2; opacity: 0;" type="file">
+<input src="" type="button" style="display:block; position: absolute;height: 100%;width:100%;z-index:1;line-height: 25px;font-size:15px;color:#000000;text-align: center;" value="上传图片">
+</span>
+<input type="hidden" name="YYUC_UPLOAD_SIZE" value="600">
+<input type="hidden" name="YYUC_UPLOAD_ID" value="YYUC_806191a574edd625c1d0ad21d30b355d"></form></body></html>

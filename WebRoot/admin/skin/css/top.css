@@ -1,0 +1,59 @@
+.top_all{
+	background-image: url(../images/frame/topbg.jpg);
+	background-repeat: repeat-x;
+	height: 140px;
+	width: 100%;
+}
+.top_tq{
+	float: left;
+	height: 50px;
+	width: 413px;
+	background-image: url(../images/frame/logo.jpg);
+	background-repeat: no-repeat;
+	padding-top: 90px;
+}
+.top_tq_txt{
+	float: left;
+	height: 30px;
+	width: 213px;
+	margin-top: 20px;
+	margin-left: 200px;
+}
+.top_rig{
+	float: right;
+	height: 140px;
+	width: 700px;
+	background-image: url(../images/frame/topbgright.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.top_tz_wel{
+	float: left;
+	height: 60px;
+	width: 700px;
+	margin-top: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	color: #FFF;
+	text-align: right;
+}
+.top_tz_wel a:link {
+	color: #FFF;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+.top_tz_wel a:visited {
+	color: #FFF; text-decoration: none;
+}
+.top_tz_wel a:hover {
+	text-decoration: none;
+	color: #F60;
+}
+.top_tz_wel a:active {
+	color: #FFF; text-decoration: none;
+} 
+.top_tz{	float: left;
+	height: 30px;
+	width: 700px;
+	margin-top: 20px;}

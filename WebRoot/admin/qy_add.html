@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>新增建筑垃圾准运信息</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/yyucadapter.js"></script>
+
+<link rel="stylesheet" href="css/admin/bootstrap.min.css">
+<link rel="stylesheet" href="css/admin/admin.css">
+<style type="text/css">
+	table td {
+		min-width:50px;
+		overflow:hidden;text-overflow:ellipsis;
+	}
+	#picsethere{
+		width: 510px;
+		display: block;
+	}
+	#picsethere img{
+		max-width: 500px;
+		display: block;
+	}
+</style>
+</head>
+<body>
+	<h3>新增建筑垃圾准运信息</h3>
+	<div class="alert alert-info">
+	  	<p><span class="bold">说明：</span>请输入完整的信息</p>
+        
+	</div>
+	<form class="form-horizontal" id="lbsForm" action="" method="post"><input type="hidden" value="54dd9f8f0a845" name="YYUC_FORM_TOKEN"/><input type="hidden" value = "11585" name="WVlQE15vTl0RVTJYXQ==" id="micro_voteid" />		
+		<!--
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">选择分类</label>
+	    	<div class="controls">
+		    	<select name="select1" style="width:130px;">
+		    		<option value="1" checked="checked">单位简介</option> 
+		    		<option value="2">城管动态</option>
+		    		<option value="3">信息公开</option>
+		    		<option value="4">专题报道</option>
+		    		<option value="5">城管期刊</option>
+		    	</select>
+	    	</div>
+	  	</div>
+		-->
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">准运单位</label>
+	    	
+	    	<div class="controls">
+	    	<input type="text"   value="" name="WVlQE15vTl0RVTJfWFxU" id="micro_votename" class="span4" />
+	    	</div>
+	  	</div>
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">负责人</label>
+	    	
+	    	<div class="controls">
+	    	<input type="text"   value="" name="WVlQE15vTl0RVTJfWFxU" id="micro_votename" class="span4" />
+	    	</div>
+	  	</div>
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">联系电话</label>
+	    	
+	    	<div class="controls">
+	    	<input type="text"   value="" name="WVlQE15vTl0RVTJfWFxU" id="micro_votename" class="span4" />
+	    	</div>
+	  	</div>
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">车辆数量</label>
+	    	
+	    	<div class="controls">
+	    	<input type="text"   value="" name="WVlQE15vTl0RVTJfWFxU" id="micro_votename" class="span4" />
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	    	<label class="control-label" for="keyword">车牌号码</label>
+	    	
+	    	<div class="controls">
+	    	<input type="text"   value="" name="WVlQE15vTl0RVTJfWFxU" id="micro_votename" class="span4"/>
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+			<label class="control-label" for="detail">运输路线</label>
+			<div class="controls">
+			<textarea name="jgcd"   id="micro_votems" class="span5" style="height:100px;width:520px;"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">运输时限</label>
+	    	
+	    	<div class="controls">
+	    	<input type="text"   value="" name="WVlQE15vTl0RVTJfWFxU" id="micro_votename" class="span4"/>
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+			<label class="control-label" for="detail">备注</label>
+			<div class="controls">
+			<textarea name="jgcd"   id="micro_votems" class="span5" style="height:100px;width:520px;"></textarea>
+			</div>
+		</div>
+		
+ 		<div class="control-group">
+		    <div class="controls">
+		    
+		      <button id="save-btn" type="submit" class="btn btn-primary btn-large">保存</button>
+		     
+		    </div>
+	    </div>
+	</form>
+<script type="text/javascript" src="js/comm.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#more_vote").click(function(){ 
+		 $(".more").toggle();
+		 
+	 });
+	 $("#lbsForm").submit(function(){
+		var cansv= true;
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($.trim($(this).val())=='' && $(this).attr('noneed')!='1'){
+				cansv = false;
+				$(this).css('backgroundColor','yellow');
+				$(this).one('focus',function(){
+					$(this).css('backgroundColor','transparent');
+				});
+			}
+		});
+		if(!cansv){
+			tusi('请将信息填写完整');
+			return false;
+		}
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($(this).attr('isint')=='1' && $.trim($(this).val())!=''){
+				var intthis = parseInt2($(this).val());
+				if(intthis+''=='NaN'){
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}else{
+					$(this).val(parseInt($(this).val()));
+				}
+			}
+		});
+		if(!cansv){
+			tusi('标注的项目必须为整数');
+			return false;
+		}
+		
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($(this).attr('isfloat')=='1' && $.trim($(this).val())!=''){
+				var intthis = parseFloat($(this).val());
+				if(intthis+''=='NaN'){
+					$(this).val('0');
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}else{
+					$(this).val(parseFloat($(this).val()));
+				}
+			}
+		});
+		if(!cansv){
+			tusi('标注的项目必须为数字');
+			return false;
+		}
+		
+		if($('#picsethere').find('img').size()<1){
+   		cansv = false;
+   		tusi('请上传活动图片');
+   		return false;
+   	}
+   	return cansv;
+   });
+});
+</script>
+<br/><br/><br/></body>
+
+</html>

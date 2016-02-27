@@ -45,3 +45,20 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+#lq j2ee #
+*.class
+*.jar
+*.war
+*.ear
+/.settings
+/.classpath
+.mymetadata
+.project
+ /bin
+bin/beans.xml
+bin/jdbc.properties
+bin/struts.xml
+bin/xwork-conversion.properties
+bin/log4j.properties

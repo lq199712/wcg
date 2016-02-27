@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>新增文章</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/yyucadapter.js"></script>
+
+<link rel="stylesheet" href="css/admin/bootstrap.min.css">
+<link rel="stylesheet" href="css/admin/admin.css">
+<style type="text/css">
+	table td {
+		min-width:50px;
+		overflow:hidden;text-overflow:ellipsis;
+	}
+	#picsethere{
+		width: 510px;
+		display: block;
+	}
+	#picsethere img{
+		max-width: 500px;
+		display: block;
+	}
+</style>
+</head>
+<body>
+	<h3>新增文章</h3>
+	<div class="alert alert-info">
+	  	<p><span class="bold">说明：</span>前台将会显示文章</p>
+        
+	</div>
+	<form class="form-horizontal" id="lbsForm" action="" method="post"><input type="hidden" value="54dd9f8f0a845" name="YYUC_FORM_TOKEN"/><input type="hidden" value = "11585" name="WVlQE15vTl0RVTJYXQ==" id="micro_voteid" />		
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">选择分类</label>
+	    	<div class="controls">
+		    	<select name="select1" style="width:130px;">
+		    		<option value="1" checked="checked">单位简介</option> 
+		    		<option value="2">城管动态</option>
+		    		<option value="3">信息公开</option>
+		    		<option value="4">专题报道</option>
+		    		<option value="5">城管期刊</option>
+		    	</select>
+	    	</div>
+	  	</div>
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">文章标题</label>
+	    	
+	    	<div class="controls">
+	    	<input type="text"   value="城东城管中队不等不靠 迅速恢复路面整洁" name="WVlQE15vTl0RVTJfWFxU" id="micro_votename" class="span4" style="width:520px;"/>		    	<span class="maroon">*</span>
+		    	<span class="help-inline">最多只能输入100个字符。</span>
+	    	</div>
+	  	</div>
+
+	  	<div class="control-group">
+	    	<label class="control-label" for="keyword">发布作者</label>
+	    	
+	    	<div class="controls">
+	    	<input type="text"   value="城市管理局" name="WVlQE15vTl0RVTJfWFxU" id="micro_votename" class="span4" />
+	    	</div>
+	  	</div>
+
+	  	<div class="control-group">
+			<label class="control-label" for="detail">正文描述</label>
+			<div class="controls">
+			<textarea name="WVlQE15vTl0RVTJcSg=="   id="micro_votems" class="span5" style="height:300px;width:520px;">2月4日下午，中队队员巡查至枫隐路金百临财富中心门口时，发现路面有50多米长车轮带泥行驶的痕迹，在无法找到肇事车辆驾驶员清理的情况下，队员们不等不靠，立即准备工具冲刷路面，恢复了路面整洁。（城东中队）</textarea>
+			</div>
+		</div>
+
+		<div class="control-group">
+	    	<label class="control-label" for="keyword">发布日期</label>
+	    	
+	    	<div class="controls">
+	    	<input type="text"   value="2015-02-10" name="WVlQE15vTl0RVTJfWFxU" id="micro_votename" class="span4" />
+	    	</div>
+	  	</div>
+
+	  	<div class="control-group">
+	    	<label class="control-label" for="keyword">是否显示</label>
+	    	<div class="controls">
+		    	<input type="radio" name="isshow" value="1" checked/>显示&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="isshow" value="0"/>不显示
+	    	</div>
+	  	</div>
+		
+	  	
+		
+
+	  	
+		
+ 		<div class="control-group">
+		    <div class="controls">
+		    
+		      <button id="save-btn" type="submit" class="btn btn-primary btn-large">修改</button>
+		     
+		    </div>
+	    </div>
+	</form>
+<script type="text/javascript" src="js/comm.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#more_vote").click(function(){ 
+		 $(".more").toggle();
+		 
+	 });
+	 $("#lbsForm").submit(function(){
+		var cansv= true;
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($.trim($(this).val())=='' && $(this).attr('noneed')!='1'){
+				cansv = false;
+				$(this).css('backgroundColor','yellow');
+				$(this).one('focus',function(){
+					$(this).css('backgroundColor','transparent');
+				});
+			}
+		});
+		if(!cansv){
+			tusi('请将信息填写完整');
+			return false;
+		}
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($(this).attr('isint')=='1' && $.trim($(this).val())!=''){
+				var intthis = parseInt2($(this).val());
+				if(intthis+''=='NaN'){
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}else{
+					$(this).val(parseInt($(this).val()));
+				}
+			}
+		});
+		if(!cansv){
+			tusi('标注的项目必须为整数');
+			return false;
+		}
+		
+		$(this).find('input[type="text"],select,textarea').each(function(){
+			if($(this).attr('isfloat')=='1' && $.trim($(this).val())!=''){
+				var intthis = parseFloat($(this).val());
+				if(intthis+''=='NaN'){
+					$(this).val('0');
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}else{
+					$(this).val(parseFloat($(this).val()));
+				}
+			}
+		});
+		if(!cansv){
+			tusi('标注的项目必须为数字');
+			return false;
+		}
+		
+		if($('#picsethere').find('img').size()<1){
+   		cansv = false;
+   		tusi('请上传活动图片');
+   		return false;
+   	}
+   	return cansv;
+   });
+});
+</script>
+<br/><br/><br/></body>
+
+</html>

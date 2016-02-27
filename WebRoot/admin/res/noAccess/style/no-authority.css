@@ -1,0 +1,14 @@
+ @charset "utf-8";
+/* CSS Document */
+*{margin: 0;padding: 0;}
+body{background-color:#ebebeb}
+
+/*无权限进入*/
+.banner {text-align: center;}
+.main img {max-width: 100%;border: 0 none;}
+.authority{ background:none; border:none;}
+
+
+
+
+

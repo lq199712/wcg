@@ -1,0 +1,228 @@
+* {
+	FONT-FAMILY: "????"; FONT-SIZE: 12px
+}
+TD {
+	LINE-HEIGHT: 1.5
+}
+BODY {
+	LINE-HEIGHT: 1.5;
+	FONT-FAMILY: "????";
+	FONT-SIZE: 12px;
+	background-color: #24559A;
+	background-image: url(../skin/images/frame/bg_r1_c1.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TD {
+	WORD-WRAP: break-word; WORD-BREAK: break-all
+}
+TH {
+	WORD-WRAP: break-word; WORD-BREAK: break-all
+}
+DIV {
+	WORD-WRAP: break-word; WORD-BREAK: break-all
+}
+B {
+	COLOR: #666600
+}
+STRONG {
+	COLOR: #666600
+}
+LI {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+INPUT[type=button] {
+	BACKGROUND-COLOR: #f1f8b4
+}
+H1 {
+	COLOR: #171b16; FONT-SIZE: 130%; FONT-WEIGHT: bold
+}
+H2 {
+	COLOR: #171b16; FONT-SIZE: 115%; FONT-WEIGHT: bold
+}
+H3 {
+	COLOR: #171b16; FONT-SIZE: 100%; FONT-WEIGHT: bold
+}
+A:link {
+	FONT-FAMILY: ""????""; COLOR: #000000; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-FAMILY: ""????""; COLOR: #000000; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-FAMILY: ""????""; COLOR: red
+}
+A IMG {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none
+}
+B A {
+	COLOR: #666600
+}
+STRONG A {
+	COLOR: #666600
+}
+A B {
+	COLOR: #666600
+}
+A STRONG {
+	COLOR: #666600
+}
+INPUT {
+	BORDER-BOTTOM: #ababab 1px solid; BORDER-LEFT: #ababab 1px solid; BORDER-TOP: #ababab 1px solid; BORDER-RIGHT: #ababab 1px solid
+}
+.pubinputs {
+	BORDER-BOTTOM: #dddddd 1px solid; BORDER-LEFT: #999999 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 3px; WIDTH: 250px; PADDING-RIGHT: 3px; HEIGHT: 22px; BORDER-TOP: #999999 1px solid; BORDER-RIGHT: #dddddd 1px solid; PADDING-TOP: 4px
+}
+.iptxt {
+	BORDER-BOTTOM: #dddddd 1px solid; BORDER-LEFT: #999999 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; HEIGHT: 22px; BORDER-TOP: #999999 1px solid; BORDER-RIGHT: #dddddd 1px solid; PADDING-TOP: 4px
+}
+.alltxt {
+	BORDER-BOTTOM: #dddddd 1px solid; BORDER-LEFT: #999999 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BORDER-TOP: #999999 1px solid; BORDER-RIGHT: #dddddd 1px solid; PADDING-TOP: 4px
+}
+.pubinput {
+	PADDING-BOTTOM: 0px; WIDTH: 250px; HEIGHT: 24px; PADDING-TOP: 3px
+}
+.pubinputl {
+	PADDING-BOTTOM: 0px; WIDTH: 350px; HEIGHT: 24px; PADDING-TOP: 3px
+}
+.np {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.linerow {
+	BORDER-BOTTOM: #acacac 1px solid
+}
+.coolbg {
+	BORDER-BOTTOM: #acacac 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #eff7d0; CURSOR: pointer; BORDER-RIGHT: #acacac 1px solid; PADDING-TOP: 2px
+}
+.coolbg2 {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BACKGROUND-COLOR: #dfddd2; HEIGHT: 18px; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid
+}
+.ll {
+	BORDER-BOTTOM: #acacac 2px solid; BACKGROUND-COLOR: #e6e6e6; BORDER-RIGHT: #acacac 2px solid
+}
+.bline {
+	BORDER-BOTTOM: #bcbcbc 1px dotted; BACKGROUND-COLOR: #ffffff; HEIGHT: 28px
+}
+#uploadfield {
+	FLOAT: left
+}
+.bline2 {
+	BORDER-BOTTOM: #bcbcbc 1px solid
+}
+.coolbt {
+	BORDER-BOTTOM: #acacac 1px solid; BORDER-LEFT: #efefef 1px solid; BACKGROUND-COLOR: #e4f7d7; BORDER-TOP: #efefef 1px solid; CURSOR: pointer; BORDER-RIGHT: #acacac 1px solid
+}
+.coolbt2 {
+	BORDER-BOTTOM: #acacac 1px solid; BORDER-LEFT: #efefef 1px solid; BACKGROUND-COLOR: #f7fcda; BORDER-TOP: #efefef 1px solid; BORDER-RIGHT: #acacac 1px solid
+}
+.coolbg3 {
+	BORDER-BOTTOM: #bdc5b4 1px solid; TEXT-ALIGN: right; BORDER-LEFT: #bdc5b4 1px solid; BACKGROUND-COLOR: #dfddd2; WIDTH: 140px; HEIGHT: 20px; BORDER-TOP: #bdc5b4 1px solid; BORDER-RIGHT: #bdc5b4 1px solid
+}
+.coolbg61 {
+	TEXT-ALIGN: right; BORDER-LEFT: #bdc5b4 1px solid; LINE-HEIGHT: 26px; BACKGROUND-COLOR: #e7f3b1; WIDTH: 380px; HEIGHT: 26px; BORDER-TOP: #bdc5b4 1px solid; BORDER-RIGHT: #bdc5b4 1px solid
+}
+.coolbg62 {
+	BORDER-BOTTOM: #bdc5b4 1px solid; BORDER-LEFT: #bdc5b4 1px solid; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #f8fdf0; PADDING-LEFT: 5px; WIDTH: 380px; PADDING-RIGHT: 5px; HEIGHT: 300px; BORDER-TOP: #bdc5b4 1px solid; BORDER-RIGHT: #bdc5b4 1px solid; PADDING-TOP: 5px
+}
+.coolbg4 {
+	BORDER-BOTTOM: #c9cfc1 1px solid; TEXT-ALIGN: right; BACKGROUND-COLOR: #edebe5; WIDTH: 190px; HEIGHT: 20px
+}
+.coolbg5 {
+	BACKGROUND-COLOR: #edebe5; WIDTH: 190px; HEIGHT: 6px; FONT-SIZE: 1pt; BORDER-TOP: #bdc5b4 1px solid
+}
+.dlg {
+	BORDER-BOTTOM: #749f4d 2px solid; BORDER-LEFT: #749f4d 2px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 160%; BACKGROUND-COLOR: #f0faeb; PADDING-LEFT: 2px; WIDTH: 360px; PADDING-RIGHT: 2px; BORDER-TOP: #749f4d 2px solid; BORDER-RIGHT: #749f4d 2px solid; PADDING-TOP: 2px
+}
+.dlgws {
+	BORDER-BOTTOM: #749f4d 2px solid; BORDER-LEFT: #749f4d 2px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 160%; BACKGROUND-COLOR: #f0faeb; PADDING-LEFT: 2px; WIDTH: 280px; PADDING-RIGHT: 2px; BORDER-TOP: #749f4d 2px solid; BORDER-RIGHT: #749f4d 2px solid; PADDING-TOP: 2px
+}
+.dlgws DIV {
+	WIDTH: 100%
+}
+.dlgTesttitle {
+	BORDER-BOTTOM: #749f4d 2px solid; BORDER-LEFT: #749f4d 2px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 150%; BACKGROUND-COLOR: #f0faeb; PADDING-LEFT: 2px; WIDTH: 200px; PADDING-RIGHT: 2px; BORDER-TOP: #749f4d 2px solid; BORDER-RIGHT: #749f4d 2px solid; PADDING-TOP: 2px
+}
+UNKNOWN {
+	Z-INDEX: 5000
+}
+UNKNOWN {
+	Z-INDEX: 6000
+}
+.option1 {
+	BACKGROUND-COLOR: #dceca6
+}
+.option2 {
+	BACKGROUND-COLOR: #f7fbd2
+}
+.option3 {
+	BACKGROUND-COLOR: #ffffff
+}
+.ininput {
+	BORDER-BOTTOM: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; WIDTH: 96%; HEIGHT: 20px; BORDER-TOP: #ffffff 1px solid; BORDER-RIGHT: #ffffff 1px solid
+}
+.nbt {
+	BACKGROUND-IMAGE: url(allbtbg.gif); BORDER-BOTTOM: #a5af83 1px solid; BORDER-LEFT: #a5af83 1px solid; PADDING-BOTTOM: 1px; BACKGROUND-COLOR: #ffffff; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BORDER-TOP: #a5af83 1px solid; BORDER-RIGHT: #a5af83 1px solid; PADDING-TOP: 1px
+}
+.tdt {
+	PADDING-LEFT: 6px
+}
+.waitpage {
+	Z-INDEX: 10000; POSITION: absolute; FILTER: Alpha(opacity=70); BACKGROUND: url(../images/frame/loading1.gif) #ababab no-repeat center 50%; TOP: 0px; LEFT: 0px; -moz-opacity: 0.7
+}
+.divpre {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)
+}
+.autoinput {
+	PADDING-LEFT: 3px; WIDTH: 90%; HEIGHT: 22px
+}
+.bodytitle {
+	BORDER-BOTTOM: #bfd67c 1px dotted; BORDER-LEFT: #bfd67c 1px dotted; MARGIN: auto auto 6px; WIDTH: 98%; BACKGROUND: url(wbg.gif); HEIGHT: 28px; BORDER-TOP: #bfd67c 1px dotted; FONT-WEIGHT: bold; BORDER-RIGHT: #bfd67c 1px dotted
+}
+.bodytitle DIV {
+	FLOAT: left
+}
+.bodytitletxt {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 6px
+}
+.tbtitle TD {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; PADDING-TOP: 3px
+}
+.tblist TD {
+	PADDING-BOTTOM: 6px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; BACKGROUND: #ffffff; PADDING-TOP: 6px
+}
+.tblist TD.tbsname {
+	PADDING-BOTTOM: 6px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; BACKGROUND: #f9ffe6; PADDING-TOP: 6px
+}
+
+.oa_body{
+	background-image: url(../skin/images/frame/bg.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 500px;
+	width: 100%;
+	padding-top: 150px;
+}

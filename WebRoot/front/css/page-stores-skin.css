@@ -1,0 +1,173 @@
+﻿@charset "utf-8";
+/* theme  */
+.stores-tab {
+}
+    .stores-tab li {
+        border-color:#dcdcdc;
+        color:#c9c9c9;
+    }
+        .stores-tab li.selected {
+            color:#850b00;
+            background:#ededed;
+        }
+        .stores-tab li.i p {
+            background-image:url(../images/tabBar/coupon-i.png);
+        }
+        .stores-tab li.i.selected p {
+            background-image:url(../images/tabBar/coupon-i-s.png);
+        }
+        .stores-tab li.j p {
+            background-image:url(../images/tabBar/coupon-j.png);
+        }
+        .stores-tab li.j.selected p {
+            background-image:url(../images/tabBar/coupon-j-s.png);
+        }
+        .stores-tab li.k p {
+            background-image:url(../images/tabBar/coupon-k.png);
+        }
+        .stores-tab li.k.selected p {
+            background-image:url(../images/tabBar/coupon-k-s.png);
+        }
+        .stores-tab li.l p {
+            background-image:url(../images/tabBar/coupon-l.png);
+        }
+        .stores-tab li.l.selected p {
+            background-image:url(../images/tabBar/coupon-l-s.png);
+        }
+        .stores-tab li.d.selected p {
+            background-image:url(../images/tabBar/coupon-l-s.png);
+        }
+        .stores-tab li.m p {
+            background-image:url(../images/tabBar/coupon-m.png);
+        }
+        .stores-tab li.m.selected p {
+            background-image:url(../images/tabBar/coupon-m-s.png);
+        }
+        .stores-tab li.a p {
+            background-image:url(../images/tabBar/coupon-a.png);
+        }
+        .stores-tab li.a.selected p {
+            background-image:url(../images/tabBar/coupon-a-s.png);
+        }
+
+/* theme stores */
+.page-stores .am-header .city {
+    background: url(../images/arrow-city.png) no-repeat 35px center;
+    background-size: 12px 8px;
+}
+.stores-info {
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#eaeaea));
+    border-color:#e4e4e4;
+}
+.stores-info.am-clickable-active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#FFFFFF));
+}
+    .stores-info span {
+        background: url(../images/arrow-r.png) no-repeat center center;
+        background-size: 18px 18px;
+    }
+.stores-list li {
+    box-shadow:rgba(0,0,0,0.3) 1px 1px 5px;
+}
+.stores-list li .title {
+    color:#ce3000;
+}
+.stores-list li .desc {
+    color:#000;
+}
+.stores-list li .time {
+    color:#727272;
+}
+
+/* theme storesList */
+.page-storesList .range, .page-productList .range {
+    border-color:#c0b8b6;
+    background:rgba(255,255,255,0.95);
+    box-shadow:rgba(0,0,0,0.2) 1px 1px 5px;
+    color:#000;
+}
+    .page-storesList .range li ,.page-productList .range li{
+        border-color:#e7e7e7;
+    }
+        .page-storesList .range li.am-clickable-active,.page-productList .range li.am-clickable-active {
+            background-color:#ffd800;
+        }
+.page-storesList .am-header span.arrow,.page-productList .am-header span.arrow {
+    background:url(../images/arrow-city.png) no-repeat right center;
+    background-size:12px 8px;
+}
+.page-storesList .global {
+    background-image:url(../images/icon-stores.png);
+}
+    .page-storesList .global.am-clickable-active {
+        background-image:url(../images/icon-stores-gray.png);
+    }
+
+/* theme storesDetail */
+    .storeDetail-content .adress span {
+        color:#636363;
+    }
+/* theme storeBulletin */
+.storeBulletin-list li {
+    border-color:#ededed;
+}
+    .storeBulletin-list li .time {
+        background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#f5f5f5));
+        color:#717171;
+    }
+    .storeBulletin-list li .question {
+        background:url(../images/icon-chat.png) no-repeat 5px 4px;
+        background-size:20px 20px;
+    }
+    .storeBulletin-list li .answer {
+        color:#737373;
+    }
+    .storeBulletin-list li .stars, .storeSignin-creat .stars{
+        background:url(../images/icon-star-gray.png) repeat-x;
+        background-size:15px 15px;
+    }
+    .storeBulletin-list li .stars p, .storeSignin-creat .stars p{
+        background:url(../images/icon-star.png) repeat-x;
+        background-size:15px 15px;
+    }
+    .storeSignin-creat .stars,.storeSignin-creat .stars p{
+    	background-size:30px 30px;
+    }
+
+/* theme storeQA */
+
+/* theme storeSignin */
+.page-storeSignin .creat,.page-storeQA .creat {
+    background:url(../images/icon-add.png) no-repeat center center;
+    background-size:32px 32px;
+}
+.page-storeSignin .creat.am-clickable-active{
+    background:url(../images/icon-add-s.png) no-repeat center center;
+    background-size:32px 32px;
+}
+.storeSignin-creat .actionButton span {
+    background-image:url(../images/icon-footPrint.png);
+}
+
+/* theme storeCoupon */
+.page-storeCoupon .coupon-list li{
+    border-color:#ededed;
+    box-shadow:rgba(0,0,0,0.1) 1px 1px 1px;
+}
+.storeCoupon-tags ul {
+    border-color:#eeeeee;
+    background: #f8f8f8;
+}
+.storeCoupon-tags li {
+    border-color: #eeeeee;
+    background:#f8f8f8;
+}
+    .storeCoupon-tags li.selected {
+        background: #FFF;
+    }
+
+
+
+
+
+

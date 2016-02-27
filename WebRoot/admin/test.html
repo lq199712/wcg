@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/mwm/msg/msg.css" media="all" />
+  <script type="text/javascript" src="js/jquery.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function alert(title){ 
+			window.scrollTo(0, -1);
+			$("#windowcenter").slideToggle("slow"); 
+			$("#txt").html(title);
+			setTimeout(function(){ $("#windowcenter").slideUp(500);},4000);
+		}
+	
+		alert("hello");
+	</script>
+</body>
+</html>

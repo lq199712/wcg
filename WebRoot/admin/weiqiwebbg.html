@@ -1,0 +1,165 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<!-- Apple devices fullscreen -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- Apple devices fullscreen -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<base target="mainFrame" />
+<link rel="stylesheet" type="text/css" href="css/wm/index.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/bootstrap_min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/bootstrap_responsive_min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/themes.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/todc_bootstrap.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/inside.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/album.css" media="all" />
+<title>宜兴市城管局</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/yyucadapter.js"></script>
+<script src="http://api.map.baidu.com/api?v=1.5&ak=1b0ace7dde0245f796844a06fb112734"></script>
+</head>
+<body class="theme-blue">
+	<div id="main">
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="box">
+						<div class="box-title">
+							<div class="span12">
+								<h3><i class="icon-cog"></i>微官网背景轮播图配置</h3>
+							</div>
+						</div>
+						<div class="box-content">
+							<form action="" method="post" id="lbsForm" class="form-horizontal form-validate" ><input type="hidden" value="54d9b1c152834" name="YYUC_FORM_TOKEN"/><input type="hidden" value = "" name="EwdZRVo9Q1MHbgRTNlwG" id="weiqi_web_bgid" />							
+							<div class="control-group">
+									<label for="title" class="control-label">说明：</label>
+									<div class="controls">
+									    如需使用背景轮播请先删除微官网图片<br>
+									    此操作智能在微官网没有背景图片的情况下才能使用背景轮播<!--微企助手-->
+										<span class="maroon"></span>
+										 <span class="help-inline"></span> 
+									</div>
+								</div><BR>
+								<div class="control-group">
+									<label for="title" class="control-label">轮播间隔时间：</label>
+									<div class="controls">
+									<input type="text"  required="required"  value="3000" name="EwdZRVo9Q1MHbgRTNlcFElhfVA==" id="weiqi_web_bgbgtime" class="input-xlarge" required="required"/>										<span class="maroon">*</span>
+										 <span class="help-inline">单位毫秒，默认3000毫秒，值越大，速度越慢！</span> 
+									</div>
+								</div>								
+								<div class="control-group">
+									<label class="control-label">轮播1：</label>
+									<div class="controls">
+										<img class="thumb_img" src="res/meirong/1.jpg" id="pic" style="max-height:100px;" />
+										<input type="hidden" value = "res/meirong/1.jpg" name="EwdZRVo9Q1MHbgRTNkULBQ==" id="weiqi_web_bgpic" />										<span class="help-inline">
+											<button class="btn select_img" type="button" onclick="setpic('pic','weiqi_web_bgpic');">选择图片</button>
+											<span class="help-inline">建议尺寸：宽400像素，高720像素</span>
+										</span>
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label">轮播2：</label>
+									<div class="controls">
+									<img class="thumb_img" src="res/meirong/2.jpg" id="pic1"  style="max-height:100px;" />
+										<input type="hidden" value = "res/meirong/2.jpg" name="EwdZRVo9Q1MHbgRTNkULBQA=" id="weiqi_web_bgpic1" />										<span class="help-inline">
+											<button class="btn select_img" type="button" onclick="setpic('pic1','weiqi_web_bgpic1');">选择图片</button>
+											<span class="help-inline">建议尺寸：宽400像素，高720像素</span>
+										</span>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label">轮播3：</label>
+									<div class="controls">
+									<img class="thumb_img" src="res/meirong/3.jpg" id="pic2"  style="max-height:100px;" />
+										<input type="hidden" value = "res/meirong/3.jpg" name="EwdZRVo9Q1MHbgRTNkULBQM=" id="weiqi_web_bgpic2" />										<span class="help-inline">
+											<button class="btn select_img" type="button" onclick="setpic('pic2','weiqi_web_bgpic2');">选择图片</button>
+											<span class="help-inline">建议尺寸：宽400像素，高720像素</span>
+										</span>
+									</div>
+								</div>
+							
+								<div class="control-group">
+									<label class="control-label">轮播4：</label>
+									<div class="controls">
+									
+									<img class="thumb_img" src="res/meirong/4.jpg" id="pic3" style="max-height:100px;" />
+									<input type="hidden" value = "res/meirong/4.jpg" name="EwdZRVo9Q1MHbgRTNkULBQI=" id="weiqi_web_bgpic3" />									
+										<span class="help-inline">
+											<button class="btn select_img" type="button" onclick="setpic('pic3','weiqi_web_bgpic3');">选择图片</button>
+											<span class="help-inline">建议尺寸：宽400像素，高720像素</span>
+										</span>
+									</div>
+								</div>
+									<div class="control-group">
+									<label class="control-label">轮播5：</label>
+									<div class="controls">
+									<img class="thumb_img" src="res/meirong/5.jpg" id="pic4" style="max-height:100px;" />
+									<input type="hidden" value = "res/meirong/5.jpg" name="EwdZRVo9Q1MHbgRTNkULBQU=" id="weiqi_web_bgpic4" />									
+										<span class="help-inline">
+											<button class="btn select_img" type="button" onclick="setpic('pic4','weiqi_web_bgpic4');">选择图片</button>
+											<span class="help-inline">建议尺寸：宽400像素，高720像素</span>
+										</span>
+									</div>
+                                    <div class="control-group">
+                                        <label for="title" class="control-label">是否开启背景轮播：</label>
+                                        <div class="controls">
+                                        <input type="text"   value="" name="EwdZRVo9Q1MHbgRTNkYWB0VHQg==" id="weiqi_web_bgstatus" class="input-xlarge" required="required"/>                                            <span class="maroon">*</span>
+                                             <span class="help-inline">注：1为开启 0为关闭 其他值无效！</span> 
+                                        </div>
+                                    </div>								
+						
+								</div>								
+								
+								<div class="form-actions">
+									<button type="submit" id="bsubmit" data-loading-text="提交中..." class="btn btn-primary">保存</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<br/><br/><br/></body>
+	<script type="text/javascript">
+	function setpic(imgid,hideid){
+		window.piccbk = function(m){
+			$('#'+imgid).attr('src',m);
+			$('#'+hideid).val(m);
+			window.piccbk = null;
+		}
+		window.curpic = null;
+		openpicset();	
+	} 
+	function openpicset(){
+		pophtml('<iframe src="wspicif.html" style="width:630px;height:470px;border:none;background-color: #dfdfdf;" width="630px" height="475px"></iframe>',670,510,true);
+	}
+
+
+	$(function(){
+		
+		 $("#lbsForm").submit(function(){
+			var cansv= true;
+			$(this).find('input[type="text"],select,textarea').filter('[required="required"]').each(function(){
+				if($.trim($(this).val())==''){
+					cansv = false;
+					$(this).css('backgroundColor','yellow');
+					$(this).one('focus',function(){
+						$(this).css('backgroundColor','transparent');
+					});
+				}
+			});
+			if(!cansv){
+				tusi('请将信息填写完整');
+			}
+	    	return cansv;
+	    });
+	});
+	</script>
+</html>

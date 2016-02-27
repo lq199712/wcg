@@ -1,0 +1,188 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<!-- Apple devices fullscreen -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- Apple devices fullscreen -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<base target="mainFrame" />
+<title>宜兴市城管局</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/yyucadapter.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/wm/index.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/bootstrap_min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/todc_bootstrap.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/bootstrap_responsive_min.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/themes.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/todc_bootstrap.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/inside.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/wm/uploadify.css" media="all" />
+<script type="text/javascript" src="res/js/jquery_ui_custom.js"></script>
+<script type="text/javascript">
+function imgSelectorInit() {
+    $('#imgSelectorChoice').delegate('img', 'click', function () {
+        var el = $(this);
+        if (!el.hasClass('selected'))
+            buildSelectedImg(el);
+    }).delegate('img', 'mouseenter', function () {
+        $(this).addClass('hovered');
+    }).delegate('img', 'mouseleave', function () {
+        $(this).removeClass('hovered');
+    });
+}
+function ipostSortInit() {
+    $('.ipost-list').sortable({
+        items: '> .post',
+        containment: 'parent',
+        appendTo: 'parent',
+        tolerance: 'pointer',
+        axis: 'y',
+        placeholder: 'holder',
+        forceHelperSize: true,
+        forcePlaceholderSize: true,
+        opacity: 0.8,
+        cursor: 'ns-resize'
+    });
+}
+$(function(){
+	imgSelectorInit();
+	ipostSortInit();
+});
+</script>
+
+<link rel="shortcut icon" href="/favicon.ico" />
+</head>
+<body class="theme-blue">
+	<div id="main">
+        <div class="container-fluid">
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="box">
+                        <div class="box-title">
+                            <h3><i class="icon-picture"></i>上传图片<small>拖拽图片可排序(图片大小不超过300k,50张上限)</small></h3>
+                            <a class="btn pull-right" href="Javascript:window.history.go(-1)">返回</a>
+                        </div>
+                        <div class="box-content">
+                                <div id="upimg_main">
+                                    <div id="file_upload" class="uploadify"><button id="file_upload-button" class="btn pl_add btn-primary" onclick="setbj1();"><span class="uploadify-button-text"><i class="icon-plus-sign"></i> 添加图片</span></button>   <button id="bsubmit" type="button" onclick="savedata();" class="btn">保存</button></div><div id="file_upload-queue" class="uploadify-queue"></div>
+                                    <ul class="ipost-list ui-sortable" id="fileList">
+                                    										<li class="post file" style="position: relative; opacity: 1; z-index: 0;">
+										<a class="thumb" href="ups/3de02b25125582246b9c6b5728921747.png" target="_blank" title="点击查看原图，拖动排序">
+										<img style="width: 130px;" src="ups/3de02b25125582246b9c6b5728921747.png"/>
+										</a>
+										<dl class="form data">
+												<dt>标题</dt>
+												<dd class="title">
+													<input type="text" class="text tittext" name="tit" value="444">
+												</dd>
+												<dt>描述</dt>
+												<dd class="description">
+													<textarea name="des" class="destext">1</textarea>
+												</dd>
+											</dl>
+											<ul class="action">
+												<li class="delete"><a class="ir" href="javascript:;" onclick="delthis(this)">删除</a></li>
+												<li class="sort"><a class="ir">排序</a></li>
+											</ul></li>
+																			<li class="post file" style="position: relative; opacity: 1; z-index: 0;">
+										<a class="thumb" href="ups/fa9bcdd702ac5b517f8ed71d32c21177.jpg" target="_blank" title="点击查看原图，拖动排序">
+										<img style="width: 130px;" src="ups/fa9bcdd702ac5b517f8ed71d32c21177.jpg"/>
+										</a>
+										<dl class="form data">
+												<dt>标题</dt>
+												<dd class="title">
+													<input type="text" class="text tittext" name="tit" value="333">
+												</dd>
+												<dt>描述</dt>
+												<dd class="description">
+													<textarea name="des" class="destext">2</textarea>
+												</dd>
+											</dl>
+											<ul class="action">
+												<li class="delete"><a class="ir" href="javascript:;" onclick="delthis(this)">删除</a></li>
+												<li class="sort"><a class="ir">排序</a></li>
+											</ul></li>
+																		</ul>
+                                    <div id="file_upload_queue" class="uploadifyQueue">
+                                    </div>
+                                  <!--  <button id="bsubmit" type="button" onclick="savedata();" class="btn">保存</button> --></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>    
+<textarea id="ltarea" style="display: none;">
+    <li class="post file" style="position: relative; opacity: 1; z-index: 0;">
+										<a class="thumb" href="" target="_blank" title="点击查看原图，拖动排序" >
+										<img style="width: 130px;"/>
+										</a>
+										<dl class="form data">
+												<dt>标题</dt>
+												<dd class="title">
+													<input type="text" class="text tittext" name="tit" value="">
+												</dd>
+												<dt>描述</dt>
+												<dd class="description">
+													<textarea name="des" class="destext"></textarea>
+												</dd>
+											</dl>
+											<ul class="action">
+												<li class="delete"><a class="ir">删除</a></li>
+												<li class="sort"><a class="ir">排序</a></li>
+											</ul></li>
+</textarea>
+<script type="text/javascript">
+function setbj1(){
+	window.piccbk = function(m,n){
+		var newl = $('#ltarea').val();
+		$('#fileList').append(newl);
+		newl = $('#fileList').children('li:last');
+		newl.find('.thumb').attr('href',m).find('img').attr('src',m);
+		n = n.split('.');
+		newl.find('.tittext').val(n[0]);
+		
+		window.piccbk = null;
+	}
+	window.curpic = null;
+	openpicset();	
+} 
+function openpicset(){
+	pophtml('<iframe src="wspicif.html" style="width:630px;height:470px;border:none;background-color: #dfdfdf;" width="630px" height="475px"></iframe>',670,510,true);
+}
+
+function savedata(){
+	var data = [];
+	$('#fileList').children('li').each(function(i){
+		var mm = {};
+		mm.pic = $(this).find('.thumb').attr('href');
+		mm.title = $.trim($(this).find('.tittext').val());
+		mm.desc = $.trim($(this).find('.destext').val());
+		mm.sort = i;
+		data[data.length] = mm;
+	});
+	ajaxjson(location.href,data,function(m){
+		tusi('保存成功');
+		setTimeout(function(){
+			goto('list.html');
+		},1000);
+	});
+
+}
+
+function delthis(o){
+	if(confirm('确定删除此条图片吗？')){
+		$(o).parent().parent().parent().remove();
+	}
+}
+</script>
+<br/><br/><br/></body>
+</html>

@@ -1,0 +1,206 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.servicemenu {
+    background:url(../images/menu.png) no-repeat center center;
+    background-size:40px 40px;
+}
+/*.menu-list {
+    padding:5px;
+    width:50%;
+}
+.menu-list li{
+    width:50%;
+    float:left;
+}*/
+.menu-list {
+    width:50%;
+    float:left;
+}
+.menu-list li{
+}
+    .menu-list .content {
+        margin:5px;
+        border:1px solid #DDD;
+        display:block;
+        background-color:#f7f7f7;
+        text-shadow:#FFF 0 1px;
+    }
+    .menu-list .img {
+        border-bottom:1px solid #DDD;
+        padding:1px;
+    }
+    .menu-list img {
+        width:100%;
+        display:block;
+    }
+    .menu-list .name {
+        font-size: 14px;
+		line-height: 20px;
+		font-weight: bold;
+		padding: 5px 0 5px 5px;
+		float: left;
+    }
+    .menu-list .comment {
+    	min-height:30px;
+        line-height:30px;
+        font-size:12px;
+        color:#AAA;
+        padding-right:5px;
+        text-align:right;
+    } 
+    .menu-list .price {
+        line-height:30px;
+        font-size:18px;
+        color:#ff6a00;
+        padding-right:5px;
+        text-align:right;
+        font-weight:bold;
+    } 
+    .menu-list .desc {
+        line-height:16px;
+        font-size:12px;
+        color:#AAA;
+        padding:0 5px 5px 5px;
+    }
+
+.parentMenu {
+    padding:5px;
+    background-color:#444;
+    box-shadow:#000 0 1px 5px inset;
+    position:relative;
+}
+    .parentMenu li {
+        float:left;
+        height:42px;
+        width:25%;
+    }
+    .parentMenu a{
+        display:block;
+        margin:0 5px;
+        text-align:center;
+        color:#FFF;
+        line-height:32px;
+        background:#555;
+        margin-top:5px;
+        box-shadow:#333 1px 1px 4px,rgba(255,255,255,0.1) 0 1px 1px inset;
+        font-size:14px;
+    }
+    .parentMenu li.active a{
+        font-weight:bold;
+        background:#ff6a00;
+        box-shadow:rgba(255,255,255,0.1) 1px 1px 0,rgba(0,0,0,0.4) 0 1px 2px inset;
+    }
+    .parentMenu .arrow {
+        background: url(../images/menu-arrow.png) no-repeat center center;
+        background-size:10px 5px;
+        position:absolute;
+        top:-5px;
+        right:19px;
+        width:10px;
+        height:5px;
+    }
+
+
+.menu-title {
+    line-height:40px;
+    font-size:14px;
+    font-weight:bold;
+    background:#eee url(../images/arrow-select.png) no-repeat right center;
+    background-size:30px 30px;
+    border-bottom:1px solid #DDD;
+    padding-left:10px;
+    box-shadow:rgba(255,255,255,0.5) 0 1px 1px inset; 
+}
+    .menu-title.unfold {
+        background-color:#f5f5f5;
+        background-image:url(../images/arrow-select_1.png);
+        box-shadow:rgba(0,0,0,0.1) 0 1px 3px; 
+    }
+    .menu-title .icon {
+        float:left;
+        width:30px;
+        height:40px;
+        margin-right:10px;
+        background:url(../images/menu_icon_a.png) no-repeat center center;
+        background-size:20px 20px;
+    }
+    .menu-title .icon.xifa{
+    	background-image:url(../images/icons/1.xifa.png);
+    }
+    .menu-title .icon.jianfa{
+    	background-image:url(../images/icons/2.jianfa.png);
+    }
+    .menu-title .icon.chuifa{
+    	background-image:url(../images/icons/3.chuifa.png);
+    }
+    .menu-title .icon.tangfa{
+    	background-image:url(../images/icons/4.tangfa.png);
+    }
+    .menu-title .icon.ranfa{
+    	background-image:url(../images/icons/5.ranfa.png);
+    }
+    .menu-title .icon.huli{
+    	background-image:url(../images/icons/7.huli.png);
+    }
+    .menu-title .icon.chongzhi{
+    	background-image:url(../images/icons/6.chongzhi.png);
+    }
+    .menu-title .icon.waimai{
+    	background-image:url(../images/icons/8.waimai.png);
+    }
+    .menu-title .icon.liwu{
+    	background-image:url(../images/icons/9.liwu.png);
+    }
+.menu-listA {
+    display:none;
+}
+.menu-listA li{
+    border-bottom:1px solid #DDD;
+    min-height:20px;
+    padding:8px 0;
+}
+.menu-listA .price{
+    float:right;
+    font-size:14px;
+    font-weight:bold;
+    color:#AAA;
+    line-height:20px;
+    padding-right:25px;
+}
+    .menu-listA .name {
+        padding-left:60px;
+        font-size:14px;
+        line-height:20px;
+    }
+
+.menu-listB li{
+	padding:10px 20px;
+	
+}
+.menu-listB li:nth-child(2n){
+	background:#f1f1f1;
+}
+.menu-listB li.am-clickable-active{
+	background:#DDD;
+}
+.menu-listB .name{
+	float:left;
+	font-size:15px;
+	line-height:30px;
+}
+.menu-listB .price{
+	float:right;
+	font-size:18px;
+	line-height:30px;
+	color:#ff0047;
+}
+.menu-listB .desc{
+	clear:both;
+	font-size:12px;
+	color:#bcbcbc;
+	line-height:20px;
+}
+
+
+
+

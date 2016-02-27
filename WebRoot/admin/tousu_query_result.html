@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/admin/bootstrap.min.css">
+<link rel="stylesheet" href="css/admin/admin.css">
+<title>微投诉</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/yyucadapter.js"></script>
+
+</head>
+<body>
+	<div class="main-title">
+		<h3>投诉管理-查询结果</h3>
+	</div>
+	
+	
+	
+
+
+<div class="pagination">
+ <!--  <ul>
+
+    <li class="disabled"><span>上一页</span></li>
+  </ul>
+ -->  
+</div>
+	
+	<table class="table table-bordered">
+			<thead>
+				<tr>
+					
+					<th>流水号</th>
+					<th>流程类型</th>
+					<th>投诉类型</th>
+					<th>工作名称/文号</th>
+					<th>发起人</th>
+					<th>时间</th>
+					<th>投诉状态</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+						 
+			      <tr>
+			      		
+						<td>
+							4355
+						</td>
+						<td>投诉处理</td>
+						<td>市容环境</td>
+						<td>宜城闵先生反映解放东路东风巷米香团子店占道经营</td>
+						<td>潘军</td>
+						<td>
+							2015-02-12 10:35:55
+						</td>
+						<td><span>已办结</span></td>
+						<td>
+						<span>
+						[
+						<a href="tousu_do.html">主办</a>
+						]
+						</span>
+						<span>
+						[
+						<a href="tousu_detail.html">详细</a>
+						]
+						</span>
+						<span>
+						[
+						<a href="#" >删除</a>
+						]
+						</span>
+						
+						</td>
+				  </tr>
+				  
+						</tbody>
+		</table>
+
+	
+
+
+<div class="pagination">
+  <!-- <ul>
+
+    <li class="disabled"><span>上一页</span></li>
+  </ul> -->
+  
+</div>
+
+<script type="text/javascript">
+$(function() {
+	$("#gotonext").click(function(){
+		window.parent.$('.menu-yuding').trigger('click');
+	});
+});
+
+function dellbs(id,o){
+	if(id=='a'){
+		if(confirm('确定删除这些信息吗？')){
+			var ids = [];
+			$('td').find('input[type="checkbox"]:checked').each(function(){
+				ids[ids.length] = $(this).val();
+			});
+			ajax('microVote-del.html',{ id:ids.join(',')},function(){
+				$('td').find('input[type="checkbox"]:checked').each(function(){
+					$(this).parent().parent().remove();
+				});
+			});	
+		}
+	}else{
+		if(confirm('确定删除此条信息吗？')){
+			ajax('microVote-del.html',{ id:id},function(){
+				$(o).parent().parent().parent().remove();
+			});	
+		}
+	}	
+}
+
+function selallck(o){
+	if($(o).prop('checked')){
+		$('td').find('input[type="checkbox"]').prop('checked',true);
+	}else{
+		$('td').find('input[type="checkbox"]').prop('checked',false);
+	}
+}
+</script>
+
+<div id="gotonext"  >
+	<img src="media/images/admin/v3/yuding.png" ></img>
+</div>
+
+<br/><br/><br/></body></html>

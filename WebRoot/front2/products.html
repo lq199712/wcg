@@ -1,0 +1,565 @@
+﻿
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="all">
+	<!--<link rel="stylesheet" type="text/css" href="comCss/diyCols_44/common.css" media="all">-->
+	<link rel="stylesheet" type="text/css" href="css/list-15.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/menu-2.css" media="all">
+	<script type="text/javascript" src="js/lib/iscroll.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+	<link href="css/news2.css" rel="stylesheet" type="text/css">
+	<title>产品展示</title>
+        
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+	<meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<style type="text/css">
+		
+/**
+ *
+ * Pull down styles
+ *
+ */
+#pullDown, #pullUp {
+	background:rgba(38, 37, 44, 0.6);
+	height:40px;
+	line-height:40px;
+	padding:5px 10px;
+	/*border-bottom:1px solid #ccc;*/
+	font-weight:bold;
+	font-size:14px;
+	color:#afafaf;
+	/*border-radius:10px;*/
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+	display:block; float:left;
+	width:40px; height:36px;
+	background:url(images/pull-icon@2x.png) 0 0 no-repeat;
+	-webkit-background-size:40px 80px; background-size:40px 80px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+	#wrapper{
+		position:fixed;
+		width:100%;
+		height:100%;
+		height:94%;
+		top: 50px;
+	}
+	#scroller{
+	position:absolute; 
+	z-index:1;
+	width:100%;
+	padding-bottom:12%;
+	}
+	</style>
+	<script type="text/javascript">
+	//获取url参数
+	function GetRequest() {
+	   var url = location.search; //获取url中"?"符后的字串
+	   var theRequest = new Object();
+	   if (url.indexOf("?") != -1) {
+		  var str = url.substr(1);
+		  strs = str.split("&");
+		  for(var i = 0; i < strs.length; i ++) {
+			 theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+		  }
+	   }
+	   return theRequest;
+	}
+
+	var Request = new Object();
+	Request = GetRequest();
+	var fromuser=Request['fromuser'];
+	if(fromuser){
+	window.localStorage.setItem("fromuser", fromuser);
+
+	}
+
+	if(!fromuser || fromuser=='undefined'){
+	 fromuser=window.localStorage.getItem("fromuser");
+	}
+
+
+	function goLink(url){
+		if(url){
+			//  url=url.toLowerCase();
+			if(url.indexOf("http")!=-1 && url.indexOf("weixinpl")!=-1){
+				//跳转到活动
+				url+='&fromuser='+fromuser+'&wxref=mp.weixin.qq.com';
+			}else if(url.indexOf("http")!=-1){
+				url=url;
+			}else if(url.indexOf("php")!= -1){
+						url+='&C_id='+'29'+'&wxref=mp.weixin.qq.com&fromuser='+fromuser;
+			}else{
+			url+='.html?wxref=mp.weixin.qq.com&fromuser='+fromuser;
+			}
+			
+			//alert('===='+url);
+			location.href=url;
+			}
+	}
+
+		function goNextPage(url){
+	var go_url='';
+		if(url){
+			if(url.indexOf("http")!=-1){
+			
+			go_url=url;
+			}else if(url.indexOf("tel")!=-1){ go_url=url;location.href=go_url;return;
+			}else if((url.indexOf(".html")!=-1) || (url.indexOf(".php")!=-1)){
+			
+			go_url=url
+			
+			}else{
+			go_url=url+'.html';	
+			}
+
+			
+			if(go_url.indexOf("?")!=-1){
+			
+			setTimeout(function(){
+					location.href=go_url+'&fromuser='+fromuser+'&wxref=mp.weixin.qq.com';
+			
+				},250);
+			}else{
+			
+			setTimeout(function(){
+					location.href=go_url+'?fromuser='+fromuser+'&wxref=mp.weixin.qq.com';
+			
+				},250);
+			}
+			
+			
+		}else{
+			alert('找不到此页面！');
+		
+		}
+
+	}
+	
+	var myScroll,
+		pullUpEl, pullUpOffset,
+		generatedCount = 0;
+		var page=1;
+		
+		var C_id='29';
+		var col_flag='';
+		var col_id='';
+		var col_id_sub='';
+		if(col_flag){
+			col_id_sub='4338';
+		}else{
+			col_id='4338';
+		
+		}
+		var type_id=0;
+	function pullUpAction () {
+		page++;
+			$.ajax({
+				url:'http://#',
+				dataType:'jsonp',
+				data:{"C_id":C_id,"page":page,"col_id":col_id,"col_id_sub":col_id_sub,"type_id":type_id},
+				success:function(data){
+						var html='';
+					if(data){
+						for(var i=0;i<data.length;i++){
+						if(data[i].type==1){
+							html+='<li><a onclick=goNextPage("'+data[i].link+'") class="tbox"><div class="left_img_wrap"><img src="images/'+data[i].img+'" /></div><div class="summary">'+data[i].name+'</div><img src="images/next.png" class="img2" style="width:10px;"></a></li>';
+							
+						}else{
+							html+='<li><a onclick=goNextPage("'+data[i].fileName+'?detail_id='+data[i].id+'&C_id='+C_id+'&col_id='+data[i].col_id+'&col_id_sub='+data[i].parent_id+'") class="tbox"><div class="left_img_wrap"><img  src="images/'+data[i].img+'" /></div><div class="summary">'+data[i].name+'</div><img src="images/next.png" class="img2" style="width:10px;"></a></li>';
+							
+						}
+					}
+					if(page!=1){
+					$('#thelist').append(html);
+					myScroll.refresh();	
+					}else{
+					$('#thelist').html(html);
+					myScroll.refresh();	
+					myScroll.scrollToPage(0,0,0);
+					}		
+						//$('#thelist').append(html);
+						//myScroll.refresh();	
+					}else{
+					myScroll.refresh();	
+					}
+					
+					
+					
+				},
+				error:function(r){
+				
+				}
+
+			});
+				
+			
+
+	}
+
+	function loaded() {
+		pullUpEl = document.getElementById('pullUp');	
+		pullUpOffset = pullUpEl.offsetHeight;
+		
+		myScroll = new iScroll('wrapper', {
+			useTransition: true,
+			hideScrollbar:true,
+			onRefresh: function () {
+			if (pullUpEl.className.match('loading')) {
+					pullUpEl.className = '';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+				}
+			},
+			onScrollMove: function () {
+		if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'flip';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '松开加载...';
+					this.maxScrollY = this.maxScrollY;
+				} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+					pullUpEl.className = '';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+					this.maxScrollY = pullUpOffset;
+				}
+			},
+			onScrollEnd: function () {
+			if (pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'loading';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '努力加载中...';				
+					pullUpAction();	// Execute custom function (ajax call?)
+				}
+			}
+		});
+		
+	}
+
+	function goPage(url){
+		if(url){
+			location.href=url;
+		}
+
+	}
+
+	</script>
+	<script type="text/javascript">
+		/*var img_flag=0;
+		function loadother(e){
+		document.getElementById('slideshow_wrap').style.height=e.offsetHeight+'px';
+			if(!img_flag){
+				var html='';
+			
+			
+			document.getElementById('swipe-wrap').innerHTML+=html;
+			img_flag=1;
+			setTimeout(function(){
+			init_swipe();
+			},1000);
+			
+			}
+
+		}*/
+
+
+function goLink(url){
+	if(url){
+		//  url=url.toLowerCase();
+		if(url.indexOf("http")!=-1 && url.indexOf("weixinpl")!=-1){
+			//跳转到活动
+			url+='&fromuser='+fromuser+'&wxref=mp.weixin.qq.com';
+		}else if(url.indexOf("http")!=-1){
+			url=url;
+		}else if(url.indexOf("php")!= -1){
+					url+='&C_id='+'29'+'&wxref=mp.weixin.qq.com&fromuser='+fromuser;
+		}else{
+		url+='.html?wxref=mp.weixin.qq.com&fromuser='+fromuser;
+		}
+		
+		//alert('===='+url);
+		location.href=url;
+		}
+}
+
+function get_body_link(){
+		var link=location.href;
+		var link=link.split('?')[0];
+		$('body').attr('weiba-link',link);
+	
+	}
+	
+		var oWin,oLay,oBtn,dropdown;
+	$(function(){
+
+		 oWin = document.getElementById("win");
+		 oLay = document.getElementById("overlay");	
+		oBtn = document.getElementById("popmenu");
+		 dropdown = document.getElementById("dropdown");
+		oBtn.onclick = function ()
+		{
+
+		oLay.style.display = "block";
+		oWin.style.display = "block";
+		};
+		oLay.onclick = function ()
+		{
+
+		oLay.style.display = "none";
+		oWin.style.display = "none"	
+		};
+																																																
+
+	})
+	function selectType(e){
+	var title = document.getElementById("main_title");
+		var a=e.innerHTML;
+		title.innerHTML=a;
+	oLay.style.display = "none";
+	oWin.style.display = "none";
+	//alert('typeid==='+e.id);
+	type_id=e.id;
+	page=0;
+	$('#thelist').empty();
+	pullUpEl.className = 'loading';
+	pullUpAction();
+
+	}
+</script>
+	<style type="text/css">
+	.img2{
+		position:absolute;
+		height:20px;
+		right:15px;
+		margin-top:-34px;
+		display:block;	
+	}
+	</style>
+</head>
+
+<body onload="init()" onselectstart="return true;" ondragstart="return false;">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all">
+	
+	<div id="ui-header">
+	<div class="fixed">
+
+	<a class="ui-title" id="popmenu"><font  style="font-size: 18px;" id="main_title">选择分类</font> </a>
+
+	<a class="ui-btn-left_pre" href="javascript:" onclick="window.history.go(-1)"></a>
+
+	<a class="ui-btn-right_home" onclick="goPage('index.html')"></a>
+	</div>
+	</div>
+
+	<div id="overlay"></div>
+
+	<div id="win">
+
+	<ul class="dropdown" id="dropdown">
+	<li><span onclick="selectType(this)" id="0">全部</span></li>
+		<div class="clr"></div>
+
+	</ul>
+	</div>
+	<div class="body">
+		<section class="section_body">
+			<div id="wrapper">
+			<div id="scroller">
+			<ul id="thelist" class="list_article">
+				<li>
+							<a onclick="goNextPage('detail.html')" class="tbox">	
+								<div class="left_img_wrap">
+									<img src="images/54b20fc781709.jpg">
+								</div>	
+								<div class="summary">智能门窗回馈系统</div>
+								<img src="images/next.png" class="img2" style="width:10px;">
+							</a>					
+						</li>
+					<li>
+							<a onclick="goNextPage('detail.html')" class="tbox">	
+								<div class="left_img_wrap">
+									<img src="images/54b20fa56a8d3.jpg">
+								</div>	
+								<div class="summary">智能远程智慧眼</div>
+								<img src="images/next.png" class="img2" style="width:10px;">
+							</a>					
+						</li>
+					<li>
+							<a onclick="goNextPage('detail.html')" class="tbox">	
+								<div class="left_img_wrap">
+									<img src="images/54b20f852d843.jpg">
+								</div>	
+								<div class="summary">Vulcan-F/沃肯-指纹锁</div>
+								<img src="images/next.png" class="img2" style="width:10px;">
+							</a>					
+						</li>
+					<li>
+							<a onclick="goNextPage('detail.html')" class="tbox">	
+								<div class="left_img_wrap">
+									<img src="images/54b20f66075e9.jpg">
+								</div>	
+								<div class="summary">韩国耶鲁YDM4109指纹锁</div>
+								<img src="images/next.png" class="img2" style="width:10px;">
+							</a>					
+						</li>
+					<li>
+							<a onclick="goNextPage('detail.html')" class="tbox">	
+								<div class="left_img_wrap">
+									<img src="images/54b20f43f3e17.jpg">
+								</div>	
+								<div class="summary">智能猫眼</div>
+								<img src="images/next.png" class="img2" style="width:10px;">
+							</a>					
+						</li>
+					<li>
+							<a onclick="goNextPage('detail.html')" class="tbox">	
+								<div class="left_img_wrap">
+									<img src="images/54b20f25baa90.jpg">
+								</div>	
+								<div class="summary">瑞典VOC指纹锁品牌授权合作代理商（型号M77）</div>
+								<img src="images/next.png" class="img2" style="width:10px;">
+							</a>					
+						</li>
+								</ul>
+			<div id="pullUp">
+				<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+			</div>
+			</div>
+			</div>
+		</section>
+	</div>
+	
+	<!--<footer class="nav_footer">
+		<ul class="box">
+			<li><a href="javascript:history.go(-1);">返回</a></li>
+			<li><a href="javascript:history.go(1);">前进</a></li>
+			<li><a onclick="goPage('index.html')">首页</a></li>
+			<li><a href="javascript:location.reload();">刷新</a></li>
+		</ul>
+	</footer>
+自定义菜单-->
+
+<script type="text/javascript">
+function init(){
+loaded();
+}
+function init_swipe(){
+window.mySwipe = new Swipe(document.getElementById('slider'), {
+  startSlide: 0,
+  speed: 400,
+  auto: 3000,
+  continuous: true,
+  disableScroll: false,
+  stopPropagation: false,
+  callback: function(index, elem) {
+ // console.log('=======index'+index);
+	 document.querySelector('#nav > div.active').className = '';
+      document.querySelector('#nav > div:nth-child(' + (index+1) + ')').className = 'active';
+  },
+  transitionEnd: function(index, elem) {}
+});
+
+
+}
+
+
+/****分享设置start****/
+window.shareData = {
+			"imgUrl": "",
+			"link": this.location.href,
+			"title": "" || document.title,
+			"content": "",
+		};
+
+
+		
+function getShareImageUrl(){
+	var share_imgurl = "";
+	if("" == share_imgurl){
+		var shareImgObj = document.getElementsByTagName("img")[0];
+		if('undefined' != typeof(shareImgObj)){
+			share_imgurl = shareImgObj.src;
+		}
+	}
+	return window.shareData.imgUrl || share_imgurl ;
+}
+
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+	// 发送给好友
+	WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+		WeixinJSBridge.invoke('sendAppMessage', { 
+			"img_url": getShareImageUrl(),
+			"img_width": "640",
+			"img_height": "640",
+			"link": window.shareData.link,
+			"desc": window.shareData.content,
+			"title": window.shareData.title
+		}, function (res) {
+			
+		})
+	});
+
+	// 分享到朋友圈
+	WeixinJSBridge.on('menu:share:timeline', function (argv) {
+		WeixinJSBridge.invoke('shareTimeline', {
+			"img_url": getShareImageUrl(),
+			"img_width": "640",
+			"img_height": "640",
+			"link": window.shareData.link,
+			"desc": window.shareData.content,
+			"title": window.shareData.title
+		}, function (res) {
+			
+		});
+	});
+
+	// 分享到微博
+	WeixinJSBridge.on('menu:share:weibo', function (argv) {
+		WeixinJSBridge.invoke('shareWeibo', {
+			"content": window.shareData.content,
+			"url": window.shareData.link
+		}, function (res) {
+			
+		});
+	});
+}, false);		
+/****分享设置end****/
+</script>
+<!--  start验证用户是否已经可用-->
+<!--  end验证用户是否已经可用-->
+
+</body></html>
